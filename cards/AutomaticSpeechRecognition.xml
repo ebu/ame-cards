@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 sp2 (x64) (http://www.altova.com) by Alberto Messina (RAI - Radiotelevisione Italiana) -->
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file://../FIMS-AME.xsd">
+	<AMECard>
+		<CardID>A002</CardID>
+		<Name>Automatic Speech Recognition</Name>
+		<Type>Audio</Type>
+		<Status>draft</Status>
+		<Editor>Mike</Editor>
+		<Definition>The translation of spoken words (from an audio fragment) into written text</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>RecordingCondition</Name>
+					<Type>controlled vocabulary</Type>
+					<Representation>http://www.ebu.ch/fdksf/AMECardsCS_RecordingCOndition.xml</Representation>
+				</Input>
+				<Input>
+					<Name>InlineDIctionaryExtension</Name>
+					<Type>text</Type>
+				</Input>
+				<Input>
+					<Name>RemoteDIctionaryExtension</Name>
+					<Type>URL</Type>
+				</Input>
+				<Input>
+					<Name>Language</Name>
+					<Type>controlled vocabulary</Type>
+					<Representation>http://iso.ch/languages.xml</Representation>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>Transcript</Name>
+					<Type>xml</Type>
+					<Representation>urn:mpeg:mpeg7:part5:TextAnnotationType</Representation>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="ASR types">
+			<Capability>
+				<Values>urn:oiweuowieru</Values>
+				<Type>supported languages</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sfsdjkh</Values>
+				<Type>supported speech types</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:jhfkjsdhs</Values>
+				<Type>supported recording conditions</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:cvds</Values>
+				<Type>supported audio codec</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sdhfsdjkfh</Values>
+				<Type>supported audio formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>

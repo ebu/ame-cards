@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 sp2 (x64) (http://www.altova.com) by Alberto Messina (RAI - Radiotelevisione Italiana) -->
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file://../FIMS-AME.xsd">
+	<AMECard>
+		<CardID>A001</CardID>
+		<Name>Speech Activity Detection</Name>
+		<Type>Audio</Type>
+		<Status>draft</Status>
+		<Editor>Alberto</Editor>
+		<Definition>Detection of speech being present (as opposed to silence or other sounds)</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>AudioType</Name>
+					<Type>controlled vocabulary</Type>
+					<Representation>http://www.ebu.ch/fdksf/AMECardsCS_AudioType.xml</Representation>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>SpeechSegments</Name>
+					<Type>xml</Type>
+					<Representation>urn:mpeg:mpeg7:part5:AudiovisualSegmentType</Representation>
+					<Representation>EBUCore:ebuCoreMain</Representation>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="global">
+			<Capability>
+				<Values>urn:oiweuowieru</Values>
+				<Type>result type</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:cvds</Values>
+				<Type>supported audio codec</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sdhfsdjkfh</Values>
+				<Type>supported audio formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>

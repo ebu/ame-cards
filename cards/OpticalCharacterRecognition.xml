@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 sp2 (x64) (http://www.altova.com) by Alberto Messina (RAI - Radiotelevisione Italiana) -->
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file://../FIMS-AME.xsd">
+	<AMECard>
+		<CardID>V001</CardID>
+		<Name>Optical Character Recognition</Name>
+		<Type>VIdeo</Type>
+		<Status>draft</Status>
+		<Editor>Werner</Editor>
+		<Definition>Detection of regions containing overlaid text elements or text depicted in the scene, possibly moving over time. Run OCR on the identified text areas.</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>StructuredRegionOfInterest</Name>
+					<Type>xml</Type>
+					<Representation>urn:mpeg:mpeg7:part5:MovingRegionType</Representation>
+				</Input>
+				<Input>
+					<Name>BoundingBox</Name>
+					<Type>text</Type>
+				</Input>
+				<Input>
+					<Name>MinimumTextDuration</Name>
+					<Type>float</Type>
+					<Representation/>
+					<Unit>seconds</Unit>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>Transcript</Name>
+					<Type>xml</Type>
+					<Representation>urn:mpeg:mpeg7:part5:MovingRegionType</Representation>
+					<Comment>The output must contain the detected text, and may contain regions</Comment>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="Text Types">
+			<Capability>
+				<Values>urn:oiweuowieru</Values>
+				<Type>supported languages</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sfsdjkh</Values>
+				<Type>supported scripts</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:jhfkjsdhs</Values>
+				<Type>recognisable text types</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:jhfkjsdhs</Values>
+				<Type>minimum text size</Type>
+				<Unit>pixel</Unit>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:cvds</Values>
+				<Type>supported video formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sdhfsdjkfh</Values>
+				<Type>supported image formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
