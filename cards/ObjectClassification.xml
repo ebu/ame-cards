@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 rel. 3 (x64) (http://www.altova.com) by Lauri Saarikoski (Yle - The Finnish Broadcasting Company) -->
+<!-- Should be renamed to Visual object classification?-->
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>V005</CardID>
+		<Name>Object classification</Name>
+		<Type>VIdeo</Type>
+		<Status>draft</Status>
+		<Editor>Lauri</Editor>
+		<Definition>Determine if there are one or more regions showing (part of) a specified/one from a list of specified object class(es), and report their approximate boundaries.</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>ClassesToDetect</Name>
+					<Type>xml</Type>
+					<Representation/>
+				</Input>
+				<Input>
+					<Name>MinimumObjectSize</Name>
+					<Type>text</Type>
+					<Representation/>
+					<Unit>pixels</Unit>
+				</Input>
+				<Input>
+					<Name>ObjectModelToUse</Name>
+					<Type>URL</Type>
+				</Input>
+				<Input>
+					<Name>BoundingBox</Name>
+					<Type>text</Type>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>DetectedRegion</Name>
+					<Type>xml</Type>
+					<Representation>urn:mpeg:mpeg7:part5:MovingRegionType</Representation>
+					<Comment>per object class, a list of time indexed regions</Comment>
+				</Output>
+				<Output>
+					<Name>Confidence</Name>
+					<Type>float</Type>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="object classes">
+			<Capability>
+				<Values>urn:oiweuowieru</Values>
+				<Type>supported object classes</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:jhfkjsdhs</Values>
+				<Type>minimum object size</Type>
+				<Unit>pixel</Unit>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:cvds</Values>
+				<Type>supported video formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sdhfsdjkfh</Values>
+				<Type>supported image formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>

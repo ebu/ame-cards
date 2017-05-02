@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 rel. 3 (x64) (http://www.altova.com) by Lauri Saarikoski (Yle - The Finnish Broadcasting Company) -->
+<!-- Output type for actual speaker model? -->
+<!-- Language dependant? -->
+<!-- Input audio fragment not needed as input? -->
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>A004</CardID>
+		<Name>Speaker recognition training</Name>
+		<Type>Audio</Type>
+		<Status>draft</Status>
+		<Editor>Lauri</Editor>
+		<Definition>Train models for a speaker recognition system</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>InputAudioFragment</Name>
+					<Type>URL</Type>
+				</Input>
+				<Input>
+					<Name>SpeakerModelReference</Name>
+					<Type>URL</Type>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>TrainedSpeakerModelReference</Name>
+					<Type>URL</Type>
+				</Output>
+				<Output>
+					<Name>WasTrainingSuccess</Name>
+					<Type>text</Type>
+					<Representation/>
+				</Output>
+				<Output>
+					<Name>TrainedSpeakerModel</Name>
+					<Type>URL</Type>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:cvds</Values>
+				<Type>supported audio codec</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sdhfsdjkfh</Values>
+				<Type>supported audio formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
