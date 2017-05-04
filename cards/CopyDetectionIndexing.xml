@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 sp2 (x64) (http://www.altova.com) by Alberto Messina (RAI - Radiotelevisione Italiana) -->
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>V002</CardID>
+		<Name>Copy Detection (Indexing)</Name>
+		<Type>Video</Type>
+		<Status>draft</Status>
+		<Editor>Werner</Editor>
+	
+		<!-- Copy detection (indexing)	Extract features from a video and index them in a database for later matching.	
+			
+    Target size of the descriptor (average bytes/sec)
+    Identifier of the database
+    
+	 	
+	 	
+    Supported video codecs
+    Minimum length of match
+    Supported descriptor sizes
+    
+	 -->
+		
+		
+		<Definition>Extract descriptors/fingerprints from a video and index them in a database for later matching.</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>TargetDescriptorSize</Name>
+					<Type>integer</Type>
+					<Unit>bytes/second</Unit>
+				</Input>
+				<Input>
+					<Name>DBIdentifier</Name>
+					<Type>URL</Type>
+					<Comment>The identifier of the database in which the descriptors/fingerprints shall be indexed.</Comment>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>dummy</Name>
+					<Type>text</Type>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="Descriptor sizes">
+			<Capability>
+				<Values>urn:oiweuowieru</Values>
+				<Type>supported descriptor sizes</Type>
+				<Unit>bytes/second</Unit>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:cvds</Values>
+				<Type>supported video formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sdhfsdjkfh</Values>
+				<Type>supported image formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
