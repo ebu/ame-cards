@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Werner Bailer (JOANNEUM RESEARCH) -->
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>T001</CardID>
+		<Name>Part of speech tagging</Name>
+		<Type>Text</Type>
+		<Status>draft</Status>
+		<Editor>Werner</Editor>
+		<Definition>The allocation of categories and relationships of words in a sentence. F.e. verbs or nouns (plural/...).</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>InputText</Name>
+					<Type>text</Type>
+					<Representation>TBD, could also be XML</Representation>
+					<Comment>The input text to be processed (required)</Comment>
+				</Input>			
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>TaggedWords</Name>
+					<Type>xml</Type>
+					<Representation>urn:tbd</Representation>
+					<Comment>A list of tagged words, for each the disambiguated category, relationship with other words, confidence score</Comment>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="Text Types">
+			<Capability>
+				<Values>urn:oiweuowieru</Values>
+				<Type>supported languages</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sfsdjkh</Values>
+				<Type>supported scripts</Type>
+			</Capability>
+		</CapabilityGroup>
+		
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:cvds</Values>
+				<Type>supported text formats</Type>
+			</Capability>
+		</CapabilityGroup>
+		
+	</AMECard>
+</FIMSAMECards>

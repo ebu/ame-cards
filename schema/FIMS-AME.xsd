@@ -126,6 +126,7 @@
 			<xs:enumeration value="supported speech types"/>
 			<xs:enumeration value="supported video formats"/>
 			<xs:enumeration value="supported image formats"/>
+			<xs:enumeration value="supported text formats"/>
 			<xs:enumeration value="supported scripts"/>
 			<xs:enumeration value="supported object classes"/>
 			<xs:enumeration value="recognisable text types"/>
