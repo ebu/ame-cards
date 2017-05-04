@@ -5,7 +5,7 @@
 	<AMECard>
 		<CardID>V005</CardID>
 		<Name>Object classification</Name>
-		<Type>VIdeo</Type>
+		<Type>Video</Type>
 		<Status>draft</Status>
 		<Editor>Lauri</Editor>
 		<Definition>Determine if there are one or more regions showing (part of) a specified/one from a list of specified object class(es), and report their approximate boundaries.</Definition>
