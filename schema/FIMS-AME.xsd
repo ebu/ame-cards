@@ -131,6 +131,8 @@
 			<xs:enumeration value="recognisable text types"/>
 			<xs:enumeration value="minimum text size"/>
 			<xs:enumeration value="minimum object size"/>
+			<xs:enumeration value="supported genres"/>
+			<xs:enumeration value="supported modalities"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

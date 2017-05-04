@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Werner Bailer (JOANNEUM RESEARCH) -->
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>M001</CardID>
+		<Name>Scene/story segmentation</Name>
+		<Type>Multimodal</Type>
+		<Status>draft</Status>
+		<Editor>Werner</Editor>
+		<Definition>Segment an audiovisual segment into semantic temporal units, such as news stories, scenes, etc.</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>MinDuration</Name>
+					<Type>float</Type>
+					<Unit>seconds</Unit>
+					<Comment>Minimum duration of a segment to be reported (optional, default: 0).</Comment>
+				</Input>
+				<Input>
+					<Name>MaxDuration</Name>
+					<Type>float</Type>
+					<Unit>seconds</Unit>
+					<Comment>Maximium duration of a segment to be reported (optional, default: inf).</Comment>
+				</Input>				
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>Segmentation</Name>
+					<Type>xml</Type>
+					<Representation>urn:mpeg:mpeg7:schema:2004:TemporalDecompositionType</Representation>
+					<Comment>The timeline of segments with their start and end times.</Comment>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="modalities">
+			<Capability>
+				<Values>urn:ebu:metadata-cs:ContentGenreCS</Values>
+				<Type>supported genres</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup name="genres">
+			<Capability>
+				<Values>urn:modalities</Values>
+				<Type>supported modalities</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:cvds</Values>
+				<Type>supported video formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sdhfsdjkfh</Values>
+				<Type>supported image formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sdhfsdjkfh</Values>
+				<Type>supported audio formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>

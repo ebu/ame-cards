@@ -4,7 +4,7 @@
 	<AMECard>
 		<CardID>V001</CardID>
 		<Name>Optical Character Recognition</Name>
-		<Type>VIdeo</Type>
+		<Type>Video</Type>
 		<Status>draft</Status>
 		<Editor>Werner</Editor>
 		<Definition>Detection of regions containing overlaid text elements or text depicted in the scene, possibly moving over time. Run OCR on the identified text areas.</Definition>
@@ -13,7 +13,7 @@
 				<Input>
 					<Name>StructuredRegionOfInterest</Name>
 					<Type>xml</Type>
-					<Representation>urn:mpeg:mpeg7:part5:MovingRegionType</Representation>
+					<Representation>urn:mpeg:mpeg7:schema:2004:MovingRegionType</Representation>
 				</Input>
 				<Input>
 					<Name>BoundingBox</Name>
@@ -30,7 +30,7 @@
 				<Output>
 					<Name>Transcript</Name>
 					<Type>xml</Type>
-					<Representation>urn:mpeg:mpeg7:part5:MovingRegionType</Representation>
+					<Representation>urn:mpeg:mpeg7:schema:2004:TextAnnotationType urn:mpeg:mpeg7:schema:2004:MovingRegionType</Representation>
 					<Comment>The output must contain the detected text, and may contain regions</Comment>
 				</Output>
 			</Outputs>
