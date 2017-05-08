@@ -9,4 +9,6 @@ This repository collects all documents related to the EBU AME cards definition. 
 
 Structure of the repository
 --------------
-To be completed
+The repository consists of 2 folders:
+- _schema_ contains the xml schema file for the AME cards descriptions
+- _cards_ contains the xml files representing the AME cards. It is organised as one file per AME card. A list of cards can be found on the EBU workspace of the MIM-SCAIE group: https://workspace.ebu.ch/pages/viewpage.action?pageId=98678281
