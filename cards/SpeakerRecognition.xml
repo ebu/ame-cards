@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 rel. 3 (x64) (http://www.altova.com) by Lauri Saarikoski (Yle - The Finnish Broadcasting Company) -->
+<!-- Should be renamed to Visual object classification?-->
+<FIMSAMECards xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <AMECard>
+    <CardID>A003</CardID>
+
+    <Name>Speaker Recognition</Name>
+
+    <Type>Audio</Type>
+
+    <Status>draft</Status>
+
+    <Editor>Mike</Editor>
+
+    <Definition>Given an external reference database of speakers, say who (if any) of the known speakers is speaking at a particular point in time</Definition>
+
+    <Parameters>
+      <Inputs>
+        <Input>
+          <Name>SpeakerDatabase</Name>
+
+          <Type>xml</Type>
+
+          <Representation/>
+        </Input>
+      </Inputs>
+
+      <Outputs>
+        <Output>
+          <Name>ListOfSpeakerSegments</Name>
+
+          <Type>xml</Type>
+
+          <Representation/>
+
+          <Comment>list of segments with start time, end time, speaker id and
+          confidence score</Comment>
+        </Output>
+      </Outputs>
+    </Parameters>
+
+    <CapabilityGroup name="speaker classes">
+      <Capability>
+        <Values>urn:oiweuowieruf</Values>
+
+        <Type>supported speaker classes</Type>
+      </Capability>
+    </CapabilityGroup>
+
+    <CapabilityGroup name="input formats">
+      <Capability>
+        <Values>urn:xyz</Values>
+
+        <Type>supported audio formats</Type>
+      </Capability>
+
+      <Capability>
+        <Values>urn:sdhfsdjkfh</Values>
+
+        <Type>supported languages</Type>
+      </Capability>
+    </CapabilityGroup>
+  </AMECard>
+</FIMSAMECards>
