@@ -128,14 +128,21 @@
                   type="xs:anyURI"/>
 
       <xs:element minOccurs="0" name="Unit"/>
+      
+      <xs:element name="Definition" type="xs:string" minOccurs="0"/>
 
       <xs:element minOccurs="0" name="Comment"/>
     </xs:sequence>
+    <xs:attribute name="mandatory" type="xs:boolean" default="false" />
   </xs:complexType>
 
   <xs:complexType name="inputParameterType">
     <xs:complexContent>
-      <xs:extension base="parameterType"/>
+      <xs:extension base="parameterType">
+        <xs:sequence>
+          <xs:element name="DefaultValue" type="xs:string" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
 
