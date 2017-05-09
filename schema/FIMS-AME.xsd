@@ -71,7 +71,7 @@
             <xs:element name="Inputs">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:element maxOccurs="unbounded" name="Input"
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="Input"
                               type="inputParameterType"/>
                 </xs:sequence>
               </xs:complexType>

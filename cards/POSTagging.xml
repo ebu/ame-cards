@@ -10,19 +10,21 @@
 		<Definition>The allocation of categories and relationships of words in a sentence. F.e. verbs or nouns (plural/...).</Definition>
 		<Parameters>
 			<Inputs>
+				<!-- no input params, assuming the text is provided as a resource to the FIMS service
 				<Input>
 					<Name>InputText</Name>
 					<Type>text</Type>
 					<Representation>TBD, could also be XML</Representation>
-					<Comment>The input text to be processed (required)</Comment>
-				</Input>			
+					<Definition>The input text to be processed (required)</Definition>
+				</Input>		
+				-->
 			</Inputs>
 			<Outputs>
-				<Output>
+				<Output mandatory="true">
 					<Name>TaggedWords</Name>
 					<Type>xml</Type>
 					<Representation>urn:tbd</Representation>
-					<Comment>A list of tagged words, for each the disambiguated category, relationship with other words, confidence score</Comment>
+					<Definition>A list of tagged words, for each the disambiguated category, relationship with other words, confidence score</Definition>
 				</Output>
 			</Outputs>
 		</Parameters>

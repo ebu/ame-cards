@@ -14,21 +14,23 @@
 					<Name>MinDuration</Name>
 					<Type>float</Type>
 					<Unit>seconds</Unit>
-					<Comment>Minimum duration of a segment to be reported (optional, default: 0).</Comment>
+					<Definition>Minimum duration of a segment to be reported.</Definition>
+					<DefaultValue>0</DefaultValue>
 				</Input>
 				<Input>
 					<Name>MaxDuration</Name>
 					<Type>float</Type>
 					<Unit>seconds</Unit>
-					<Comment>Maximium duration of a segment to be reported (optional, default: inf).</Comment>
+					<Definition>Maximium duration of a segment to be reported.</Definition>
+					<DefaultValue>inf</DefaultValue>
 				</Input>				
 			</Inputs>
 			<Outputs>
-				<Output>
+				<Output mandatory="true">
 					<Name>Segmentation</Name>
 					<Type>xml</Type>
 					<Representation>urn:mpeg:mpeg7:schema:2004:TemporalDecompositionType</Representation>
-					<Comment>The timeline of segments with their start and end times.</Comment>
+					<Definition>The timeline of segments with their start and end times.</Definition>
 				</Output>
 			</Outputs>
 		</Parameters>

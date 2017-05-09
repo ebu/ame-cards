@@ -18,19 +18,21 @@
 				<Input>
 					<Name>BoundingBox</Name>
 					<Type>text</Type>
+					<Definition>A bounding box, specified as space separated list of x,y,w,h in pixels</Definition>
 				</Input>
 				<Input>
 					<Name>MinimumTextDuration</Name>
 					<Type>float</Type>
-					<Representation/>
 					<Unit>seconds</Unit>
+					<DefaultValue>0.04</DefaultValue>
 				</Input>
 			</Inputs>
 			<Outputs>
-				<Output>
+				<Output mandatory="true">
 					<Name>Transcript</Name>
 					<Type>xml</Type>
-					<Representation>urn:mpeg:mpeg7:schema:2004:TextAnnotationType urn:mpeg:mpeg7:schema:2004:MovingRegionType</Representation>
+					<Representation>urn:mpeg:mpeg7:schema:2004:TextAnnotationType</Representation>
+					<Representation>urn:mpeg:mpeg7:schema:2004:MovingRegionType</Representation>
 					<Comment>The output must contain the detected text, and may contain regions</Comment>
 				</Output>
 			</Outputs>
