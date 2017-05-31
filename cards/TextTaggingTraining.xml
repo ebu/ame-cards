@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 rel. 3 (x64) (http://www.altova.com) by Lauri Saarikoski (Yle - The Finnish Broadcasting Company) -->
+<!-- Input audio fragment not needed as input? -->
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>T008</CardID>
+		<Name>Text tagging training</Name>
+		<Type>Text</Type>
+		<Status>draft</Status>
+		<Editor>Lauri</Editor>
+		<Definition>Training module for a text tagging system</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>InputTextFragment</Name>
+					<Type>text</Type>
+				</Input>
+				<Input>
+					<Name>ClassificationData</Name>
+					<Type>xml</Type>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>WasTrainingSuccess</Name>
+					<Type>text</Type>
+					<Representation/>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:cvds</Values>
+				<Type>supported text formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>

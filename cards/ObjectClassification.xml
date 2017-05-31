@@ -35,7 +35,7 @@
 			</Inputs>
 			<Outputs>
 				<Output mandatory="true">
-					<Name>DetectedRegion</Name>
+					<Name>DetectedRegions</Name>
 					<Type>xml</Type>
 					<Representation>urn:mpeg:mpeg7:part5:MovingRegionType</Representation>
 					<Definition>Per object class, a list of time indexed regions</Definition>

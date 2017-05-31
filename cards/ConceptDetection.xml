@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 rel. 3 (x64) (http://www.altova.com) by Lauri Saarikoski (Yle - The Finnish Broadcasting Company) -->
+<!-- Should be renamed to Visual concept detection?-->
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>V020</CardID>
+		<Name>Concept detection</Name>
+		<Type>Video</Type>
+		<Status>draft</Status>
+		<Editor>Lauri</Editor>
+		<Definition>Determine if a video segment represents a specified/one from a list of specified concept class(es). A concept is visually represented by the content, but not a particular object. Examples are day/night, indoor/outdoor, rural, ... Also includes basic actions such as person walking, person greeting other person.</Definition>
+		<Parameters>
+			<Inputs>
+				<Input mandatory="true">
+					<Name>ClassesToDetect</Name>
+					<Type>xml</Type>
+					<Representation/>
+				</Input>
+				<Input>
+					<Name>ConceptModelToUse</Name>
+					<Type>URL</Type>
+					<Definition>If applicable, visual model to use for detection.</Definition>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output mandatory="true">
+					<Name>DetectedConcepts</Name>
+					<Type>text</Type>
+					<Comment>Per concept class, a list of time segments</Comment>
+				</Output>
+				<Output>
+					<Name>Confidence</Name>
+					<Type>float</Type>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:cvds</Values>
+				<Type>supported video formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sdhfsdjkfh</Values>
+				<Type>supported image formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
