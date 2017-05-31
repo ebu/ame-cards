@@ -1,32 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2017 rel. 3 (x64) (http://www.altova.com) by Lauri Saarikoski (Yle - The Finnish Broadcasting Company) -->
-<!-- Language dependant? -->
 <!-- Input audio fragment not needed as input? -->
 <FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
 	<AMECard>
-		<CardID>A004</CardID>
-		<Name>Speaker recognition training</Name>
+		<CardID>A014</CardID>
+		<Name>Music genre classification training</Name>
 		<Type>Audio</Type>
 		<Status>draft</Status>
 		<Editor>Lauri</Editor>
-		<Definition>Train models for a speaker recognition system</Definition>
+		<Definition>Training service for an music genre classification system</Definition>
 		<Parameters>
 			<Inputs>
-				<Input mandatory="true">
+				<Input>
 					<Name>InputAudioFragment</Name>
 					<Type>URL</Type>
 				</Input>
 				<Input>
-					<Name>SpeakerModelReference</Name>
-					<Type>URL</Type>
+					<Name>ClassificationData</Name>
+					<Type>xml</Type>
 				</Input>
 			</Inputs>
 			<Outputs>
 				<Output>
-					<Name>TrainedSpeakerModelReference</Name>
-					<Type>URL</Type>
-				</Output>
-				<Output mandatory="true">
 					<Name>WasTrainingSuccess</Name>
 					<Type>text</Type>
 					<Representation/>
