@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>T006</CardID>
+		<Name>Language identification</Name>
+		<Type>Text</Type>
+		<Status>draft</Status>
+		<Editor>Werner</Editor>
+		<Definition>The recognition of the language of a text</Definition>
+		<Parameters>
+			<Inputs>
+				<!-- no input params, assuming the text is provided as a resource to the FIMS service		
+				-->
+			</Inputs>
+			<Outputs>
+				<Output mandatory="true">
+					<Name>TextSegments</Name>
+					<Type>xml</Type>
+					<Representation>urn:tbd</Representation>
+					<Definition>A list segments with start and end time, together with a language identifier according to ISO 639-1, -2 or -3, and an optional confidence score.</Definition>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="Text Types">
+			<Capability>
+				<Values>urn:oiweuowieru</Values>
+				<Type>supported languages</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sfsdjkh</Values>
+				<Type>supported scripts</Type>
+			</Capability>
+		</CapabilityGroup>
+		
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:cvds</Values>
+				<Type>supported text formats</Type>
+			</Capability>
+		</CapabilityGroup>
+		
+	</AMECard>
+</FIMSAMECards>
