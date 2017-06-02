@@ -120,6 +120,8 @@
             <xs:enumeration value="float"/>
 
             <xs:enumeration value="integer"/>
+            
+            <xs:enumeration value="boolean"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
