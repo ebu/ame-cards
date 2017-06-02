@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <AMECard>
+    <CardID>A013</CardID>
+
+    <Name>Audio Content Recognition</Name>
+
+    <Type>Audio</Type>
+
+    <Status>draft</Status>
+
+    <Editor>Werner</Editor>
+
+    <Definition>Matching an audio segment with a reference database.</Definition>
+
+    <Parameters>
+      <Inputs>
+        <Input>
+          <Name>DBIdentifier</Name>
+          <Type>URL</Type>
+          <Definition>One or more identifier(s) of the database(s) which holds the descriptors/fingerprints to match against.</Definition>
+          <Comment>An implementation may use a default database, if no parameter is specified.</Comment>
+        </Input>
+        <Input>
+          <Name>MinDuration</Name>
+          <Type>float</Type>
+          <Unit>seconds</Unit>
+          <Definition>The minimum duration of a segment to be matched</Definition>
+          <DefaultValue>5 sec</DefaultValue>
+        </Input>
+      </Inputs>
+
+      <Outputs>
+        <Output mandatory="true">
+          <Name>MatchingResults</Name>
+          <Type>xml</Type>
+          <Representation>urn:mpeg:mpeg7:part5:SegmentType urn:mpeg:mpeg7:part5:RelationType</Representation>
+          <Definition>Recognised segments, with an identifier of the database entry that matched, and optionally a score (strength) for the match.</Definition>
+        </Output>
+      </Outputs>
+    </Parameters>
+
+    <CapabilityGroup name="input formats">
+      <Capability>
+        <Values>urn:xyz</Values>
+
+        <Type>supported audio formats</Type>
+      </Capability>
+    </CapabilityGroup>
+  </AMECard>
+</FIMSAMECards>

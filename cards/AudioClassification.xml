@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <AMECard>
+    <CardID>A008</CardID>
+
+    <Name>Audio Classification</Name>
+
+    <Type>Audio</Type>
+
+    <Status>draft</Status>
+
+    <Editor>Werner</Editor>
+
+    <Definition>Determine if an audio segment represents a specified/one from a list of specified concept class(es).</Definition>
+
+    <Parameters>
+      <Inputs>
+        <Input mandatory="true">
+          <Name>ClassesToDetect</Name>
+          <Type>controlled vocabulary</Type>
+          <Representation>List of identifiers of classes to be detected</Representation>
+        </Input>
+        <Input>
+          <Name>ObjectModelToUse</Name>
+          <Type>URL</Type>
+          <Definition>If applicable, audio model to use for detection.</Definition>
+        </Input>
+      </Inputs>
+
+      <Outputs>
+        <Output mandatory="true">
+          <Name>Classification</Name>
+          <Type>xml</Type>
+          <Representation>urn:mpeg:mpeg7:part5:SegmentType urn:mpeg:mpeg7:part5:StructuredAnnotationType</Representation>
+          <Definition>Per object class, a list of time indexed regions</Definition>
+        </Output>
+        <Output>
+          <Name>Confidence</Name>
+          <Type>float</Type>
+          <Definition>Confidence of the result (per detected instance)</Definition>
+        </Output>
+      </Outputs>
+    </Parameters>
+
+    <CapabilityGroup name="input formats">
+      <Capability>
+        <Values>urn:xyz</Values>
+
+        <Type>supported audio formats</Type>
+      </Capability>
+    </CapabilityGroup>
+  </AMECard>
+</FIMSAMECards>
