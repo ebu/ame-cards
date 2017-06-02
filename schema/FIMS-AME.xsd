@@ -209,6 +209,11 @@
       <xs:enumeration value="supported modalities"/>
 
       <xs:enumeration value="supported descriptor sizes"/>
+
+      <xs:enumeration value="activity adaptivity supported"/>
+      
+      <xs:enumeration value="extracting images supported"/>
+      
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>V003</CardID>
+		<Name>Key Frame Extraction</Name>
+		<Type>Video</Type>
+		<Status>draft</Status>
+		<Editor>Werner</Editor>
+		<Definition>Selection of a subset of frames to represent a video segment.</Definition>
+		<Parameters>
+			
+			
+			<Inputs>
+				<Input>
+					<Name>FixedTemporalFrequency</Name>
+					<Type>float</Type>
+					<Definition>Number of key frames to be extracted per second.</Definition>
+					<Comment>If the adaptivity parameter is used, the value may be ignored.</Comment>
+					<DefaultValue>1</DefaultValue>
+				</Input>
+				<Input>
+					<Name>Adaptivity</Name>
+					<Type>float</Type>
+					<Definition>A value expressing adaptivity of the extraction to the visual activity in the content. 
+						Higher values shall produce more key frames.
+						A value of 0 shall force a fixed key frame rate.
+					</Definition>
+					<DefaultValue>0</DefaultValue>
+				</Input>
+				<Input>
+					<Name>ShotAdaptive</Name>
+					<Type>boolean</Type>
+					<Definition>Take detected shot boundaries into account (i.e., restart detection after boundaries, ensure at least one key frame per shot)</Definition>
+					<DefaultValue>false</DefaultValue>
+				</Input>
+				<Input>
+					<Name>StoreImages</Name>
+					<Type>boolean</Type>
+					<Definition>If true, images of the extracted key frames will be stored.</Definition>
+					<DefaultValue>false</DefaultValue>
+				</Input>
+				<Input>
+					<Name>ImagePath</Name>
+					<Type>URL</Type>
+					<Definition>Path for storing the extracted key frame images. Ignored of StoreImages is set to false.</Definition>
+					<DefaultValue>(implementation dependent)</DefaultValue>
+				</Input>
+				<Input>
+					<Name>ImageHeight</Name>
+					<Type>integer</Type>
+					<Definition>Height of extracted images in pixels. 0 denotes original size. Ignored of StoreImages is set to false.</Definition>
+					<DefaultValue>0</DefaultValue>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output mandatory="true">
+					<Name>Transcript</Name>
+					<Type>xml</Type>
+					<Representation>urn:mpeg:mpeg7:schema:2004:SegmentType</Representation>
+					<Representation>urn:mpeg:mpeg7:schema:2004:MediaLocatorType</Representation>
+					<Comment>The output must contain the time points of detected key frames, and may contain the locators of the extracted images.</Comment>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="keyframe extraction">
+			<Capability>
+				<Values>urn:oiweuowieru</Values>
+				<Type>activity adaptivity supported</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sfsdjkh</Values>
+				<Type>extracting images supported</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:cvds</Values>
+				<Type>supported video formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
