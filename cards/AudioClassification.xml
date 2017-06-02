@@ -23,7 +23,7 @@
           <Representation>List of identifiers of classes to be detected</Representation>
         </Input>
         <Input>
-          <Name>ObjectModelToUse</Name>
+          <Name>ModelToUse</Name>
           <Type>URL</Type>
           <Definition>If applicable, audio model to use for detection.</Definition>
         </Input>

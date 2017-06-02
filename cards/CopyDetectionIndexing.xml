@@ -2,7 +2,7 @@
 <!-- edited with XMLSpy v2017 sp2 (x64) (http://www.altova.com) by Alberto Messina (RAI - Radiotelevisione Italiana) -->
 <FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
 	<AMECard>
-		<CardID>V002</CardID>
+		<CardID>V013</CardID>
 		<Name>Copy Detection (Indexing)</Name>
 		<Type>Video</Type>
 		<Status>draft</Status>
