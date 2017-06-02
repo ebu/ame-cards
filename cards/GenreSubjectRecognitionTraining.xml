@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 rel. 3 (x64) (http://www.altova.com) by Lauri Saarikoski (Yle - The Finnish Broadcasting Company) -->
+<!-- Input audio fragment not needed as input? -->
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>M006</CardID>
+		<Name>Genre/Subject Recognition (Training)</Name>
+		<Type>Multimodal</Type>
+		<Status>draft</Status>
+		<Editor>Werner</Editor>
+		<Definition>Training module for a genre/subject classification service</Definition>
+		<Parameters>
+			<Inputs>
+				<Input mandatory="true">
+					<Name>Annotations</Name>
+					<Type>URL</Type>
+					<Definition>Reference to the annotations for the provided content set.</Definition>
+				</Input>
+				<Input>
+					<Name>SpeakerModelReference</Name>
+					<Type>URL</Type>
+					<Definition>The model to be trained</Definition>
+					<DefaultValue>(implementation specific)</DefaultValue>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>TrainedModelReference</Name>
+					<Type>URL</Type>
+				</Output>
+				<Output>
+					<Name>WasTrainingSuccess</Name>
+					<Type>text</Type>
+					<Representation/>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:werwef</Values>
+				<Type>supported audio codec</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:werwef</Values>
+				<Type>supported video codec</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sdhfsdjkfh</Values>
+				<Type>supported audio formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sdhfsdjkfh</Values>
+				<Type>supported image formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
