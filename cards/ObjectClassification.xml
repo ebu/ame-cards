@@ -23,7 +23,7 @@
 					<Unit>pixels</Unit>
 				</Input>
 				<Input>
-					<Name>ObjectModelToUse</Name>
+						<Name>ObjectModelToUse</Name>
 					<Type>URL</Type>
 					<Definition>If applicable, visual model to use for detection.</Definition>
 				</Input>
