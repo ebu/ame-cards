@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>A0011</CardID>
+		<Name>speaker adaptation of ASR</Name>
+		<Type>Audio</Type>
+		<Status>draft</Status>
+		<Editor>Alberto</Editor>
+		<Definition>Training an ASR engine on a particular speaker</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>InputAudioFragments</Name>
+					<Type>URL</Type>
+				</Input>
+				<Input>
+					<Name>FragmentsTranscription</Name>
+					<Type>xml</Type>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>WasTrainingSuccess</Name>
+					<Type>text</Type>
+					<Representation/>
+				</Output>
+				<Output>
+					<Name>AdaptedModelReference</Name>
+					<Type>URL</Type>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:sfsklsdfs</Values>
+				<Type>supported audio codec</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sdhfsdjkfh</Values>
+				<Type>supported audio formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
