@@ -2,7 +2,7 @@
 <FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
 	<AMECard>
 		<CardID>T006</CardID>
-		<Name>Language identification</Name>
+		<Name>Language identification (Text)</Name>
 		<Type>Text</Type>
 		<Status>draft</Status>
 		<Editor>Werner</Editor>
