@@ -71,7 +71,7 @@
             <xs:element name="Inputs">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:element minOccurs="0" maxOccurs="unbounded" name="Input"
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="Input"
                               type="inputParameterType"/>
                 </xs:sequence>
               </xs:complexType>
@@ -120,7 +120,7 @@
             <xs:enumeration value="float"/>
 
             <xs:enumeration value="integer"/>
-            
+
             <xs:enumeration value="boolean"/>
           </xs:restriction>
         </xs:simpleType>
@@ -130,19 +130,21 @@
                   type="xs:anyURI"/>
 
       <xs:element minOccurs="0" name="Unit"/>
-      
-      <xs:element name="Definition" type="xs:string" minOccurs="0"/>
+
+      <xs:element minOccurs="0" name="Definition" type="xs:string"/>
 
       <xs:element minOccurs="0" name="Comment"/>
     </xs:sequence>
-    <xs:attribute name="mandatory" type="xs:boolean" default="false" />
+
+    <xs:attribute default="false" name="mandatory" type="xs:boolean"/>
   </xs:complexType>
 
   <xs:complexType name="inputParameterType">
     <xs:complexContent>
       <xs:extension base="parameterType">
         <xs:sequence>
-          <xs:element name="DefaultValue" type="xs:string" minOccurs="0" maxOccurs="1" />
+          <xs:element maxOccurs="1" minOccurs="0" name="DefaultValue"
+                      type="xs:string"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -211,9 +213,10 @@
       <xs:enumeration value="supported descriptor sizes"/>
 
       <xs:enumeration value="activity adaptivity supported"/>
-      
+
       <xs:enumeration value="extracting images supported"/>
-      
+
+      <xs:enumeration value="supported music genres"/>
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>

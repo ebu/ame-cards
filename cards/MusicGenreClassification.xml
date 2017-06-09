@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 sp2 (x64) (http://www.altova.com) by Alberto Messina (RAI - Radiotelevisione Italiana) -->
+<FIMSAMECards xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <AMECard>
+    <CardID>13</CardID>
+
+    <Name>Music Genre Classification</Name>
+
+    <Type>Audio</Type>
+
+    <Status>draft</Status>
+
+    <Editor>Mike</Editor>
+
+    <Definition>Identifying the genre of a particular piece of music</Definition>
+
+    <Parameters>
+      <Inputs>
+        <Input>
+          <Name>GenresModel</Name>
+
+          <Type>controlled vocabulary</Type>
+        </Input>
+      </Inputs>
+
+      <Outputs>
+        <Output>
+          <Name>ListofGenres</Name>
+
+          <Type>xml</Type>
+
+          <Representation>urn:mpeg:mpeg7:part5:TextAnnotationType</Representation>
+        </Output>
+      </Outputs>
+    </Parameters>
+
+    <CapabilityGroup name="ASR types">
+      <Capability>
+        <Values>urn:oiweuowieru</Values>
+
+        <Type>supported music genres</Type>
+      </Capability>
+    </CapabilityGroup>
+
+    <CapabilityGroup name="input formats">
+      <Capability>
+        <Values>urn:cvds</Values>
+
+        <Type>supported audio codec</Type>
+      </Capability>
+
+      <Capability>
+        <Values>urn:sdhfsdjkfh</Values>
+
+        <Type>supported audio formats</Type>
+      </Capability>
+    </CapabilityGroup>
+  </AMECard>
+</FIMSAMECards>
