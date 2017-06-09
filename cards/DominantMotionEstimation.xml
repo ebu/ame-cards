@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <AMECard>
+    <CardID>V004</CardID>
+
+    <Name>Dominant Camera Motion Estimation</Name>
+
+    <Type>Video</Type>
+
+    <Status>draft</Status>
+
+    <Editor>Mike</Editor>
+
+    <Definition>Estimation of the dominant global motion in the video, typically the caused by camera motion and/or zoom (including virtual cameras).</Definition>
+
+    <Parameters>
+      <Inputs>
+        <Input>
+          <Name>MotionTypes</Name>
+
+          <Type>xml</Type>
+
+          <Representation>urn:xjksjiweuf</Representation>
+
+          <Definition>The motion types that should be reported</Definition>
+        </Input>
+
+        <Input>
+          <Name>MinimumMotion</Name>
+
+          <Type>xml</Type>
+
+          <Representation>urn:jdksfajsdlf; </Representation>
+
+          <Definition>The minimum motion size (per type) to be reported</Definition>
+        </Input>
+      </Inputs>
+
+      <Outputs>
+        <Output mandatory="true">
+          <Name>DominantMotions</Name>
+
+          <Type>xml</Type>
+
+          <Representation>urn:jdksfjwie</Representation>
+
+          <Comment>Dominant set of motions and their amounts per
+          segment</Comment>
+        </Output>
+      </Outputs>
+    </Parameters>
+
+    <CapabilityGroup name="dominant motion estimation">
+      <Capability>
+        <Values>urn:oiweuowieru</Values>
+
+        <Type>supported motion types</Type>
+      </Capability>
+    </CapabilityGroup>
+
+    <CapabilityGroup name="input formats">
+      <Capability>
+        <Values>urn:cvds</Values>
+
+        <Type>supported video formats</Type>
+      </Capability>
+    </CapabilityGroup>
+  </AMECard>
+</FIMSAMECards>

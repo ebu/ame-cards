@@ -217,6 +217,8 @@
       <xs:enumeration value="extracting images supported"/>
 
       <xs:enumeration value="supported music genres"/>
+
+      <xs:enumeration value="supported motion types"/>
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>
