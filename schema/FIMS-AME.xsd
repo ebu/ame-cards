@@ -189,6 +189,8 @@
       <xs:enumeration value="supported speech types"/>
 
       <xs:enumeration value="supported video formats"/>
+	  
+      <xs:enumeration value="supported video codec"/>
 
       <xs:enumeration value="supported image formats"/>
 
