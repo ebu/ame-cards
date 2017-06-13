@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Git4win/ame-cards/schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>A010</CardID>
+		<Name>Radio Content Segmentation</Name>
+		<Type>Audio</Type>
+		<Status>draft</Status>
+		<Editor>Masa</Editor>
+		<Definition>Segment a radio stream into individual conent items (e.g. speech, mucic, jingles)</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>AudioContent</Name>
+					<Type>URL</Type>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>Segments</Name>
+					<Type>xml</Type>
+				</Output>
+				<Output>
+					<Name>AudioContentType</Name>
+					<Type>controlled vocabulary</Type>
+					<Representation>http://www.hogehoge.org/AudioContentType.xml</Representation>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported audio codec</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported audio formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported languages</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>

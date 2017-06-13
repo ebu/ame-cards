@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Git4win/ame-cards/schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>T004</CardID>
+		<Name>Named Entity Recognition</Name>
+		<Type>Text</Type>
+		<Status>draft</Status>
+		<Editor>Masa</Editor>
+		<Definition>Recognize names of persons, locations, organisations, events, currencies, dates etc.</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>InputSentence</Name>
+					<Type>text</Type>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>RecognizedEntity</Name>
+					<Type>text</Type>
+				</Output>
+				<Output>
+					<Name>RecognizedEntityType</Name>
+					<Type>controlled vocabulary</Type>
+				</Output>
+				<Output>
+					<Name>Confidence</Name>
+					<Type>float</Type>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported languages</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>

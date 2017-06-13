@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Git4win/ame-cards/schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>V001</CardID>
+		<Name>Low-level visual descriptor extraction</Name>
+		<Type>Video</Type>
+		<Status>draft</Status>
+		<Editor>Masa</Editor>
+		<Definition>Extract desriptors representing visual features of single frames or a group of frames (e.g. MPEG-7 dominant color, accent color, amount of motion color layout etc.)</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>DetectedDescriptor</Name>
+					<Type>controlled vocabulary</Type>
+				</Input>
+				<Input>
+					<Name>TemporalFrequency</Name>
+					<Type>controlled vocabulary</Type>
+				</Input>
+				<Input>
+					<Name>Resolution</Name>
+					<Type>controlled vocabulary</Type>
+				</Input>
+				<Input>
+					<Name>Others</Name>
+					<Type>xml</Type>
+					<Comment>parameters depend on the descriptor to be extracted, in this case how far should we mention? Is there any good descriptive solutions for this problem? </Comment>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>Descriptor</Name>
+					<Type>xml</Type>
+				</Output>
+				<Output>
+					<Name>DescriptorFile</Name>
+					<Type>URL</Type>
+				</Output>
+				<Output>
+					<Name>Others</Name>
+					<Type>xml</Type>
+					<Comment>Detected descriptor tends to have its own structual data such a timepoint, timedutaion, region of interest.... How can we handle this?</Comment>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported video formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>result type</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>

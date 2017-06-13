@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Git4win/ame-cards/schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>V006</CardID>
+		<Name>Object Classification Training</Name>
+		<Type>Video</Type>
+		<Status>draft</Status>
+		<Editor>Masa</Editor>
+		<Definition>Train module for an object classification</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>InputImage</Name>
+					<Type>URL</Type>
+				</Input>
+				<Input>
+					<Name>ClassificationData</Name>
+					<Type>xml</Type>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>WasTrainingSuccess</Name>
+					<Type>text</Type>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported image formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>

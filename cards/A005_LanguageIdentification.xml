@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Git4win/ame-cards/schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>A005</CardID>
+		<Name>Language Identification</Name>
+		<Type>Audio</Type>
+		<Status>draft</Status>
+		<Editor>Masa</Editor>
+		<Definition>Identify spoken language(s) in audio fragments</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>InputAudioFragment</Name>
+					<Type>URL</Type>
+				</Input>
+				<Input>
+					<Name>AutioFormat</Name>
+					<Type>controlled vocabulary</Type>
+					<Representation>http://www.hogehoge.org/AudioFormatType.xml</Representation>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>IdentifiedLanguage</Name>
+					<Type>controlled vocabulary</Type>
+					<Representation>http://www.hogehoge.org/LanguageType.xml</Representation>
+				</Output>
+				<Output>
+					<Name>Confidence</Name>
+					<Type>float</Type>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported languages</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported audio formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported audio codec</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>

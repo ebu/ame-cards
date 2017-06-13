@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Git4win/ame-cards/schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>V021</CardID>
+		<Name>Video Summarisation</Name>
+		<Type>Video</Type>
+		<Status>draft</Status>
+		<Editor>Masa</Editor>
+		<Definition>Produce an abstract of the input video as a set of key frames or a shoter video clips</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>InputVideo</Name>
+					<Type>URL</Type>
+				</Input>
+				<Input>
+					<Name>TargetMinimumLength</Name>
+					<Type>integer</Type>
+					<Unit>second</Unit>
+				</Input>
+				<Input>
+					<Name>TargetMaximumLength</Name>
+					<Type>integer</Type>
+					<Unit>second</Unit>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>KeyFrames</Name>
+					<Type>xml</Type>
+					<Comment>a set of key frame time points, possibly organised in a hierarchy from coarse to fine</Comment>
+				</Output>
+				<Output>
+					<Name>SummaryVideo</Name>
+					<Type>xml</Type>
+					<Comment>an EDL of segments to be incoulded in a summary</Comment>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported genres</Type>
+			</Capability>
+			<Capability>
+				<Values>run:hogehoge</Values>
+				<Type>supported video formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>result type</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>

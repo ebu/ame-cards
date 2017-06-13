@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Git4win/ame-cards/schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>M004</CardID>
+		<Name>Mood/Affective Classification Training</Name>
+		<Type>Multimodal</Type>
+		<Status>draft</Status>
+		<Editor>Masa</Editor>
+		<Definition>Train module for a mood/affective classification service</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>InputFragmentData</Name>
+					<Type>URL</Type>
+				</Input>
+				<Input>
+					<Name>ClassificationData</Name>
+					<Type>xml</Type>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>WasTraninigSuccess</Name>
+					<Type>text</Type>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported modalities</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported languages</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported audio formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported video formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
