@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 sp2 (x64) (http://www.altova.com) by Alberto Messina (RAI - Radiotelevisione Italiana) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <xs:element name="FIMSAMECards">
+    <xs:annotation>
+      <xs:documentation>Comment describing your root
+      element</xs:documentation>
+    </xs:annotation>
+
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="AMECard" type="AMECardType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="AMECardType">
+    <xs:sequence>
+      <xs:element name="CardID" type="xs:anyURI"/>
+
+      <xs:element name="Name" type="xs:string"/>
+
+      <xs:element name="Type">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Audio"/>
+
+            <xs:enumeration value="Video"/>
+
+            <xs:enumeration value="Text"/>
+
+            <xs:enumeration value="Multimodal"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+
+      <xs:element name="Status">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="draft"/>
+
+            <xs:enumeration value="published"/>
+
+            <xs:enumeration value="publisheable"/>
+
+            <xs:enumeration value="finalreview"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+
+      <xs:element name="Editor" type="xs:string"/>
+
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Alias"/>
+
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Tag"/>
+
+      <xs:element name="Definition" type="xs:string"/>
+
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Reference"/>
+
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Example"/>
+
+      <xs:element minOccurs="0" name="Remarks"/>
+
+      <xs:element name="Parameters">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Inputs">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="Input"
+                              type="inputParameterType"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+
+            <xs:element name="Outputs">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="Output"
+                              type="outputParameterType"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element maxOccurs="unbounded" name="CapabilityGroup">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="Capability"
+                        type="capabilityType"/>
+          </xs:sequence>
+
+          <xs:attribute name="type" type="xs:anyURI"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType abstract="true" name="parameterType">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:NMTOKEN"/>
+
+      <xs:element name="Type">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="controlled vocabulary"/>
+
+            <xs:enumeration value="xml"/>
+
+            <xs:enumeration value="text"/>
+
+            <xs:enumeration value="URL"/>
+
+            <xs:enumeration value="float"/>
+
+            <xs:enumeration value="integer"/>
+
+            <xs:enumeration value="boolean"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Representation"
+                  type="xs:anyURI"/>
+
+      <xs:element minOccurs="0" name="Unit"/>
+
+      <xs:element minOccurs="0" name="Definition" type="xs:string"/>
+
+      <xs:element minOccurs="0" name="Comment"/>
+    </xs:sequence>
+
+    <xs:attribute default="false" name="mandatory" type="xs:boolean"/>
+  </xs:complexType>
+
+  <xs:complexType name="inputParameterType">
+    <xs:complexContent>
+      <xs:extension base="parameterType">
+        <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="0" name="DefaultValue"
+                      type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="outputParameterType">
+    <xs:complexContent>
+      <xs:extension base="parameterType"/>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="capabilityType">
+    <xs:sequence>
+      <xs:element name="Values" minOccurs="0">
+        <xs:simpleType>
+          <xs:union memberTypes="xs:anyURI xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+
+      <xs:element name="Type" xsi:type="xs:anyUri" />
+
+      <xs:element minOccurs="0" name="Unit"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
