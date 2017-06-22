@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>V018</CardID>
+		<Name>Scene Structure Classification Training</Name>
+		<Type>Video</Type>
+		<Status>draft</Status>
+		<Editor>Alberto</Editor>
+		<Definition>Training module for a scene structure classification service</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>InputVideoSamples</Name>
+					<Type>URL</Type>
+				</Input>
+				<Input>
+					<Name>ClassificationData</Name>
+					<Type>xml</Type>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>WasTrainingSuccess</Name>
+					<Type>text</Type>
+				</Output>
+				<Output>
+					<Name>DatabaseID</Name>
+					<Type>URL</Type>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported video formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:lkhfs</Values>
+				<Type>supported video codec</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
