@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>V022</CardID>
+		<Name>Shot Boundary Detection</Name>
+		<Type>Video</Type>
+		<Status>draft</Status>
+		<Editor>Alberto</Editor>
+		<Definition>Detection of cuts and transitions inserted during the editing process. The result is the set of shots (i.e., continuously recorded segments) that constitute the video segment.	</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>TypesOfTransitions</Name>
+					<Type>controlled vocabulary</Type>
+					<Representation/>
+					<Definition>List of transitions types to be detected</Definition>
+				</Input>
+				<Input>
+					<Name>Sensitivity</Name>
+					<Type>float</Type>
+					<Unit/>
+					<Definition>A 0 to 1 parameter specifying the (normalised) sensitivity</Definition>
+					<DefaultValue>0.5</DefaultValue>
+				</Input>
+				<Input>
+					<Name>MinimumShotLength</Name>
+					<Type>integer</Type>
+					<Unit>frames</Unit>
+					<Definition>The minimum shot length to be considered between two detected transitions</Definition>
+					<DefaultValue/>
+				</Input>
+				<Input>
+					<Name>MaximumShotLength</Name>
+					<Type>integer</Type>
+					<Unit>frames</Unit>
+					<Definition>The maximum shot length to be considered between two detected transitions. If a shot transition is forced by maximum shot length the corresponding transition type should be set do a distinct value (e.g., maxShotLen)</Definition>
+				</Input>
+				<Input>
+					<Name>MaximumGradualTranistiontLength</Name>
+					<Type>integer</Type>
+					<Unit>frames</Unit>
+					<Definition>The maximum shot length to be considered valid for a gradual transition</Definition>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output mandatory="true">
+					<Name>ShotBoundaryTimesAndClassification</Name>
+					<Type>xml</Type>
+					<Representation>urn:mpeg:mpeg7:schema:2004:TemporalDecomposition</Representation>
+					<Comment>For each shot included in the temporal decomposition of the analysed content a classification label shall be attached specifying the transition type corresponding to the shot start</Comment>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="tranistion detection">
+			<Capability>
+				<Values>urn:oiweuowieru</Values>
+				<Type>supported shot transition types</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:cvds</Values>
+				<Type>supported video formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sdhfsdjkfh</Values>
+				<Type>supported image formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
