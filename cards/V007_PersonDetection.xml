@@ -19,14 +19,14 @@
 					<Name>MinimumSize</Name>
 					<Type>integer</Type>
 					<Unit>pixels</Unit>
-					<Definition>The minimum size of faces to be detected in pixels.</Definition>
+					<Definition>The minimum size of parts to be detected in pixels.</Definition>
 					<DefaultValue>50</DefaultValue>
 				</Input>
 				<Input>
 					<Name>MaximumSize</Name>
 					<Type>integer</Type>
 					<Unit>pixels</Unit>
-					<Definition>The maximum size of faces to be detected in pixels.</Definition>
+					<Definition>The maximum size of parts to be detected in pixels.</Definition>
 					<DefaultValue>500</DefaultValue>
 				</Input>
 				<Input>
