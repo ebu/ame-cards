@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>V007</CardID>
+		<Name>Person Detection</Name>
+		<Type>Video</Type>
+		<Status>draft</Status>
+		<Editor>Alberto</Editor>
+		<Definition>Determine if there are one or more regions showing (part of) a human, and report their approximate boundaries.</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>StructuredRegionOfInterest</Name>
+					<Type>xml</Type>
+					<Representation>urn:mpeg:mpeg7:schema:2004:MovingRegionType</Representation>
+					<Definition>A region in which to perform the detection.</Definition>
+				</Input>
+				<Input>
+					<Name>MinimumSize</Name>
+					<Type>integer</Type>
+					<Unit>pixels</Unit>
+					<Definition>The minimum size of faces to be detected in pixels.</Definition>
+					<DefaultValue>50</DefaultValue>
+				</Input>
+				<Input>
+					<Name>MaximumSize</Name>
+					<Type>integer</Type>
+					<Unit>pixels</Unit>
+					<Definition>The maximum size of faces to be detected in pixels.</Definition>
+					<DefaultValue>500</DefaultValue>
+				</Input>
+				<Input>
+					<Name>ModelToUse</Name>
+					<Type>URL</Type>
+					<Definition>The model for detection to use, if applicable .</Definition>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output mandatory="true">
+					<Name>Detection</Name>
+					<Type>xml</Type>
+					<Representation>urn:mpeg:mpeg7:schema:2004:MovingRegionType</Representation>
+					<Comment>The output regions where person parts have been detected</Comment>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="person part detection">
+			<Capability>
+				<Values>urn:oiweuowieru</Values>
+				<Type>minimum object size</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:cvds</Values>
+				<Type>supported video formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sdhfsdjkfh</Values>
+				<Type>supported image formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
