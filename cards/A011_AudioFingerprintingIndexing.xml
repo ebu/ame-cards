@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
 	<AMECard>
-		<CardID>A016</CardID>
+		<CardID>A011</CardID>
 		<Name>Audio classification training</Name>
 		<Type>Audio</Type>
 		<Status>draft</Status>
