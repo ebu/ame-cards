@@ -1,226 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2017 sp2 (x64) (http://www.altova.com) by Alberto Messina (RAI - Radiotelevisione Italiana) -->
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
-  <xs:element name="FIMSAMECards">
-    <xs:annotation>
-      <xs:documentation>Comment describing your root
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="FIMSAMECards">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root
       element</xs:documentation>
-    </xs:annotation>
-
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element maxOccurs="unbounded" name="AMECard" type="AMECardType"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-
-  <xs:complexType name="AMECardType">
-    <xs:sequence>
-      <xs:element name="CardID" type="xs:anyURI"/>
-
-      <xs:element name="Name" type="xs:string"/>
-
-      <xs:element name="Type">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="Audio"/>
-
-            <xs:enumeration value="Video"/>
-
-            <xs:enumeration value="Text"/>
-
-            <xs:enumeration value="Multimodal"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
-
-      <xs:element name="Status">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="draft"/>
-
-            <xs:enumeration value="published"/>
-
-            <xs:enumeration value="publisheable"/>
-
-            <xs:enumeration value="finalreview"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
-
-      <xs:element name="Editor" type="xs:string"/>
-
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="Alias"/>
-
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="Tag"/>
-
-      <xs:element name="Definition" type="xs:string"/>
-
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="Reference"/>
-
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="Example"/>
-
-      <xs:element minOccurs="0" name="Remarks"/>
-
-      <xs:element name="Parameters">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element name="Inputs">
-              <xs:complexType>
-                <xs:sequence>
-                  <xs:element maxOccurs="unbounded" minOccurs="0" name="Input"
-                              type="inputParameterType"/>
-                </xs:sequence>
-              </xs:complexType>
-            </xs:element>
-
-            <xs:element name="Outputs">
-              <xs:complexType>
-                <xs:sequence>
-                  <xs:element maxOccurs="unbounded" name="Output"
-                              type="outputParameterType"/>
-                </xs:sequence>
-              </xs:complexType>
-            </xs:element>
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-
-      <xs:element maxOccurs="unbounded" name="CapabilityGroup">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element maxOccurs="unbounded" name="Capability"
-                        type="capabilityType"/>
-          </xs:sequence>
-
-          <xs:attribute name="name" type="xs:string"/>
-        </xs:complexType>
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType abstract="true" name="parameterType">
-    <xs:sequence>
-      <xs:element name="Name" type="xs:NMTOKEN"/>
-
-      <xs:element name="Type">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="controlled vocabulary"/>
-
-            <xs:enumeration value="xml"/>
-
-            <xs:enumeration value="text"/>
-
-            <xs:enumeration value="URL"/>
-
-            <xs:enumeration value="float"/>
-
-            <xs:enumeration value="integer"/>
-
-            <xs:enumeration value="boolean"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
-
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="Representation"
-                  type="xs:anyURI"/>
-
-      <xs:element minOccurs="0" name="Unit"/>
-
-      <xs:element minOccurs="0" name="Definition" type="xs:string"/>
-
-      <xs:element minOccurs="0" name="Comment"/>
-    </xs:sequence>
-
-    <xs:attribute default="false" name="mandatory" type="xs:boolean"/>
-  </xs:complexType>
-
-  <xs:complexType name="inputParameterType">
-    <xs:complexContent>
-      <xs:extension base="parameterType">
-        <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="DefaultValue"
-                      type="xs:string"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-
-  <xs:complexType name="outputParameterType">
-    <xs:complexContent>
-      <xs:extension base="parameterType"/>
-    </xs:complexContent>
-  </xs:complexType>
-
-  <xs:complexType name="capabilityType">
-    <xs:sequence>
-      <xs:element name="Values">
-        <xs:simpleType>
-          <xs:union memberTypes="xs:anyURI xs:string"/>
-        </xs:simpleType>
-      </xs:element>
-
-      <xs:element name="Type">
-        <xs:simpleType>
-          <xs:restriction base="capabilityElement"/>
-        </xs:simpleType>
-      </xs:element>
-
-      <xs:element minOccurs="0" name="Unit"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:simpleType name="capabilityElement">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="supported audio formats"/>
-
-      <xs:enumeration value="supported audio codec"/>
-
-      <xs:enumeration value="result type"/>
-
-      <xs:enumeration value="supported languages"/>
-
-      <xs:enumeration value="supported recording conditions"/>
-
-      <xs:enumeration value="supported speech types"/>
-
-      <xs:enumeration value="supported video formats"/>
-	  
-      <xs:enumeration value="supported video codec"/>
-
-      <xs:enumeration value="supported image formats"/>
-
-      <xs:enumeration value="supported text formats"/>
-
-      <xs:enumeration value="supported scripts"/>
-
-      <xs:enumeration value="supported object classes"/>
-
-      <xs:enumeration value="supported speaker classes"/>
-
-      <xs:enumeration value="recognisable text types"/>
-
-      <xs:enumeration value="minimum text size"/>
-
-      <xs:enumeration value="minimum object size"/>
-
-      <xs:enumeration value="supported genres"/>
-
-      <xs:enumeration value="supported modalities"/>
-
-      <xs:enumeration value="supported descriptor sizes"/>
-
-      <xs:enumeration value="activity adaptivity supported"/>
-
-      <xs:enumeration value="extracting images supported"/>
-
-      <xs:enumeration value="supported music genres"/>
-
-      <xs:enumeration value="supported motion types"/>
-    </xs:restriction>
-  </xs:simpleType>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="AMECard" type="AMECardType" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="AMECardType">
+		<xs:sequence>
+			<xs:element name="CardID" type="xs:anyURI"/>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Type">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Audio"/>
+						<xs:enumeration value="Video"/>
+						<xs:enumeration value="Text"/>
+						<xs:enumeration value="Multimodal"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Status">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="draft"/>
+						<xs:enumeration value="published"/>
+						<xs:enumeration value="publisheable"/>
+						<xs:enumeration value="finalreview"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Editor" type="xs:string"/>
+			<xs:element name="Alias" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Tag" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Definition" type="xs:string"/>
+			<xs:element name="Reference" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Example" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Remarks" minOccurs="0"/>
+			<xs:element name="Parameters">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Inputs">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Input" type="inputParameterType" minOccurs="0" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Outputs">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Output" type="outputParameterType" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CapabilityGroup" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Capability" type="capabilityType" maxOccurs="unbounded"/>
+					</xs:sequence>
+					<xs:attribute name="name" type="xs:string"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="parameterType" abstract="true">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:NMTOKEN"/>
+			<xs:element name="Type">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="controlled vocabulary"/>
+						<xs:enumeration value="xml"/>
+						<xs:enumeration value="text"/>
+						<xs:enumeration value="URL"/>
+						<xs:enumeration value="float"/>
+						<xs:enumeration value="integer"/>
+						<xs:enumeration value="boolean"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Representation" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Unit" minOccurs="0"/>
+			<xs:element name="Definition" type="xs:string" minOccurs="0"/>
+			<xs:element name="Comment" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="mandatory" type="xs:boolean" default="false"/>
+	</xs:complexType>
+	<xs:complexType name="inputParameterType">
+		<xs:complexContent>
+			<xs:extension base="parameterType">
+				<xs:sequence>
+					<xs:element name="DefaultValue" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="outputParameterType">
+		<xs:complexContent>
+			<xs:extension base="parameterType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="capabilityType">
+		<xs:sequence>
+			<xs:element name="Values">
+				<xs:simpleType>
+					<xs:union memberTypes="xs:anyURI xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Type">
+				<xs:simpleType>
+					<xs:restriction base="capabilityElement"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Unit" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="capabilityElement">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="supported audio formats"/>
+			<xs:enumeration value="supported audio codec"/>
+			<xs:enumeration value="result type"/>
+			<xs:enumeration value="supported languages"/>
+			<xs:enumeration value="supported recording conditions"/>
+			<xs:enumeration value="supported speech types"/>
+			<xs:enumeration value="supported video formats"/>
+			<xs:enumeration value="supported video codec"/>
+			<xs:enumeration value="supported image formats"/>
+			<xs:enumeration value="supported text formats"/>
+			<xs:enumeration value="supported scripts"/>
+			<xs:enumeration value="supported object classes"/>
+			<xs:enumeration value="supported speaker classes"/>
+			<xs:enumeration value="recognisable text types"/>
+			<xs:enumeration value="minimum text size"/>
+			<xs:enumeration value="minimum object size"/>
+			<xs:enumeration value="supported genres"/>
+			<xs:enumeration value="supported modalities"/>
+			<xs:enumeration value="supported descriptor sizes"/>
+			<xs:enumeration value="activity adaptivity supported"/>
+			<xs:enumeration value="extracting images supported"/>
+			<xs:enumeration value="supported music genres"/>
+			<xs:enumeration value="supported motion types"/>
+			<xs:enumeration value="supported shot transition types"/>
+		</xs:restriction>
+	</xs:simpleType>
 </xs:schema>
