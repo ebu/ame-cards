@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 sp2 (x64) (http://www.altova.com) by Alberto Messina (RAI - Radiotelevisione Italiana) -->
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>V012</CardID>
+		<Name>Copy Detection (Matching)</Name>
+		<Type>Video</Type>
+		<Status>draft</Status>
+		<Editor>Alberto</Editor>
+		<Definition>Determine if a video segment is (near) identical to one of the video segments in a specified database. Common edit operations like colour adjustment, frame rate change or title overlay do not change the identity.</Definition>
+		<Parameters>
+			<Inputs>
+				<Input mandatory="true">
+					<Name>VideoFragment</Name>
+					<Type>URL</Type>
+					<Definition>The video clip (or possibly a part) to be checked for copy detection</Definition>
+				</Input>
+				<Input mandatory="true">
+					<Name>MinimumMatchingDuration</Name>
+					<Type>integer</Type>
+					<Unit>frames</Unit>
+					<Definition>The minimum matching duration to be considered a valid match</Definition>
+				</Input>
+				<Input mandatory="true">
+					<Name>DBIdentifier</Name>
+					<Type>URL</Type>
+					<Unit/>
+					<Definition>The reference to the index database</Definition>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output mandatory="true">
+					<Name>MatchingReport</Name>
+					<Type>xml</Type>
+					<Definition>A structure containing pointers from parts of the input video to (parts of) indexed clips</Definition>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:cvds</Values>
+				<Type>supported video formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sdhfsdjkfh</Values>
+				<Type>supported image formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
