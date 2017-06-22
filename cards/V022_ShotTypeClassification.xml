@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>V022</CardID>
+		<Name>Shot type classification</Name>
+		<Type>Video</Type>
+		<Status>draft</Status>
+		<Editor>Alberto</Editor>
+		<Definition>Classification of the shot types (close shot, wide shot, establishing shot, ...)</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>InputVideo</Name>
+					<Type>URL</Type>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>DetectedClasses</Name>
+					<Type>controlled vocabulary</Type>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported video formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported video codec</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
