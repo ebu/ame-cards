@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>A016</CardID>
+		<Name>Audio classification training</Name>
+		<Type>Audio</Type>
+		<Status>draft</Status>
+		<Editor>Alberto</Editor>
+		<Definition>Indexing an audio stream and adding its fingerprints into a reference database	</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>InputAudioFragment</Name>
+					<Type>URL</Type>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>WasIndexingSuccess</Name>
+					<Type>text</Type>
+					<Representation/>
+				</Output>
+				<Output>
+					<Name>ReferenceToIndex</Name>
+					<Type>URL</Type>
+					<Representation/>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:cvds</Values>
+				<Type>supported audio codec</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sdhfsdjkfh</Values>
+				<Type>supported audio formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
