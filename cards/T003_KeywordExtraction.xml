@@ -65,13 +65,13 @@
 
 		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
 			<Capability xsi:type="textEncodingCapabilityType">
-				<Values>urn:tbd</Values>
+				<Values>https://www.iana.org/assignments/character-sets/character-sets.xhtml</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/codec/textencoding</Type>
 			</Capability>
 		</CapabilityGroup>
 		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
 			<Capability xsi:type="textFormatCapabilityType">
-				<Values>urn:tbd</Values>
+				<Values>https://www.iana.org/assignments/media-types/media-types.xhtml</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/format/text</Type>
 			</Capability>
 		</CapabilityGroup>

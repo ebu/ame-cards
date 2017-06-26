@@ -251,7 +251,7 @@
 		<xs:complexContent>
 			<xs:restriction base="formatCapabilityType">
 				<xs:sequence>
-					<xs:element name="Values" type="xs:anyURI" fixed="urn:tbd" />
+					<xs:element name="Values" type="xs:anyURI" fixed="https://www.iana.org/assignments/media-types/media-types.xhtml" />
 
 					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/format/text" />
 				</xs:sequence>
@@ -297,7 +297,7 @@
 		<xs:complexContent>
 			<xs:restriction base="codecCapabilityType">
 				<xs:sequence>
-					<xs:element name="Values" type="xs:anyURI" fixed="urn:tbd" />
+					<xs:element name="Values" type="xs:anyURI" fixed="https://www.iana.org/assignments/character-sets/character-sets.xhtml" />
 
 					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/codec/textencoding" />
 				</xs:sequence>
