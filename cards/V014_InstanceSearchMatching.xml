@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 sp2 (x64) (http://www.altova.com) by Alberto Messina (RAI - Radiotelevisione Italiana) -->
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>V014</CardID>
+		<Name>Instance Search (Matching)</Name>
+		<Type>Video</Type>
+		<Status>draft</Status>
+		<Editor>Mike</Editor>
+		<Definition>Determine if a video segment contains an object instance (building, logo, etc) or scene from a specified database. The instances may be depicted differently and may only be partly visible.</Definition>
+		<Parameters>
+			<Inputs>
+				<Input mandatory="true">
+					<Name>Database</Name>
+					<Type>URL</Type>
+					<Unit/>
+					<Definition>An database with instances to be searched for</Definition>
+				</Input>
+			</Inputs>
+			<Input>
+				<Name>StructuredRegionOfInterest</Name>
+				<Type>xml</Type>
+				<Representation>urn:mpeg:mpeg7:schema:2004:MovingRegionType</Representation>
+				<Definition>A region in which to perform the detection.</Definition>
+			</Input>
+			<Outputs>
+				<Output mandatory="true">
+					<Name>SearchReport</Name>
+					<Type>xml</Type>
+					<Definition>An output file containing the instances found and the corresponding spatiotemporal segments</Definition>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:cvds</Values>
+				<Type>supported video formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sdhfsdjkfh</Values>
+				<Type>supported image formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
