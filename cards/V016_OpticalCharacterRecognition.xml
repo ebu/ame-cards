@@ -35,16 +35,16 @@
 				<Output mandatory="true">
 					<Name>Transcript</Name>
 					<Type>xml</Type>
-					<Representation>urn:mpeg:mpeg7:schema:2004:TextAnnotationType</Representation>
-					<Representation>urn:mpeg:mpeg7:schema:2004:MovingRegionType</Representation>
+					<Representation>urn:mpeg:mpeg7:part5:VideoSegmentType/urn:mpeg:mpeg7:schema:2004:TextAnnotationType</Representation>
+					<Representation>urn:mpeg:mpeg7:part5:VideoSegmentType/urn:mpeg:mpeg7:schema:2004:MovingRegionType</Representation>
 					<Comment>The output must contain the detected text, and may contain regions</Comment>
 				</Output>
 			</Outputs>
 		</Parameters>
 		<CapabilityGroup xsi:type="textCapabilityGroupType">
-			<Capability xsi:type="textFontCapabilityType" >
+			<Capability xsi:type="textScriptCapabilityType" >
 				<Values>urn:iso:std:iso:15924</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/text/font</Type>
+				<Type>http://ebu.io/fims/ame/capabilities/text/script</Type>
 			</Capability>
 			<Capability xsi:type="textLanguageCapabilityType" >
 				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>

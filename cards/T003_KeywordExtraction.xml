@@ -16,31 +16,66 @@
 					<Type>text</Type>
 					<Representation>TBD, could also be XML</Representation>
 					<Definition>The input text to be processed (required)</Definition>
-				</Input>		
+				</Input>
 				-->
+				<Input>
+					<Name>Language</Name>
+					<Type>controlled vocabulary</Type>
+					<Representation>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Representation>
+					<Definition>The language of the text source</Definition>
+				</Input>
 			</Inputs>
 			<Outputs>
 				<Output mandatory="true">
-					<Name>Keywords</Name>
+					<Name>TimedKeywordsXml</Name>
 					<Type>xml</Type>
-					<Representation>urn:tbd</Representation>
+					<Representation>urn:mpeg:mpeg7:part5:AudiovisualSegmentType/urn:mpeg:mpeg7:schema:2004:TextAnnotationType</Representation>
+					<Definition>A list of keywords, for each the amount of occurrences and a confidence score</Definition>
+				</Output>
+				<Output mandatory="true">
+					<Name>TimedKeywordsJson</Name>
+					<Type>json</Type>
+					<Representation>urn:mpeg:mpeg7:part5:AudiovisualSegmentType/urn:mpeg:mpeg7:schema:2004:TextAnnotationType</Representation>
+					<Definition>A list of keywords, for each the amount of occurrences and a confidence score</Definition>
+				</Output>
+				<Output mandatory="true">
+					<Name>UntimedKeywordsXml</Name>
+					<Type>xml</Type>
+					<Representation>https://www.w3.org/TR/annotation-model/#selectors</Representation>
+					<Definition>A list of keywords, for each the amount of occurrences and a confidence score</Definition>
+				</Output>
+				<Output mandatory="true">
+					<Name>UntimedKeywordsJson</Name>
+					<Type>json</Type>
+					<Representation>https://www.w3.org/TR/annotation-model/#selectors</Representation>
 					<Definition>A list of keywords, for each the amount of occurrences and a confidence score</Definition>
 				</Output>
 			</Outputs>
 		</Parameters>
-		<CapabilityGroup name="Text Types">
-			<Capability>
-				<Values>urn:oiweuowieru</Values>
-				<Type>supported languages</Type>
+		<CapabilityGroup xsi:type="textCapabilityGroupType">
+			<Capability xsi:type="textScriptCapabilityType" >
+				<Values>urn:iso:std:iso:15924</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/text/script</Type>
+			</Capability>
+			<Capability xsi:type="textLanguageCapabilityType" >
+				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
 			</Capability>
 		</CapabilityGroup>
-		
-		<CapabilityGroup name="input formats">
-			<Capability>
-				<Values>urn:cvds</Values>
-				<Type>supported text formats</Type>
+
+		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+			<Capability xsi:type="textEncodingCapabilityType">
+				<Values>urn:tbd</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/textencoding</Type>
 			</Capability>
 		</CapabilityGroup>
-		
+		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			<Capability xsi:type="textFormatCapabilityType">
+				<Values>urn:tbd</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/text</Type>
+			</Capability>
+		</CapabilityGroup>
+
+
 	</AMECard>
 </FIMSAMECards>

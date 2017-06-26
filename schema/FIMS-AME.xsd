@@ -176,13 +176,13 @@
 	</xs:complexType>
 
 
-	<xs:complexType name="textFontCapabilityType">
+	<xs:complexType name="textScriptCapabilityType">
 		<xs:complexContent>
 			<xs:restriction base="textCapabilityType">
 				<xs:sequence>
 					<xs:element name="Values" type="xs:anyURI" fixed="urn:iso:std:iso:15924" />
 
-					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/text/font" />
+					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/text/script" />
 				</xs:sequence>
 
 			</xs:restriction>
@@ -247,6 +247,20 @@
 		</xs:complexContent>
 	</xs:complexType>
 
+	<xs:complexType name="textFormatCapabilityType">
+		<xs:complexContent>
+			<xs:restriction base="formatCapabilityType">
+				<xs:sequence>
+					<xs:element name="Values" type="xs:anyURI" fixed="urn:tbd" />
+
+					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/format/text" />
+				</xs:sequence>
+
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+
+
 	<xs:complexType name="codecCapabilityType" abstract="true">
 		<xs:complexContent>
 			<xs:extension base="capabilityType" />
@@ -278,6 +292,20 @@
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
+
+	<xs:complexType name="textEncodingCapabilityType">
+		<xs:complexContent>
+			<xs:restriction base="codecCapabilityType">
+				<xs:sequence>
+					<xs:element name="Values" type="xs:anyURI" fixed="urn:tbd" />
+
+					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/codec/textencoding" />
+				</xs:sequence>
+
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+
 
 	<xs:complexType name="resultCapabilityType">
 		<xs:complexContent>
