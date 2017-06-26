@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>T007</CardID>
+		<Name>Text Tagging</Name>
+		<Type>Text</Type>
+		<Status>draft</Status>
+		<Editor>Mike</Editor>
+		<Definition>The association of tags or categories (f.e. defined in a taxonomy) to a text</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>TagDatabase</Name>
+					<Type>URL</Type>
+					<Definition>A database with the trained tags to be identified</Definition>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>ListOfTags</Name>
+					<Type>xml</Type>
+				  <Definition>A list of tags that have been associated to the text, together with a confidence value</Definition>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup>
+			<Capability>
+				<Values>urn:xyz</Values>
+				<Type>supported languages</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
