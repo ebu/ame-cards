@@ -16,40 +16,52 @@
     <Definition>Estimating the number of speakers present and say who is talking when (without the need to link speakers to external databases, just saying speaker A is talking at these times, speaker B at these)</Definition>
 
     <Parameters>
-      <Inputs/>
+      <Inputs>
+        <Input mandatory="false">
+          <Name>OutputFormat</Name>
+          <Type>controlled vocabulary</Type>
+        </Input>
+      </Inputs>
 
       <Outputs>
-        <Output>
-          <Name>ListOfSpeakerSegments</Name>
-
-          <Type>xml</Type>
-
-          <Representation>urn:mpeg:mpeg7:2004:SegmentType urn:mpeg:mpeg7:part5:TextAnnotationType</Representation>
-
+        <Output mandatory="false">
+					<Name>ListOfSpeakerXml</Name>
+					<Type>xml</Type>
+          <Representation>urn:mpeg:mpeg7:2004:AudioSegmentType/urn:mpeg:mpeg7:part5:TextAnnotationType</Representation>
           <Definition>List of segments with start time, end time, speaker id (assigned labels within file) and confidence score</Definition>
-        </Output>
+				</Output>
+				<Output mandatory="false">
+          <Name>ListOfSpeakerJson</Name>
+					<Type>json</Type>
+          <Representation>urn:mpeg:mpeg7:2004:AudioSegmentType/urn:mpeg:mpeg7:part5:TextAnnotationType</Representation>
+          <Definition>List of segments with start time, end time, speaker id (assigned labels within file) and confidence score</Definition>
+				</Output>
       </Outputs>
     </Parameters>
 
-    <CapabilityGroup name="speaker classes">
-      <Capability>
+    <CapabilityGroup xsi:type="genericCapabilityGroupType" type="speaker classes">
+      <Capability xsi:type="genericCapabilityType">
         <Values>urn:oiweuowieruf</Values>
-
         <Type>supported speaker classes</Type>
       </Capability>
     </CapabilityGroup>
+    <CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			<Capability xsi:type="audioFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/audio</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+			<Capability xsi:type="audioCodecCapabilityType">
+				<Values>urn:ebu:metadata-cs:AudioCompressionCodeCS</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/audio</Type>
+			</Capability>
+		</CapabilityGroup>
+    <CapabilityGroup xsi:type="textCapabilityGroupType">
 
-    <CapabilityGroup name="input formats">
-      <Capability>
-        <Values>urn:xyz</Values>
-
-        <Type>supported audio formats</Type>
-      </Capability>
-
-      <Capability>
-        <Values>urn:sdhfsdjkfh</Values>
-
-        <Type>supported languages</Type>
+      <Capability xsi:type="textLanguageCapabilityType">
+        <Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
+        <Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
       </Capability>
     </CapabilityGroup>
   </AMECard>
