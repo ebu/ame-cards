@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>V009</CardID>
+		<Name>Face Recognition</Name>
+		<Type>Video</Type>
+		<Status>draft</Status>
+		<Editor>Mike</Editor>
+		<Definition>Identify faces that have been detected in a video segment.</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>StructuredRegionOfInterestList</Name>
+					<Type>xml</Type>
+					<Representation>urn:mpeg:mpeg7:schema:2004:MovingRegionType</Representation>
+					<Definition>A list of regions in which faces appear.</Definition>
+				</Input>
+				<Input>
+					<Name>FacesModel</Name>
+					<Type>URL</Type>
+					<Definition>The trained model with faces that can be identified in a video segment</Definition>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output mandatory="true">
+					<Name>ListOfNames</Name>
+					<Type>xml</Type>
+					<Representation>text</Representation>
+					<Comment>A list of person names corresponding to the input segments</Comment>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="face detection">
+			<Capability>
+				<Values>urn:oiweuowieru</Values>
+				<Type>ListOfNames</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:cvds</Values>
+				<Type>supported video formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sdhfsdjkfh</Values>
+				<Type>supported image formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
