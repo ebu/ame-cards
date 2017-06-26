@@ -136,7 +136,9 @@
 	<!-- generic capabilities and groups -->
 	<xs:complexType name="genericCapabilityType">
 		<xs:complexContent>
-			<xs:extension base="capabilityType" />
+			<xs:extension base="capabilityType" >
+				<xs:attribute name="type" type="xs:anyURI" />
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 
