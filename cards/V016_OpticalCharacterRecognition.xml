@@ -43,7 +43,7 @@
 				<Type>supported languages</Type>
 			</Capability>
 			<Capability>
-				<Values>urn:sfsdjkh</Values>
+				<Values>urn:iso:std:iso:15924</Values>
 				<Type>supported scripts</Type>
 			</Capability>
 			<Capability>
