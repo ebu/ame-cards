@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 rel. 3 (x64) (http://www.altova.com) by Lauri Saarikoski (Yle - The Finnish Broadcasting Company) -->
+<!-- Should be renamed to Visual concept detection?-->
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>V019</CardID>
+		<Name>Image/Video description</Name>
+		<Type>Video</Type>
+		<Status>draft</Status>
+		<Editor>Mike</Editor>
+		<Definition>Sentence-based description of a visual content item</Definition>
+		<Parameters>
+			<Outputs>
+				<Output mandatory="true">
+					<Name>Description</Name>
+					<Type>text</Type>
+					<Comment>A textual description of the contents in the input image or video</Comment>
+				</Output>
+				<Output>
+					<Name>Confidence</Name>
+					<Type>float</Type>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup name="input formats">
+			<Capability>
+				<Values>urn:cvds</Values>
+				<Type>supported video formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:sdhfsdjkfh</Values>
+				<Type>supported image formats</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
