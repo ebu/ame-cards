@@ -292,6 +292,20 @@
 		</xs:complexContent>
 	</xs:complexType>
 
+	<xs:complexType name="isUpdatableCapabilityType">
+		<xs:complexContent>
+			<xs:restriction base="capabilityType">
+				<xs:sequence>
+					<xs:element name="Values" type="xs:anyURI" fixed="boolean" />
+
+					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/training/isupdatable" />
+				</xs:sequence>
+
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+
+
 	<xs:complexType name="textCapabilityGroupType">
 		<xs:complexContent>
 			<xs:extension base="capabilityGroupType">
@@ -335,5 +349,17 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+
+	<xs:complexType name="trainingCapabilityGroupType">
+		<xs:complexContent>
+			<xs:extension base="capabilityGroupType">
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" name="Capability" type="isUpdatableCapabilityType"/>
+				</xs:sequence>
+				<xs:attribute name="type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/training" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
 
 </xs:schema>

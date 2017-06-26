@@ -10,25 +10,42 @@
 		<Parameters>
 			<Inputs>
 				<Input>
-					<Name>InputImage</Name>
+					<Name>ObjectClassificationTrainingData</Name>
+					<Type>xml</Type>
+					<Comment>Training data contains locators to training essence files and ground truth annotations to train</Comment>
+				</Input>
+				<Input mandatory="true">
+					<Name>ModelIdentifier</Name>
 					<Type>URL</Type>
+					<Definition>The identifier of the model that shall be trained.</Definition>
 				</Input>
 				<Input>
-					<Name>ClassificationData</Name>
-					<Type>xml</Type>
+					<Name>ReTraining</Name>
+					<Type>boolean</Type>
+					<DefaultValue>false</DefaultValue>
 				</Input>
 			</Inputs>
 			<Outputs>
 				<Output>
 					<Name>WasTrainingSuccess</Name>
-					<Type>text</Type>
+					<Type>controlled vocabulary</Type>
 				</Output>
 			</Outputs>
 		</Parameters>
-		<CapabilityGroup>
-			<Capability>
-				<Values>urn:hogehoge</Values>
-				<Type>supported image formats</Type>
+		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			<Capability xsi:type="videoFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/video</Type>
+			</Capability>
+			<Capability xsi:type="imageFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/image</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="trainingCapabilityGroupType">
+			<Capability xsi:type="isUpdatableCapabilityType">
+				<Values>boolean</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/training/isupdatable</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>
