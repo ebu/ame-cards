@@ -63,7 +63,7 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			
+
 			<xs:element name="CapabilityGroup" type="capabilityGroupType" maxOccurs="unbounded" />
 			<!--
 			<xs:element name="CapabilityGroup" maxOccurs="unbounded">
@@ -90,6 +90,7 @@
 						<xs:enumeration value="float"/>
 						<xs:enumeration value="integer"/>
 						<xs:enumeration value="boolean"/>
+						<xs:enumeration value="json"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -114,10 +115,10 @@
 			<xs:extension base="parameterType"/>
 		</xs:complexContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="capabilityGroupType" abstract="true">
 	</xs:complexType>
-	
+
 	<xs:complexType name="capabilityType" abstract="true" >
 		<xs:sequence>
 			<xs:element name="Values" minOccurs="0">
@@ -125,110 +126,110 @@
 					<xs:union memberTypes="xs:anyURI xs:string"/>
 				</xs:simpleType>
 			</xs:element>
-			
+
 			<xs:element name="Type" xsi:type="xs:anyUri" />
-			
+
 			<xs:element minOccurs="0" name="Unit"/>
 		</xs:sequence>
 	</xs:complexType>
-	
+
 	<!-- generic capabilities and groups -->
 	<xs:complexType name="genericCapabilityType">
 		<xs:complexContent>
 			<xs:extension base="capabilityType" />
-		</xs:complexContent>    
-	</xs:complexType>	
-	
+		</xs:complexContent>
+	</xs:complexType>
+
 	<xs:complexType name="genericCapabilityGroupType">
 		<xs:complexContent>
 			<xs:extension base="capabilityGroupType">
 				<xs:sequence>
 					<xs:element maxOccurs="unbounded" name="Capability" type="genericCapabilityType"/>
 				</xs:sequence>
-				<xs:attribute name="type" type="xs:anyURI" /> 
-			</xs:extension>     
+				<xs:attribute name="type" type="xs:anyURI" />
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	
+
 	<!-- specific capabilities and groups -->
-	
+
 	<xs:complexType name="textCapabilityType" abstract="true">
 		<xs:complexContent>
 			<xs:extension base="capabilityType" />
-		</xs:complexContent>    
+		</xs:complexContent>
 	</xs:complexType>
-	
-	
+
+
 	<xs:complexType name="textLanguageCapabilityType">
 		<xs:complexContent>
 			<xs:restriction base="textCapabilityType">
 				<xs:sequence>
 					<xs:element name="Values" type="xs:anyURI" fixed="urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2" />
-					
-					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/text/language" />        
+
+					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/text/language" />
 				</xs:sequence>
-				
+
 			</xs:restriction>
-		</xs:complexContent>    
+		</xs:complexContent>
 	</xs:complexType>
-	
-	
+
+
 	<xs:complexType name="textFontCapabilityType">
 		<xs:complexContent>
 			<xs:restriction base="textCapabilityType">
 				<xs:sequence>
 					<xs:element name="Values" type="xs:anyURI" fixed="urn:iso:std:iso:15924" />
-					
-					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/text/font" />        
+
+					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/text/font" />
 				</xs:sequence>
-				
+
 			</xs:restriction>
-		</xs:complexContent>    
+		</xs:complexContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="textMinSizeCapabilityType">
 		<xs:complexContent>
 			<xs:restriction base="textCapabilityType">
 				<xs:sequence>
-					
-					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/text/minSize" />    
+
+					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/text/minSize" />
 					<xs:element minOccurs="1" name="Unit"/>
 				</xs:sequence>
-				
+
 			</xs:restriction>
-		</xs:complexContent>    
+		</xs:complexContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="formatCapabilityType" abstract="true">
 		<xs:complexContent>
 			<xs:extension base="capabilityType" />
-		</xs:complexContent>    
+		</xs:complexContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="imageFormatCapabilityType">
 		<xs:complexContent>
 			<xs:restriction base="formatCapabilityType">
 				<xs:sequence>
 					<xs:element name="Values" type="xs:anyURI" fixed="urn:ebu:metadata-cs:FileFormatCS_2010" />
-					
-					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/format/image" />        
+
+					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/format/image" />
 				</xs:sequence>
-				
+
 			</xs:restriction>
-		</xs:complexContent>    
+		</xs:complexContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="videoFormatCapabilityType">
 		<xs:complexContent>
 			<xs:restriction base="formatCapabilityType">
 				<xs:sequence>
 					<xs:element name="Values" type="xs:anyURI" fixed="urn:ebu:metadata-cs:FileFormatCS_2010" />
-					
-					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/format/video" />        
+
+					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/format/video" />
 				</xs:sequence>
-				
+
 			</xs:restriction>
-		</xs:complexContent>    
+		</xs:complexContent>
 	</xs:complexType>
 
 	<xs:complexType name="audioFormatCapabilityType">
@@ -236,18 +237,18 @@
 			<xs:restriction base="formatCapabilityType">
 				<xs:sequence>
 					<xs:element name="Values" type="xs:anyURI" fixed="urn:ebu:metadata-cs:FileFormatCS_2010" />
-					
-					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/format/audio" />        
+
+					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/format/audio" />
 				</xs:sequence>
-				
+
 			</xs:restriction>
-		</xs:complexContent>    
+		</xs:complexContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="codecCapabilityType" abstract="true">
 		<xs:complexContent>
 			<xs:extension base="capabilityType" />
-		</xs:complexContent>    
+		</xs:complexContent>
 	</xs:complexType>
 
 	<xs:complexType name="videoCodecCapabilityType">
@@ -255,38 +256,38 @@
 			<xs:restriction base="codecCapabilityType">
 				<xs:sequence>
 					<xs:element name="Values" type="xs:anyURI" fixed="urn:ebu:metadata-cs:VideoCompressionCodeCS" />
-					
-					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/codec/video" />        
+
+					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/codec/video" />
 				</xs:sequence>
-				
+
 			</xs:restriction>
-		</xs:complexContent>    
+		</xs:complexContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="audioCodecCapabilityType">
 		<xs:complexContent>
 			<xs:restriction base="codecCapabilityType">
 				<xs:sequence>
-					<xs:element name="Values" type="xs:anyURI" fixed="urn:ebu:metadata-cs:VideoCompressionCodeCS" />
-					
-					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/codec/audio" />        
+					<xs:element name="Values" type="xs:anyURI" fixed="urn:ebu:metadata-cs:AudioCompressionCodeCS" />
+
+					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/codec/audio" />
 				</xs:sequence>
-				
+
 			</xs:restriction>
-		</xs:complexContent>    
+		</xs:complexContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="resultCapabilityType">
 		<xs:complexContent>
 			<xs:restriction base="capabilityType">
 				<xs:sequence>
 					<xs:element name="Values" type="xs:anyURI" fixed="urn:ebu:metadata-cs:TBD" />
-					
-					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/result/formats" />        
+
+					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/result/formats" />
 				</xs:sequence>
-				
+
 			</xs:restriction>
-		</xs:complexContent>    
+		</xs:complexContent>
 	</xs:complexType>
 
 	<xs:complexType name="textCapabilityGroupType">
@@ -295,19 +296,19 @@
 				<xs:sequence>
 					<xs:element maxOccurs="unbounded" name="Capability" type="textCapabilityType"/>
 				</xs:sequence>
-				<xs:attribute name="type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/text" /> 
-			</xs:extension>     
+				<xs:attribute name="type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/text" />
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="inputFormatCapabilityGroupType">
 		<xs:complexContent>
 			<xs:extension base="capabilityGroupType">
 				<xs:sequence>
 					<xs:element maxOccurs="unbounded" name="Capability" type="formatCapabilityType"/>
 				</xs:sequence>
-				<xs:attribute name="type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/inputformat" /> 
-			</xs:extension>     
+				<xs:attribute name="type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/inputformat" />
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 
@@ -317,8 +318,8 @@
 				<xs:sequence>
 					<xs:element maxOccurs="unbounded" name="Capability" type="codecCapabilityType"/>
 				</xs:sequence>
-				<xs:attribute name="type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/inputcodec" /> 
-			</xs:extension>     
+				<xs:attribute name="type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/inputcodec" />
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 
@@ -328,8 +329,8 @@
 				<xs:sequence>
 					<xs:element maxOccurs="unbounded" name="Capability" type="resultCapabilityType"/>
 				</xs:sequence>
-				<xs:attribute name="type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/result" /> 
-			</xs:extension>     
+				<xs:attribute name="type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/result" />
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 
