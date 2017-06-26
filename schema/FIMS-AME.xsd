@@ -254,7 +254,7 @@
 		<xs:complexContent>
 			<xs:restriction base="codecCapabilityType">
 				<xs:sequence>
-					<xs:element name="Values" type="xs:anyURI" fixed="urn:ebu:metadata-cs:FileFormatCS_2010" />
+					<xs:element name="Values" type="xs:anyURI" fixed="urn:ebu:metadata-cs:VideoCompressionCodeCS" />
 					
 					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/codec/video" />        
 				</xs:sequence>
@@ -267,9 +267,22 @@
 		<xs:complexContent>
 			<xs:restriction base="codecCapabilityType">
 				<xs:sequence>
-					<xs:element name="Values" type="xs:anyURI" fixed="urn:ebu:metadata-cs:FileFormatCS_2010" />
+					<xs:element name="Values" type="xs:anyURI" fixed="urn:ebu:metadata-cs:VideoCompressionCodeCS" />
 					
-					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/cocec/audio" />        
+					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/codec/audio" />        
+				</xs:sequence>
+				
+			</xs:restriction>
+		</xs:complexContent>    
+	</xs:complexType>
+	
+	<xs:complexType name="resultCapabilityType">
+		<xs:complexContent>
+			<xs:restriction base="capabilityType">
+				<xs:sequence>
+					<xs:element name="Values" type="xs:anyURI" fixed="urn:ebu:metadata-cs:TBD" />
+					
+					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/result/formats" />        
 				</xs:sequence>
 				
 			</xs:restriction>
@@ -305,6 +318,17 @@
 					<xs:element maxOccurs="unbounded" name="Capability" type="codecCapabilityType"/>
 				</xs:sequence>
 				<xs:attribute name="type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/inputcodec" /> 
+			</xs:extension>     
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="resultCapabilityGroupType">
+		<xs:complexContent>
+			<xs:extension base="capabilityGroupType">
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" name="Capability" type="resultCapabilityType"/>
+				</xs:sequence>
+				<xs:attribute name="type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/result" /> 
 			</xs:extension>     
 		</xs:complexContent>
 	</xs:complexType>
