@@ -151,6 +151,7 @@
 			<xs:enumeration value="supported music genres"/>
 			<xs:enumeration value="supported motion types"/>
 			<xs:enumeration value="supported shot transition types"/>
+			<xs:enumeration value="supported persons"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>
