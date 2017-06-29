@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Werner Bailer (JOANNEUM RESEARCH) -->
 <FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
 	<AMECard>
 		<CardID>T001</CardID>
@@ -18,33 +17,63 @@
 					<Definition>The input text to be processed (required)</Definition>
 				</Input>		
 				-->
+				<Input>
+					<Name>Language</Name>
+					<Type>controlled vocabulary</Type>
+					<Representation>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Representation>
+					<Definition>The language of the text source</Definition>
+				</Input>
 			</Inputs>
 			<Outputs>
 				<Output mandatory="true">
-					<Name>TaggedWords</Name>
+					<Name>TimedTaggedWordsXml</Name>
 					<Type>xml</Type>
 					<Representation>urn:tbd</Representation>
 					<Definition>A list of tagged words, for each the disambiguated category, relationship with other words, confidence score</Definition>
 				</Output>
+				<Output mandatory="true">
+					<Name>TimedTaggedWordsJson</Name>
+					<Type>json</Type>
+					<Representation>urn:tbd</Representation>
+					<Definition>A list of tagged words, for each the disambiguated category, relationship with other words, confidence score</Definition>
+				</Output>
+				<Output mandatory="true">
+					<Name>UntimedTaggedWordsXml</Name>
+					<Type>xml</Type>
+					<Representation>https://www.w3.org/TR/annotation-model/#selectors</Representation>
+					<Definition>A list of tagged words, for each the disambiguated category, relationship with other words, confidence score</Definition>
+				</Output>
+				<Output mandatory="true">
+					<Name>UntimedTaggedWordsJson</Name>
+					<Type>json</Type>
+					<Representation>https://www.w3.org/TR/annotation-model/#selectors</Representation>
+					<Definition>A list of tagged words, for each the disambiguated category, relationship with other words, confidence score</Definition>
+				</Output>
+				
 			</Outputs>
 		</Parameters>
-		<CapabilityGroup name="Text Types">
-			<Capability>
-				<Values>urn:oiweuowieru</Values>
-				<Type>supported languages</Type>
-			</Capability>
-			<Capability>
-				<Values>urn:sfsdjkh</Values>
-				<Type>supported scripts</Type>
+		
+		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+			<Capability xsi:type="textEncodingCapabilityType">
+				<Values>https://www.iana.org/assignments/character-sets/character-sets.xhtml</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/textencoding</Type>
 			</Capability>
 		</CapabilityGroup>
-		
-		<CapabilityGroup name="input formats">
-			<Capability>
-				<Values>urn:cvds</Values>
-				<Type>supported text formats</Type>
+		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			<Capability xsi:type="textFormatCapabilityType">
+				<Values>https://www.iana.org/assignments/media-types/media-types.xhtml</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/text</Type>
 			</Capability>
 		</CapabilityGroup>
-		
+		<CapabilityGroup xsi:type="textCapabilityGroupType">
+			<Capability xsi:type="textLanguageCapabilityType">
+				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
+			</Capability>
+			<Capability xsi:type="textScriptCapabilityType">
+				<Values>urn:iso:std:iso:15924</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/text/script</Type>
+			</Capability>
+		</CapabilityGroup>
 	</AMECard>
 </FIMSAMECards>
