@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Werner Bailer (JOANNEUM RESEARCH) -->
 <FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
 	<AMECard>
 		<CardID>M001</CardID>
@@ -10,6 +9,10 @@
 		<Definition>Segment an audiovisual segment into semantic temporal units, such as news stories, scenes, etc.</Definition>
 		<Parameters>
 			<Inputs>
+				<Input mandatory="false">
+					<Name>OutputFormat</Name>
+					<Type>controlled vocabulary</Type>
+				</Input>
 				<Input>
 					<Name>MinDuration</Name>
 					<Type>float</Type>
@@ -26,38 +29,50 @@
 				</Input>				
 			</Inputs>
 			<Outputs>
-				<Output mandatory="true">
-					<Name>Segmentation</Name>
+				<Output>
+					<Name>SegmentationXml</Name>
 					<Type>xml</Type>
-					<Representation>urn:mpeg:mpeg7:schema:2004:TemporalDecompositionType</Representation>
+					<Representation>urn:mpeg:mpeg7:schema:2004:TemporalDecompositionType/urn:mpeg:mpeg7:schema:2004:AudiovisualSegmentType</Representation>
 					<Definition>The timeline of segments with their start and end times.</Definition>
 				</Output>
+				<Output>
+					<Name>SegmentationJson</Name>
+					<Type>json</Type>
+					<Representation>urn:mpeg:mpeg7:schema:2004:TemporalDecompositionType/urn:mpeg:mpeg7:schema:2004:AudiovisualSegmentType</Representation>
+					<Definition>The timeline of segments with their start and end times.</Definition>
+				</Output>			
 			</Outputs>
 		</Parameters>
-		<CapabilityGroup name="modalities">
-			<Capability>
+		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			<Capability xsi:type="audioFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/audio</Type>
+			</Capability>
+			<Capability xsi:type="videoFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/video</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+			<Capability xsi:type="audioCodecCapabilityType">
+				<Values>urn:ebu:metadata-cs:AudioCompressionCodeCS</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/audio</Type>
+			</Capability>
+			<Capability xsi:type="videoCodecCapabilityType">
+				<Values>urn:ebu:metadata-cs:VideoCompressionCodeCS</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/video</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="contentTypeCapabilityGroupType">
+			<Capability xsi:type="modalityCapabilityType">
+				<Values>urn:mpeg:mpeg7:cs:ContentCS:2001</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/modalities</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="genericCapabilityGroupType" type="ContentGenres">
+			<Capability xsi:type="genericCapabilityType">
 				<Values>urn:ebu:metadata-cs:ContentGenreCS</Values>
-				<Type>supported genres</Type>
-			</Capability>
-		</CapabilityGroup>
-		<CapabilityGroup name="genres">
-			<Capability>
-				<Values>urn:modalities</Values>
-				<Type>supported modalities</Type>
-			</Capability>
-		</CapabilityGroup>
-		<CapabilityGroup name="input formats">
-			<Capability>
-				<Values>urn:cvds</Values>
-				<Type>supported video formats</Type>
-			</Capability>
-			<Capability>
-				<Values>urn:sdhfsdjkfh</Values>
-				<Type>supported image formats</Type>
-			</Capability>
-			<Capability>
-				<Values>urn:sdhfsdjkfh</Values>
-				<Type>supported audio formats</Type>
+				<Type>http://ebu.io/fims/ame/capabilities/genres</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

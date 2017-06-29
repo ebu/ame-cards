@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2017 rel. 3 (x64) (http://www.altova.com) by Lauri Saarikoski (Yle - The Finnish Broadcasting Company) -->
-<!-- Input audio fragment not needed as input? -->
 <FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
 	<AMECard>
 		<CardID>M006</CardID>
@@ -11,23 +9,23 @@
 		<Definition>Training module for a genre/subject classification service</Definition>
 		<Parameters>
 			<Inputs>
+				<Input>
+					<Name>GenreClassificationTrainingData</Name>
+					<Type>xml</Type>
+					<Comment>Training data contains locators to training essence files and ground truth annotations to train</Comment>
+				</Input>
 				<Input mandatory="true">
-					<Name>Annotations</Name>
+					<Name>ModelIdentifier</Name>
 					<Type>URL</Type>
-					<Definition>Reference to the annotations for the provided content set.</Definition>
+					<Definition>The identifier of the model that shall be trained.</Definition>
 				</Input>
 				<Input>
-					<Name>SpeakerModelReference</Name>
-					<Type>URL</Type>
-					<Definition>The model to be trained</Definition>
-					<DefaultValue>(implementation specific)</DefaultValue>
+					<Name>ReTraining</Name>
+					<Type>boolean</Type>
+					<DefaultValue>false</DefaultValue>
 				</Input>
 			</Inputs>
 			<Outputs>
-				<Output>
-					<Name>TrainedModelReference</Name>
-					<Type>URL</Type>
-				</Output>
 				<Output>
 					<Name>WasTrainingSuccess</Name>
 					<Type>text</Type>
@@ -35,23 +33,26 @@
 				</Output>
 			</Outputs>
 		</Parameters>
-		<CapabilityGroup name="input formats">
-			<Capability>
-				<Values>urn:werwef</Values>
-				<Type>supported audio codec</Type>
+		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			<Capability xsi:type="audioFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/audio</Type>
 			</Capability>
-			<Capability>
-				<Values>urn:werwef</Values>
-				<Type>supported video codec</Type>
-			</Capability>
-			<Capability>
-				<Values>urn:sdhfsdjkfh</Values>
-				<Type>supported audio formats</Type>
-			</Capability>
-			<Capability>
-				<Values>urn:sdhfsdjkfh</Values>
-				<Type>supported image formats</Type>
+			<Capability xsi:type="videoFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/video</Type>
 			</Capability>
 		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+			<Capability xsi:type="audioCodecCapabilityType">
+				<Values>urn:ebu:metadata-cs:AudioCompressionCodeCS</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/audio</Type>
+			</Capability>
+			<Capability xsi:type="videoCodecCapabilityType">
+				<Values>urn:ebu:metadata-cs:VideoCompressionCodeCS</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/video</Type>
+			</Capability>
+		</CapabilityGroup>
+		
 	</AMECard>
 </FIMSAMECards>

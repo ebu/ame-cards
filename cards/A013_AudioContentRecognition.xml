@@ -43,7 +43,8 @@
           <Type>json</Type>
           <Representation>urn:mpeg:mpeg7:part5:SegmentType/urn:mpeg:mpeg7:part5:RelationType</Representation>
           <Definition>Recognised segments, with an identifier of the database entry that matched, and optionally a score (strength) for the match.</Definition>
-        </Output>      </Outputs>
+        </Output>      
+      </Outputs>
     </Parameters>
 
     <CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
