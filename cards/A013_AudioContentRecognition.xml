@@ -4,19 +4,18 @@
               xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <AMECard>
     <CardID>A013</CardID>
-
     <Name>Audio Content Recognition</Name>
-
     <Type>Audio</Type>
-
     <Status>draft</Status>
-
     <Editor>Werner</Editor>
-
     <Definition>Matching an audio segment with a reference database.</Definition>
 
     <Parameters>
       <Inputs>
+        <Input mandatory="false">
+          <Name>OutputFormat</Name>
+          <Type>controlled vocabulary</Type>
+        </Input>
         <Input>
           <Name>DBIdentifier</Name>
           <Type>URL</Type>
@@ -33,20 +32,30 @@
       </Inputs>
 
       <Outputs>
-        <Output mandatory="true">
-          <Name>MatchingResults</Name>
+        <Output>
+          <Name>MatchingResultsXml</Name>
           <Type>xml</Type>
-          <Representation>urn:mpeg:mpeg7:part5:SegmentType urn:mpeg:mpeg7:part5:RelationType</Representation>
+          <Representation>urn:mpeg:mpeg7:part5:SegmentType/urn:mpeg:mpeg7:part5:RelationType</Representation>
           <Definition>Recognised segments, with an identifier of the database entry that matched, and optionally a score (strength) for the match.</Definition>
         </Output>
-      </Outputs>
+        <Output>
+          <Name>MatchingResultsJson</Name>
+          <Type>json</Type>
+          <Representation>urn:mpeg:mpeg7:part5:SegmentType/urn:mpeg:mpeg7:part5:RelationType</Representation>
+          <Definition>Recognised segments, with an identifier of the database entry that matched, and optionally a score (strength) for the match.</Definition>
+        </Output>      </Outputs>
     </Parameters>
 
-    <CapabilityGroup name="input formats">
-      <Capability>
-        <Values>urn:xyz</Values>
-
-        <Type>supported audio formats</Type>
+    <CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+      <Capability xsi:type="audioFormatCapabilityType">
+        <Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+        <Type>http://ebu.io/fims/ame/capabilities/format/audio</Type>
+      </Capability>
+    </CapabilityGroup>
+    <CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+      <Capability xsi:type="audioCodecCapabilityType">
+        <Values>urn:ebu:metadata-cs:AudioCompressionCodeCS</Values>
+        <Type>http://ebu.io/fims/ame/capabilities/codec/audio</Type>
       </Capability>
     </CapabilityGroup>
   </AMECard>

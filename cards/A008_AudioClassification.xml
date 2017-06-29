@@ -4,20 +4,19 @@
               xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <AMECard>
     <CardID>A008</CardID>
-
     <Name>Audio Classification</Name>
-
     <Type>Audio</Type>
-
     <Status>draft</Status>
-
     <Editor>Werner</Editor>
-
     <Definition>Determine if an audio segment represents a specified/one from a list of specified concept class(es).</Definition>
 
     <Parameters>
       <Inputs>
-        <Input mandatory="true">
+         <Input mandatory="false">
+           <Name>OutputFormat</Name>
+           <Type>controlled vocabulary</Type>
+         </Input>
+         <Input mandatory="true">
           <Name>ClassesToDetect</Name>
           <Type>controlled vocabulary</Type>
           <Representation>List of identifiers of classes to be detected</Representation>
@@ -25,30 +24,37 @@
         <Input>
           <Name>ModelToUse</Name>
           <Type>URL</Type>
-          <Definition>If applicable, audio model to use for detection.</Definition>
+          <Definition>If applicable, audio models to use for detection.</Definition>
         </Input>
       </Inputs>
 
       <Outputs>
-        <Output mandatory="true">
-          <Name>Classification</Name>
-          <Type>xml</Type>
-          <Representation>urn:mpeg:mpeg7:part5:SegmentType urn:mpeg:mpeg7:part5:StructuredAnnotationType</Representation>
-          <Definition>Per object class, a list of time indexed regions</Definition>
-        </Output>
         <Output>
-          <Name>Confidence</Name>
-          <Type>float</Type>
-          <Definition>Confidence of the result (per detected instance)</Definition>
+          <Name>ClassificationXml</Name>
+          <Type>xml</Type>
+          <Representation>urn:mpeg:mpeg7:part5:SegmentType/urn:mpeg:mpeg7:part5:StructuredAnnotationType</Representation>
+          <Definition>A list of segments of detected audio classes (preferably referring to a controlled vocabulary) and confidence score.</Definition>
         </Output>
+        <Output >
+          <Name>ClassificationJson</Name>
+          <Type>json</Type>
+          <Representation>urn:mpeg:mpeg7:part5:SegmentType/urn:mpeg:mpeg7:part5:StructuredAnnotationType</Representation>
+          <Definition>A list of segments of detected audio classes (preferably referring to a controlled vocabulary) and confidence score.</Definition>
+        </Output>
+        
       </Outputs>
     </Parameters>
 
-    <CapabilityGroup name="input formats">
-      <Capability>
-        <Values>urn:xyz</Values>
-
-        <Type>supported audio formats</Type>
+    <CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+      <Capability xsi:type="audioFormatCapabilityType">
+        <Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+        <Type>http://ebu.io/fims/ame/capabilities/format/audio</Type>
+      </Capability>
+    </CapabilityGroup>
+    <CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+      <Capability xsi:type="audioCodecCapabilityType">
+        <Values>urn:ebu:metadata-cs:AudioCompressionCodeCS</Values>
+        <Type>http://ebu.io/fims/ame/capabilities/codec/audio</Type>
       </Capability>
     </CapabilityGroup>
   </AMECard>
