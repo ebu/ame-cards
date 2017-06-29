@@ -4,7 +4,7 @@
 	VERSION WITH ALT. CAPABILTIY MODELLING
 
 -->
-<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME_altCaps2.xsd">
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
 	<AMECard>
 		<CardID>V016</CardID>
 		<Name>Optical Character Recognition</Name>
@@ -14,6 +14,10 @@
 		<Definition>Detection of regions containing overlaid text elements or text depicted in the scene, possibly moving over time. Run OCR on the identified text areas.</Definition>
 		<Parameters>
 			<Inputs>
+				<Input mandatory="false">
+					<Name>OutputFormat</Name>
+					<Type>controlled vocabulary</Type>
+				</Input>
 				<Input>
 					<Name>StructuredRegionOfInterest</Name>
 					<Type>xml</Type>
@@ -32,14 +36,20 @@
 				</Input>
 			</Inputs>
 			<Outputs>
-				<Output mandatory="true">
-					<Name>Transcript</Name>
+				<Output >
+					<Name>ResultXml</Name>
 					<Type>xml</Type>
 					<Representation>urn:mpeg:mpeg7:part5:VideoSegmentType/urn:mpeg:mpeg7:schema:2004:TextAnnotationType</Representation>
 					<Representation>urn:mpeg:mpeg7:part5:VideoSegmentType/urn:mpeg:mpeg7:schema:2004:MovingRegionType</Representation>
 					<Comment>The output must contain the detected text, and may contain regions</Comment>
 				</Output>
-			</Outputs>
+				<Output >
+					<Name>ResultJson</Name>
+					<Type>json</Type>
+					<Representation>urn:mpeg:mpeg7:part5:VideoSegmentType/urn:mpeg:mpeg7:schema:2004:TextAnnotationType</Representation>
+					<Representation>urn:mpeg:mpeg7:part5:VideoSegmentType/urn:mpeg:mpeg7:schema:2004:MovingRegionType</Representation>
+					<Comment>The output must contain the detected text, and may contain regions</Comment>
+				</Output>			</Outputs>
 		</Parameters>
 		<CapabilityGroup xsi:type="textCapabilityGroupType">
 			<Capability xsi:type="textScriptCapabilityType" >
