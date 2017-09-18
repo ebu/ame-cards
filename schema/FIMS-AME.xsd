@@ -127,7 +127,7 @@
 				</xs:simpleType>
 			</xs:element>
 
-			<xs:element name="Type" xsi:type="xs:anyUri" />
+			<xs:element name="Type" xsi:type="xs:anyURI" />
 
 			<xs:element minOccurs="0" name="Unit"/>
 		</xs:sequence>
