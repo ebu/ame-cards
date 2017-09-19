@@ -28,10 +28,22 @@
 				</Output>
 			</Outputs>
 		</Parameters>
-		<CapabilityGroup name="input formats">
-			<Capability>
-				<Values>urn:cvds</Values>
-				<Type>supported text formats</Type>
+		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+			<Capability xsi:type="textEncodingCapabilityType">
+				<Values>https://www.iana.org/assignments/character-sets/character-sets.xhtml</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/textencoding</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			<Capability xsi:type="textFormatCapabilityType">
+				<Values>https://www.iana.org/assignments/media-types/media-types.xhtml</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/text</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="textCapabilityGroupType">	
+			<Capability xsi:type="textScriptCapabilityType">
+				<Values>urn:iso:std:iso:15924</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/text/script</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

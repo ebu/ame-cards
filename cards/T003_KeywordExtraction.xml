@@ -75,7 +75,5 @@
 				<Type>http://ebu.io/fims/ame/capabilities/format/text</Type>
 			</Capability>
 		</CapabilityGroup>
-
-
 	</AMECard>
 </FIMSAMECards>

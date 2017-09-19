@@ -46,25 +46,30 @@
 				</Output>
 			</Outputs>
 		</Parameters>
-		<CapabilityGroup name="object classes">
-			<Capability>
+		<CapabilityGroup xsi:type="genericCapabilityGroupType" type="ObjectClassification">
+			<Capability xsi:type="genericCapabilityType">
 				<Values>urn:oiweuowieru</Values>
-				<Type>supported object classes</Type>
+				<Type>http://ebu.io/fims/ame/capabilities/supportedObjectClasses</Type>
 			</Capability>
-			<Capability>
-				<Values>urn:jhfkjsdhs</Values>
-				<Type>minimum object size</Type>
-				<Unit>pixel</Unit>
+			<Capability xsi:type="genericCapabilityType">
+				<Values>int</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/miniumObjectSizeInPixels</Type>
 			</Capability>
 		</CapabilityGroup>
-		<CapabilityGroup name="input formats">
-			<Capability>
-				<Values>urn:cvds</Values>
-				<Type>supported video formats</Type>
+		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			<Capability xsi:type="videoFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/video</Type>
 			</Capability>
-			<Capability>
-				<Values>urn:sdhfsdjkfh</Values>
-				<Type>supported image formats</Type>
+			<Capability xsi:type="imageFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/image</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+			<Capability xsi:type="videoCodecCapabilityType">
+				<Values>urn:ebu:metadata-cs:VideoCompressionCodeCS</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/video</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>
