@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>M003</CardID>
+		<Name>Mood/affective classification</Name>
+		<Type>Multimodal</Type>
+		<Status>draft</Status>
+		<Editor>Lauri</Editor>
+		<Definition>Classify the affective/emotional content of a multimedia item by assigning one or more class labels, or a score for one or more dimensions (e.g., valence and arousal; bpm for music; ...)</Definition>
+		<!--Should the need for input segmentation be stated somewhere here?-->
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>ClassesDatabase</Name>
+					<Type>URL</Type>
+					<Definition>A database with the trained categories or dimensions to be identified</Definition>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>ListOfClasses</Name>
+					<Type>xml</Type>
+				  <Definition>A list of categories that have been associated to the item, optionally together with a confidence value</Definition>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			<Capability xsi:type="audioFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/audio</Type>
+			</Capability>
+			<Capability xsi:type="videoFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/video</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+			<Capability xsi:type="audioCodecCapabilityType">
+				<Values>urn:ebu:metadata-cs:AudioCompressionCodeCS</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/audio</Type>
+			</Capability>
+			<Capability xsi:type="videoCodecCapabilityType">
+				<Values>urn:ebu:metadata-cs:VideoCompressionCodeCS</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/video</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="textCapabilityGroupType">
+			<Capability xsi:type="textLanguageCapabilityType">
+				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
+			</Capability>
+			<Capability xsi:type="textScriptCapabilityType">
+				<Values>urn:iso:std:iso:15924</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/text/script</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="genericCapabilityGroupType" type="supportedAudioLanguage">
+			<Capability xsi:type="genericCapabilityType">
+				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="contentTypeCapabilityGroupType">
+			<Capability xsi:type="modalityCapabilityType">
+				<Values>urn:mpeg:mpeg7:cs:ContentCS:2001</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/modalities</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="genericCapabilityGroupType" type="ContentMoodDimensions">
+			<Capability xsi:type="genericCapabilityType">
+				<Values>urn:ebu:metadata-cs:ContentMoodDimensionCS</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/moods</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
