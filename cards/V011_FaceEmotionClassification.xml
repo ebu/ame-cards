@@ -33,10 +33,10 @@
 				</Output>
 			</Outputs>
 		</Parameters>
-		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
-			<Capability xsi:type="imageFormatCapabilityType">
-				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/format/image</Type>
+		<CapabilityGroup>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported image formats</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

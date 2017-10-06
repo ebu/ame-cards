@@ -37,22 +37,18 @@
 				</Output>
 			</Outputs>
 		</Parameters>
-		<CapabilityGroup xsi:type="contentTypeCapabilityGroupType">
-			<Capability xsi:type="modalityCapabilityType">
-				<Values>urn:mpeg:mpeg7:cs:ContentCS:2001</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/modalities</Type>
-			</Capability>
-		</CapabilityGroup>
-		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
-			<Capability xsi:type="videoFormatCapabilityType">
-				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/format/video</Type>
-			</Capability>
-		</CapabilityGroup>
-		<CapabilityGroup xsi:type="resultCapabilityGroupType">
+		<CapabilityGroup>
 			<Capability>
-				<Values>urn:ebu:metadata-cs:TBD</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/result/formats</Type>
+				<Values>urn:hogehoge</Values>
+				<Type>supported genres</Type>
+			</Capability>
+			<Capability>
+				<Values>run:hogehoge</Values>
+				<Type>supported video formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>result type</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

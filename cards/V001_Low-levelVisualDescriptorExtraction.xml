@@ -43,16 +43,14 @@
 				</Output>
 			</Outputs>
 		</Parameters>
-		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
-		<Capability xsi:type="videoFormatCapabilityType">
-			<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
-			<Type>http://ebu.io/fims/ame/capabilities/format/video</Type>
-		</Capability>
-		</CapabilityGroup>
-		<CapabilityGroup xsi:type="resultCapabilityGroupType">
+		<CapabilityGroup>
 			<Capability>
-				<Values>urn:ebu:metadata-cs:TBD</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/result/formats</Type>
+				<Values>urn:hogehoge</Values>
+				<Type>supported video formats</Type>
+			</Capability>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>result type</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

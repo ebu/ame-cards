@@ -29,10 +29,10 @@
 				</Output>
 			</Outputs>
 		</Parameters>
-		<CapabilityGroup xsi:type="textCapabilityGroupType">
-			<Capability xsi:type="textLanguageCapabilityType">
-				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
+		<CapabilityGroup>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported languages</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

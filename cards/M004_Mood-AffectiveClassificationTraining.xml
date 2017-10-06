@@ -25,26 +25,22 @@
 				</Output>
 			</Outputs>
 		</Parameters>
-		<CapabilityGroup xsi:type="contentTypeCapabilityGroupType">
-			<Capability xsi:type="modalityCapabilityType">
-				<Values>urn:mpeg:mpeg7:cs:ContentCS:2001</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/modalities</Type>
+		<CapabilityGroup>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported modalities</Type>
 			</Capability>
-		</CapabilityGroup>
-		<CapabilityGroup xsi:type="textCapabilityGroupType">
-			<Capability xsi:type="textLanguageCapabilityType">
-				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported languages</Type>
 			</Capability>
-		</CapabilityGroup>
-		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
-			<Capability xsi:type="audioFormatCapabilityType">
-				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/format/audio</Type>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported audio formats</Type>
 			</Capability>
-			<Capability xsi:type="videoFormatCapabilityType">
-				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/format/video</Type>
+			<Capability>
+				<Values>urn:hogehoge</Values>
+				<Type>supported video formats</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>
