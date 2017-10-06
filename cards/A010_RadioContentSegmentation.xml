@@ -26,18 +26,22 @@
 				</Output>
 			</Outputs>
 		</Parameters>
-		<CapabilityGroup>
-			<Capability>
-				<Values>urn:hogehoge</Values>
-				<Type>supported audio codec</Type>
+		<CapabilityGroup xsi:type="textCapabilityGroupType">
+			<Capability xsi:type="textLanguageCapabilityType">
+				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
 			</Capability>
-			<Capability>
-				<Values>urn:hogehoge</Values>
-				<Type>supported audio formats</Type>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			<Capability xsi:type="audioFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/audio</Type>
 			</Capability>
-			<Capability>
-				<Values>urn:hogehoge</Values>
-				<Type>supported languages</Type>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+			<Capability xsi:type="audioCodecCapabilityType">
+				<Values>urn:ebu:metadata-cs:AudioCompressionCodeCS</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/audio</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>
