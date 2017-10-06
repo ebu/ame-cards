@@ -30,10 +30,10 @@
 				</Output>
 			</Outputs>
 		</Parameters>
-		<CapabilityGroup>
-			<Capability>
-				<Values>urn:hogehoge</Values>
-				<Type>supported video formats</Type>
+		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			<Capability xsi:type="videoFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/video</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>
