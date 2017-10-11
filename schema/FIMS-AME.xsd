@@ -355,4 +355,19 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:complexType name="audioCapabilityType" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="capabilityType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="audioLanguageCapabilityType">
+		<xs:complexContent>
+			<xs:restriction base="audioCapabilityType">
+				<xs:sequence>
+					<xs:element name="Values" type="xs:anyURI" fixed="urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2"/>
+					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/text/language"/>
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
 </xs:schema>
