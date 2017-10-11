@@ -5,17 +5,11 @@
               xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
   <AMECard>
     <CardID>V004</CardID>
-
     <Name>Dominant Camera Motion Estimation</Name>
-
     <Type>Video</Type>
-
     <Status>draft</Status>
-
     <Editor>Mike</Editor>
-
     <Definition>Estimation of the dominant global motion in the video, typically the caused by camera motion and/or zoom (including virtual cameras).</Definition>
-
     <Parameters>
       <Inputs>
         <Input>
@@ -53,20 +47,25 @@
       </Outputs>
     </Parameters>
 
-    <CapabilityGroup name="dominant motion estimation">
-      <Capability>
-        <Values>urn:oiweuowieru</Values>
 
-        <Type>supported motion types</Type>
-      </Capability>
-    </CapabilityGroup>
+    <CapabilityGroup xsi:type="genericCapabilityGroupType" type="DominantMotionEstimation">
+			<Capability xsi:type="genericCapabilityType">
+				<Values>...</Values>
+				<Type>Supported motion types</Type>
+			</Capability>
+		</CapabilityGroup>
 
-    <CapabilityGroup name="input formats">
-      <Capability>
-        <Values>urn:cvds</Values>
-
-        <Type>supported video formats</Type>
-      </Capability>
-    </CapabilityGroup>
+    <CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			<Capability xsi:type="videoFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/video</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+			<Capability xsi:type="videoCodecCapabilityType">
+				<Values>urn:ebu:metadata-cs:VideoCompressionCodeCS</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/video</Type>
+			</Capability>
+		</CapabilityGroup>
   </AMECard>
 </FIMSAMECards>

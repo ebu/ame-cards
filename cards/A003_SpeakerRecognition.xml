@@ -27,41 +27,34 @@
           <Representation/>
         </Input>
       </Inputs>
-
       <Outputs>
         <Output>
           <Name>ListOfSpeakerSegments</Name>
-
           <Type>xml</Type>
-
           <Representation/>
-
           <Comment>list of segments with start time, end time, speaker id and
           confidence score</Comment>
         </Output>
       </Outputs>
     </Parameters>
-
-    <CapabilityGroup name="speaker classes">
-      <Capability>
-        <Values>urn:oiweuowieruf</Values>
-
-        <Type>supported speaker classes</Type>
+    <CapabilityGroup xsi:type="genericCapabilityGroupType" type="FaceDetection">
+			<Capability xsi:type="genericCapabilityType">
+				<Values>...</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/speakerrecognition/classes</Type>
+				<Unit>...</Unit>
+			</Capability>
+		</CapabilityGroup>
+    <CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+      <Capability xsi:type="audioFormatCapabilityType">
+        <Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+        <Type>http://ebu.io/fims/ame/capabilities/format/audio</Type>
       </Capability>
-    </CapabilityGroup>
-
-    <CapabilityGroup name="input formats">
-      <Capability>
-        <Values>urn:xyz</Values>
-
-        <Type>supported audio formats</Type>
-      </Capability>
-
-      <Capability>
-        <Values>urn:sdhfsdjkfh</Values>
-
-        <Type>supported languages</Type>
-      </Capability>
+  	</CapabilityGroup>
+    <CapabilityGroup xsi:type="textCapabilityGroupType">
+  		<Capability xsi:type="textLanguageCapabilityType">
+  			<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
+  			<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
+  		</Capability>
     </CapabilityGroup>
   </AMECard>
 </FIMSAMECards>

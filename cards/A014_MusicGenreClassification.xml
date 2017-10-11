@@ -37,26 +37,25 @@
       </Outputs>
     </Parameters>
 
-    <CapabilityGroup name="ASR types">
-      <Capability>
-        <Values>urn:oiweuowieru</Values>
-
-        <Type>supported music genres</Type>
+    <CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+      <Capability xsi:type="audioFormatCapabilityType">
+        <Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+        <Type>http://ebu.io/fims/ame/capabilities/format/audio</Type>
+      </Capability>
+  	</CapabilityGroup>
+    <CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+      <Capability xsi:type="audioCodecCapabilityType">
+        <Values>urn:ebu:metadata-cs:AudioCompressionCodeCS</Values>
+        <Type>http://ebu.io/fims/ame/capabilities/codec/audio</Type>
       </Capability>
     </CapabilityGroup>
 
-    <CapabilityGroup name="input formats">
-      <Capability>
-        <Values>urn:cvds</Values>
-
-        <Type>supported audio codec</Type>
-      </Capability>
-
-      <Capability>
-        <Values>urn:sdhfsdjkfh</Values>
-
-        <Type>supported audio formats</Type>
-      </Capability>
+    <CapabilityGroup xsi:type="genericCapabilityGroupType" type="ASR">
+			<Capability xsi:type="genericCapabilityType">
+				<Values>urn:sfsdjkh</Values>
+				<Type>supported music genres</Type>
+			</Capability>
     </CapabilityGroup>
+
   </AMECard>
 </FIMSAMECards>
