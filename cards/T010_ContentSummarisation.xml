@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>T010</CardID>
+		<Name>Content Summarisation</Name>
+		<Type>Text</Type>
+		<Status>draft</Status>
+		<Editor>Alberto</Editor>
+		<Definition>The condensation of written text in a summary</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>InputText</Name>
+					<Type>text</Type>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>SummarisedText</Name>
+					<Type>xml</Type>
+				</Output>
+				<Output>
+					<Name>SummarisationAmount</Name>
+					<Type>float</Type>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup xsi:type="textCapabilityGroupType">
+			<Capability xsi:type="textLanguageCapabilityType">
+				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
