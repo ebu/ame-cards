@@ -53,6 +53,5 @@
 				<Type>http://ebu.io/fims/ame/capabilities/codec/audio</Type>
 			</Capability>
 		</CapabilityGroup>
-
 	</AMECard>
 </FIMSAMECards>
