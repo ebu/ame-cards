@@ -37,28 +37,33 @@
 				</Output>
 			</Outputs>
 		</Parameters>
-		<CapabilityGroup name="ASR types">
-			<Capability>
-				<Values>urn:oiweuowieru</Values>
-				<Type>supported languages</Type>
+
+		<CapabilityGroup xsi:type="textCapabilityGroupType">
+	 		<Capability xsi:type="textLanguageCapabilityType">
+	 			<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
+  			<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
 			</Capability>
-			<Capability>
+	   </CapabilityGroup>
+		 <CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+       <Capability xsi:type="audioCodecCapabilityType">
+         <Values>urn:ebu:metadata-cs:AudioCompressionCodeCS</Values>
+         <Type>http://ebu.io/fims/ame/capabilities/codec/audio</Type>
+       </Capability>
+     </CapabilityGroup>
+		 <CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			 <Capability xsi:type="audioFormatCapabilityType">
+				 <Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				 <Type>http://ebu.io/fims/ame/capabilities/format/audio</Type>
+			 </Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="genericCapabilityGroupType" type="ASR">
+			<Capability xsi:type="genericCapabilityType">
 				<Values>urn:sfsdjkh</Values>
 				<Type>supported speech types</Type>
 			</Capability>
-			<Capability>
+			<Capability xsi:type="genericCapabilityType">
 				<Values>urn:jhfkjsdhs</Values>
 				<Type>supported recording conditions</Type>
-			</Capability>
-		</CapabilityGroup>
-		<CapabilityGroup name="input formats">
-			<Capability>
-				<Values>urn:cvds</Values>
-				<Type>supported audio codec</Type>
-			</Capability>
-			<Capability>
-				<Values>urn:sdhfsdjkfh</Values>
-				<Type>supported audio formats</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>
