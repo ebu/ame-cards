@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>M004</CardID>
+		<Name>Genre/Subject Classification</Name>
+		<Type>Multimodal</Type>
+		<Status>draft</Status>
+		<Editor>Alberto</Editor>
+		<Definition>Determine the genre or subject of an audiovisual essence (segment) using a specified list of options.</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>ClassesToDetect</Name>
+					<Type>controlled vocabulary</Type>
+				</Input>
+				<Input>
+					<Name>MaxClassToReport</Name>
+					<Type>integer</Type>
+				</Input>
+				<Input>
+					<Name>MinLikelihood</Name>
+					<Type>integer</Type>
+				</Input>
+				<Input>
+					<Name>InputFragmentData</Name>
+					<Type>URL</Type>
+				</Input>
+				<Input>
+					<Name>Model</Name>
+					<Type>URL</Type>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>DetectedClassesAndLikelihood</Name>
+					<Type>xml</Type>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup xsi:type="contentTypeCapabilityGroupType">
+			<Capability xsi:type="modalityCapabilityType">
+				<Values>urn:mpeg:mpeg7:cs:ContentCS:2001</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/modalities</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			<Capability xsi:type="audioFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/audio</Type>
+			</Capability>
+			<Capability xsi:type="videoFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/video</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="resultCapabilityGroupType">
+				<Capability xsi:type="resultCapabilityType">
+				<Values>urn:ebu:metadata-cs:TBD</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/result/formats</Type>
+			</Capability>
+		
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>

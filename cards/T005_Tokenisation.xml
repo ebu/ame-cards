@@ -33,20 +33,20 @@
 				</Output>
 			</Outputs>
 		</Parameters>
-		<CapabilityGroup name="Text Types">
-			<Capability>
-				<Values>urn:oiweuowieru</Values>
-				<Type>supported languages</Type>
+		<CapabilityGroup xsi:type="textCapabilityGroupType">
+			<Capability xsi:type="textLanguageCapabilityType">
+				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
 			</Capability>
-			<Capability>
-				<Values>urn:sfsdjkh</Values>
-				<Type>supported scripts</Type>
+			<Capability xsi:type="textScriptCapabilityType">
+				<Values>urn:iso:std:iso:15924</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/text/script</Type>
 			</Capability>
 		</CapabilityGroup>
-		<CapabilityGroup name="input formats">
-			<Capability>
-				<Values>urn:cvds</Values>
-				<Type>supported text formats</Type>
+		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			<Capability xsi:type="textFormatCapabilityType">
+				<Values>https://www.iana.org/assignments/media-types/media-types.xhtml</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/text</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>
