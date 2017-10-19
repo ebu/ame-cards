@@ -16,15 +16,18 @@
 					<Type>URL</Type>
 				</Input>
 				<Input>
-					<Name>ClassificationData</Name>
+					<Name>ClassificationDataXML</Name>
 					<Type>xml</Type>
 				</Input>
+				<Input>
+					<Name>ClassificationDataJSON</Name>
+					<Type>json</Type>
+				</Input>				
 			</Inputs>
 			<Outputs>
 				<Output>
 					<Name>WasTrainingSuccess</Name>
 					<Type>text</Type>
-					<Representation/>
 				</Output>
 			</Outputs>
 		</Parameters>

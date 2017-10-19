@@ -6,14 +6,25 @@
 		<Type>Multimodal</Type>
 		<Status>draft</Status>
 		<Editor>Lauri</Editor>
-		<Definition>Classify the affective/emotional content of a multimedia item by assigning one or more class labels, or a score for one or more dimensions (e.g., valence and arousal; bpm for music; ...)</Definition>
-		<!--Should the need for input segmentation be stated somewhere here?-->
+		<Definition>Classify the affective/emotional content of a multimedia item by assigning one or more class labels, or a score for one or more dimensions (e.g., valence and arousal; bpm for music; ...). If segmentation is given as input parameter, classification is done for each segment individually.</Definition>
 		<Parameters>
 			<Inputs>
-				<Input>
+				<Input mandatory="true">
 					<Name>ClassesDatabase</Name>
 					<Type>URL</Type>
 					<Definition>A database with the trained categories or dimensions to be identified</Definition>
+				</Input>
+				<Input>
+					<Name>InputSegmentationXml</Name>
+					<Type>xml</Type>
+					<Representation>urn:mpeg:mpeg7:schema:2004:TemporalDecompositionType/urn:mpeg:mpeg7:schema:2004:AudiovisualSegmentType</Representation>
+					<Definition>The timeline of segments with their start and end times.</Definition>
+				</Input>
+				<Input>
+					<Name>InputSegmentationJson</Name>
+					<Type>json</Type>
+					<Representation>urn:mpeg:mpeg7:schema:2004:TemporalDecompositionType/urn:mpeg:mpeg7:schema:2004:AudiovisualSegmentType</Representation>
+					<Definition>The timeline of segments with their start and end times.</Definition>
 				</Input>
 			</Inputs>
 			<Outputs>
@@ -54,10 +65,10 @@
 				<Type>http://ebu.io/fims/ame/capabilities/text/script</Type>
 			</Capability>
 		</CapabilityGroup>
-		<CapabilityGroup xsi:type="genericCapabilityGroupType" type="supportedAudioLanguage">
-			<Capability xsi:type="genericCapabilityType">
+		<CapabilityGroup xsi:type="genericCapabilityGroupType" type="Language"> <!--Which capabilityGroup does audioLanguageCapability belong to?-->
+			<Capability xsi:type="audioLanguageCapabilityType">
 				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
+				<Type>http://ebu.io/fims/ame/capabilities/audio/language</Type>
 			</Capability>
 		</CapabilityGroup>
 		<CapabilityGroup xsi:type="contentTypeCapabilityGroupType">

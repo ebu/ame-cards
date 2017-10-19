@@ -32,10 +32,9 @@
 			</Outputs>
 		</Parameters>
 		<!--TODO: Descriptor sizes need clarification-->
-		<CapabilityGroup name="Descriptor sizes">
-			<Capability>
-				<Values>urn:oiweuowieru</Values>
-				<Type>supported descriptor sizes</Type>
+		<CapabilityGroup xsi:type="genericCapabilityGroupType" type="descriptorSizes">
+			<Capability type="supportedDescriptorSize">
+				<Type>integer</Type>
 				<Unit>bytes/second</Unit>
 			</Capability>
 		</CapabilityGroup>

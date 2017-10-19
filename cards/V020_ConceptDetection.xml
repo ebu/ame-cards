@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2017 rel. 3 (x64) (http://www.altova.com) by Lauri Saarikoski (Yle - The Finnish Broadcasting Company) -->
-<!-- Should be renamed to Visual concept detection?-->
 <FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
 	<AMECard>
 		<CardID>V020</CardID>
@@ -21,11 +20,23 @@
 					<Type>URL</Type>
 					<Definition>If applicable, visual model to use for detection.</Definition>
 				</Input>
+				<Input>
+					<Name>InputSegmentationXml</Name>
+					<Type>xml</Type>
+					<Representation>urn:mpeg:mpeg7:schema:2004:TemporalDecompositionType/urn:mpeg:mpeg7:schema:2004:AudiovisualSegmentType</Representation>
+					<Definition>The timeline of segments with their start and end times.</Definition>
+				</Input>
+				<Input>
+					<Name>InputSegmentationJson</Name>
+					<Type>json</Type>
+					<Representation>urn:mpeg:mpeg7:schema:2004:TemporalDecompositionType/urn:mpeg:mpeg7:schema:2004:AudiovisualSegmentType</Representation>
+					<Definition>The timeline of segments with their start and end times.</Definition>
+				</Input>
 			</Inputs>
 			<Outputs>
 				<Output mandatory="true">
 					<Name>DetectedConcepts</Name>
-					<Type>text</Type>
+					<Type>xml</Type>
 					<Comment>Per concept class, a list of time segments</Comment>
 				</Output>
 				<Output>
