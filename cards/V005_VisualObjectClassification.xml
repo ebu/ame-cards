@@ -37,11 +37,7 @@
 					<Name>DetectedRegions</Name>
 					<Type>xml</Type>
 					<Representation>urn:mpeg:mpeg7:part5:MovingRegionType</Representation>
-					<Definition>Per object class, a list of time indexed regions</Definition>
-				</Output>
-				<Output>
-					<Name>Confidence</Name>
-					<Type>float</Type>
+					<Definition>Per object class, a list of time indexed regions, optionally complemented with detection confidence scores per detection</Definition>
 				</Output>
 			</Outputs>
 		</Parameters>

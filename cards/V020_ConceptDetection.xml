@@ -37,11 +37,8 @@
 				<Output mandatory="true">
 					<Name>DetectedConcepts</Name>
 					<Type>xml</Type>
-					<Comment>Per concept class, a list of time segments</Comment>
-				</Output>
-				<Output>
-					<Name>Confidence</Name>
-					<Type>float</Type>
+					<Representation/>
+					<Comment>Per concept class, a list of time segments, optionally with confidence scores for each detection.</Comment>
 				</Output>
 			</Outputs>
 		</Parameters>
