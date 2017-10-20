@@ -39,7 +39,7 @@
       </Outputs>
     </Parameters>
 
-    <CapabilityGroup xsi:type="genericCapabilityGroupType" type="speaker classes">
+    <CapabilityGroup xsi:type="genericCapabilityGroupType" type="Speech">
       <Capability xsi:type="genericCapabilityType">
         <Values>urn:oiweuowieruf</Values>
         <Type>supported speaker classes</Type>
@@ -58,10 +58,15 @@
 			</Capability>
 		</CapabilityGroup>
     <CapabilityGroup xsi:type="textCapabilityGroupType">
-
       <Capability xsi:type="textLanguageCapabilityType">
         <Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
         <Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
+      </Capability>
+    </CapabilityGroup>
+    <CapabilityGroup xsi:type="audioCapabilityGroupType">
+      <Capability xsi:type="audioLanguageCapabilityType">
+        <Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
+        <Type>http://ebu.io/fims/ame/capabilities/audio/language</Type>
       </Capability>
     </CapabilityGroup>
   </AMECard>

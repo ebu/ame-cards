@@ -29,7 +29,11 @@
 				<Output>
 					<Name>WasTrainingSuccess</Name>
 					<Type>text</Type>
-					<Representation/>
+				</Output>
+				<Output mandatory="false">
+					<Name>TrainedClasses</Name>
+					<Type>controlled vocabulary</Type>
+					<Definition>The genres/subjects that have been trained.</Definition>
 				</Output>
 			</Outputs>
 		</Parameters>
