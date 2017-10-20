@@ -65,7 +65,7 @@
 				<Type>http://ebu.io/fims/ame/capabilities/text/script</Type>
 			</Capability>
 		</CapabilityGroup>
-		<CapabilityGroup xsi:type="genericCapabilityGroupType" type="Language"> <!--Which capabilityGroup does audioLanguageCapability belong to?-->
+		<CapabilityGroup xsi:type="audioCapabilityGroupType">
 			<Capability xsi:type="audioLanguageCapabilityType">
 				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/audio/language</Type>

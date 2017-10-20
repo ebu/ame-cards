@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2017 rel. 3 (x64) (http://www.altova.com) by Lauri Saarikoski (Yle - The Finnish Broadcasting Company) -->
-<!-- Language dependant? -->
+<!-- Language dependant? Now added audiolanguage to capabilities, remove if judged irrelevant -->
 <!-- Input audio fragment not needed as input? -->
 <FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
 	<AMECard>
@@ -33,6 +33,12 @@
 				</Output>
 			</Outputs>
 		</Parameters>
+		<CapabilityGroup xsi:type="audioCapabilityGroupType">
+			<Capability xsi:type="audioLanguageCapabilityType">
+				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/audio/language</Type>
+			</Capability>
+		</CapabilityGroup>		
 		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
 			<Capability xsi:type="audioFormatCapabilityType">
 				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
