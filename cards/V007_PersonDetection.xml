@@ -46,8 +46,8 @@
 		</Parameters>
 		<CapabilityGroup xsi:type="genericCapabilityGroupType" type="minimum object size">
 			<Capability xsi:type="genericCapabilityType">
-				<Values>urn:oiweuowieru</Values>
 				<Type>minimum object size</Type>
+				<Unit>pixels</Unit>
 			</Capability>
 		</CapabilityGroup>
 		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
