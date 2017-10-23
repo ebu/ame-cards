@@ -46,6 +46,28 @@
 				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/format/video</Type>
 			</Capability>
+			<Capability xsi:type="imageFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/image</Type>
+			</Capability>
+			<Capability xsi:type="textFormatCapabilityType">
+				<Values>https://www.iana.org/assignments/media-types/media-types.xhtml</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/text</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+			<Capability xsi:type="audioCodecCapabilityType">
+				<Values>urn:ebu:metadata-cs:AudioCompressionCodeCS</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/audio</Type>
+			</Capability>
+			<Capability xsi:type="videoCodecCapabilityType">
+				<Values>urn:ebu:metadata-cs:VideoCompressionCodeCS</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/video</Type>
+			</Capability>
+			<Capability xsi:type="textEncodingCapabilityType">
+				<Values>https://www.iana.org/assignments/character-sets/character-sets.xhtml</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/textencoding</Type>
+			</Capability>
 		</CapabilityGroup>
 	</AMECard>
 </FIMSAMECards>

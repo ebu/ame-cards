@@ -35,5 +35,23 @@
 				<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
 			</Capability>
 		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			<Capability xsi:type="textFormatCapabilityType">
+				<Values>https://www.iana.org/assignments/media-types/media-types.xhtml</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/text</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+			<Capability xsi:type="textEncodingCapabilityType">
+				<Values>https://www.iana.org/assignments/character-sets/character-sets.xhtml</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/textencoding</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="resultCapabilityGroupType">
+			<Capability>
+				<Values>urn:ebu:metadata-cs:TBD</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/result/formats</Type>
+			</Capability>
+		</CapabilityGroup>
 	</AMECard>
 </FIMSAMECards>

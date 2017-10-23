@@ -13,6 +13,14 @@
 					<Name>InputText</Name>
 					<Type>text</Type>
 				</Input>
+				<Input>
+					<Name>SemanticDataLocatorToConnect</Name>
+					<Type>URL</Type>
+				</Input>
+				<Input>
+					<Name>SemanticVocabraryToConnect</Name>
+					<Type>controlled vocabulary</Type>
+				</Input>
 			</Inputs>
 			<Outputs>
 				<Output>
@@ -30,6 +38,12 @@
 			<Capability xsi:type="textLanguageCapabilityType">
 				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			<Capability xsi:type="imageFormatCapabilityType">
+				<Values></Values>
+				<Type></Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

@@ -10,7 +10,21 @@
 		<Parameters>
 			<Inputs>
 				<Input>
-					<Name>DetectedDescriptor</Name>
+					<Name>VideoContent</Name>
+					<Type>URL</Type>
+				</Input>
+				<Input>
+					<Name>VideoFormat</Name>
+					<Type>controlled vocabulary</Type>
+					<Representation>http://www.hogehoge.org/VideoFormatType.xml</Representation>
+				</Input>
+				<Input>
+					<Name>ImageFormat</Name>
+					<Type>controlled vocabulary</Type>
+					<Representation>http://www.hogehoge.org/ImageFormatType.xml</Representation>
+				</Input>
+				<Input>
+					<Name>DetectDescriptor</Name>
 					<Type>controlled vocabulary</Type>
 				</Input>
 				<Input>
@@ -22,9 +36,9 @@
 					<Type>controlled vocabulary</Type>
 				</Input>
 				<Input>
-					<Name>Others</Name>
+					<Name>OtherParameters</Name>
 					<Type>xml</Type>
-					<Comment>parameters depend on the descriptor to be extracted, in this case how far should we mention? Is there any good descriptive solutions for this problem? </Comment>
+					<Comment>Parameters depend on the descriptor to be extracted, in this case how far should we mention? Is there any good descriptive solutions for this problem? One of solution might be to list only aparentely mandatry paramaters and the ones which have been mentioned as capability. The rest paramaters are supposed to be included in this "OtherParameters" and examples can be listed in this comment, e.g. TemporalFrequency, Resolution etc. </Comment>
 				</Input>
 			</Inputs>
 			<Outputs>
@@ -39,15 +53,25 @@
 				<Output>
 					<Name>Others</Name>
 					<Type>xml</Type>
-					<Comment>Detected descriptor tends to have its own structual data such a timepoint, timedutaion, region of interest.... How can we handle this?</Comment>
+					<Comment>Detected descriptor tends to have its own structual data such a timepoint, timedutaion, region of interest.... How can we handle this? All these </Comment>
 				</Output>
 			</Outputs>
 		</Parameters>
 		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
-		<Capability xsi:type="videoFormatCapabilityType">
-			<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
-			<Type>http://ebu.io/fims/ame/capabilities/format/video</Type>
-		</Capability>
+			<Capability xsi:type="imageFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/image</Type>
+			</Capability>
+			<Capability xsi:type="videoFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/video</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+			<Capability xsi:type="videoCodecCapabilityType">
+				<Values>urn:ebu:metadata-cs:VideoCompressionCodeCS</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/video</Type>
+			</Capability>
 		</CapabilityGroup>
 		<CapabilityGroup xsi:type="resultCapabilityGroupType">
 			<Capability>

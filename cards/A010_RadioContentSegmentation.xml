@@ -13,6 +13,11 @@
 					<Name>AudioContent</Name>
 					<Type>URL</Type>
 				</Input>
+				<Input>
+					<Name>AudioFormat</Name>
+					<Type>controlled vocabulary</Type>
+					<Representation>http://www.hogehoge.org/AudioFormatType.xml</Representation>
+				</Input>
 			</Inputs>
 			<Outputs>
 				<Output>
@@ -26,10 +31,10 @@
 				</Output>
 			</Outputs>
 		</Parameters>
-		<CapabilityGroup xsi:type="textCapabilityGroupType">
-			<Capability xsi:type="textLanguageCapabilityType">
+		<CapabilityGroup xsi:type="audioCapabilityGroupType">
+			<Capability xsi:type="audioLanguageCapabilityType">
 				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
+				<Type>http://ebu.io/fims/ame/capabilities/audio/language</Type>
 			</Capability>
 		</CapabilityGroup>
 		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
@@ -42,6 +47,12 @@
 			<Capability xsi:type="audioCodecCapabilityType">
 				<Values>urn:ebu:metadata-cs:AudioCompressionCodeCS</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/codec/audio</Type>
+			</Capability>
+		</CapabilityGroup>
+				<CapabilityGroup xsi:type="resultCapabilityGroupType">
+			<Capability>
+				<Values>urn:ebu:metadata-cs:TBD</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/result/formats</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>
