@@ -16,26 +16,31 @@
 					<Type>URL</Type>
 				</Input>
 				<Input>
-					<Name>ClassificationData</Name>
+					<Name>ClassificationDataXML</Name>
 					<Type>xml</Type>
 				</Input>
+				<Input>
+					<Name>ClassificationDataJSON</Name>
+					<Type>json</Type>
+				</Input>				
 			</Inputs>
 			<Outputs>
 				<Output>
 					<Name>WasTrainingSuccess</Name>
 					<Type>text</Type>
-					<Representation/>
 				</Output>
 			</Outputs>
 		</Parameters>
-		<CapabilityGroup name="input formats">
-			<Capability>
-				<Values>urn:cvds</Values>
-				<Type>supported audio codec</Type>
+		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			<Capability xsi:type="audioFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/audio</Type>
 			</Capability>
-			<Capability>
-				<Values>urn:sdhfsdjkfh</Values>
-				<Type>supported audio formats</Type>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+			<Capability xsi:type="audioCodecCapabilityType">
+				<Values>urn:ebu:metadata-cs:AudioCompressionCodeCS</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/audio</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

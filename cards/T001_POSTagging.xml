@@ -6,16 +6,10 @@
 		<Type>Text</Type>
 		<Status>draft</Status>
 		<Editor>Werner</Editor>
-		<Definition>The allocation of categories and relationships of words in a sentence. F.e. verbs or nouns (plural/...).</Definition>
+		<Definition>The allocation of categories and relationships of words in a sentence. E.g., verbs or nouns (plural/...).</Definition>
 		<Parameters>
 			<Inputs>
-				<!-- no input params, assuming the text is provided as a resource to the FIMS service
-				<Input>
-					<Name>InputText</Name>
-					<Type>text</Type>
-					<Representation>TBD, could also be XML</Representation>
-					<Definition>The input text to be processed (required)</Definition>
-				</Input>		
+				<!-- no input params, assuming the text is provided as a resource to the FIMS service		
 				-->
 				<Input>
 					<Name>Language</Name>
@@ -73,6 +67,12 @@
 			<Capability xsi:type="textScriptCapabilityType">
 				<Values>urn:iso:std:iso:15924</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/text/script</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="genericCapabilityGroupType" type="POS">
+			<Capability xsi:type="genericCapabilityType" >
+				<Values>urn:oiweuowieruf</Values>
+				<Type>supported categories for words</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

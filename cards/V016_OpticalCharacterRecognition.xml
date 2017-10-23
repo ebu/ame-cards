@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-
-	VERSION WITH ALT. CAPABILTIY MODELLING
-
--->
 <FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
 	<AMECard>
 		<CardID>V016</CardID>
@@ -49,7 +44,8 @@
 					<Representation>urn:mpeg:mpeg7:part5:VideoSegmentType/urn:mpeg:mpeg7:schema:2004:TextAnnotationType</Representation>
 					<Representation>urn:mpeg:mpeg7:part5:VideoSegmentType/urn:mpeg:mpeg7:schema:2004:MovingRegionType</Representation>
 					<Comment>The output must contain the detected text, and may contain regions</Comment>
-				</Output>			</Outputs>
+				</Output>			
+			</Outputs>
 		</Parameters>
 		<CapabilityGroup xsi:type="textCapabilityGroupType">
 			<Capability xsi:type="textScriptCapabilityType" >

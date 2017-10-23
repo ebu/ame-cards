@@ -39,5 +39,11 @@
 				<Type>http://ebu.io/fims/ame/capabilities/format/image</Type>
 			</Capability>
 		</CapabilityGroup>
+		<CapabilityGroup xsi:type="resultCapabilityGroupType">
+			<Capability>
+				<Values>urn:ebu:metadata-cs:TBD</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/result/formats</Type>
+			</Capability>
+		</CapabilityGroup>
 	</AMECard>
 </FIMSAMECards>

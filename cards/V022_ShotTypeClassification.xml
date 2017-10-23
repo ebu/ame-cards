@@ -21,14 +21,16 @@
 				</Output>
 			</Outputs>
 		</Parameters>
-		<CapabilityGroup>
-			<Capability>
-				<Values>urn:hogehoge</Values>
-				<Type>supported video formats</Type>
+		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+			<Capability xsi:type="videoCodecCapabilityType">
+				<Values>urn:ebu:metadata-cs:VideoCompressionCodeCS</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/video</Type>
 			</Capability>
-			<Capability>
-				<Values>urn:hogehoge</Values>
-				<Type>supported video codec</Type>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			<Capability xsi:type="videoFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/video</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

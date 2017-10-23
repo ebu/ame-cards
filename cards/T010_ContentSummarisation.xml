@@ -1,35 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
 	<AMECard>
-		<CardID>T009</CardID>
-		<Name>Semantic Enrichment</Name>
+		<CardID>T010</CardID>
+		<Name>Content Summarisation</Name>
 		<Type>Text</Type>
 		<Status>draft</Status>
-		<Editor>Masa</Editor>
-		<Definition>Enrich or link text or keywords with/to semantc web entities (including disambiguation)</Definition>
+		<Editor>Alberto</Editor>
+		<Definition>The condensation of written text in a summary</Definition>
 		<Parameters>
 			<Inputs>
 				<Input>
 					<Name>InputText</Name>
 					<Type>text</Type>
 				</Input>
-				<Input>
-					<Name>SemanticDataLocatorToConnect</Name>
-					<Type>URL</Type>
-				</Input>
-				<Input>
-					<Name>SemanticVocabraryToConnect</Name>
-					<Type>controlled vocabulary</Type>
-				</Input>
 			</Inputs>
 			<Outputs>
 				<Output>
-					<Name>EnrichedText</Name>
+					<Name>SummarisedText</Name>
 					<Type>xml</Type>
-					<Representation>Graph with the relation to the semantic web URI's</Representation>
 				</Output>
 				<Output>
-					<Name>Confidence</Name>
+					<Name>SummarisationAmount</Name>
 					<Type>float</Type>
 				</Output>
 			</Outputs>
@@ -38,12 +29,6 @@
 			<Capability xsi:type="textLanguageCapabilityType">
 				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
-			</Capability>
-		</CapabilityGroup>
-		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
-			<Capability xsi:type="imageFormatCapabilityType">
-				<Values></Values>
-				<Type></Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

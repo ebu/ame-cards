@@ -10,14 +10,6 @@
 		<Definition>The identification of the most relevant words in a text.</Definition>
 		<Parameters>
 			<Inputs>
-				<!-- no input params, assuming the text is provided as a resource to the FIMS service
-				<Input>
-					<Name>InputText</Name>
-					<Type>text</Type>
-					<Representation>TBD, could also be XML</Representation>
-					<Definition>The input text to be processed (required)</Definition>
-				</Input>
-				-->
 				<Input>
 					<Name>Language</Name>
 					<Type>controlled vocabulary</Type>
@@ -75,7 +67,5 @@
 				<Type>http://ebu.io/fims/ame/capabilities/format/text</Type>
 			</Capability>
 		</CapabilityGroup>
-
-
 	</AMECard>
 </FIMSAMECards>
