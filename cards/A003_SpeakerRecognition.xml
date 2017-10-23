@@ -6,24 +6,16 @@
               xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <AMECard>
     <CardID>A003</CardID>
-
     <Name>Speaker Recognition</Name>
-
     <Type>Audio</Type>
-
     <Status>draft</Status>
-
     <Editor>Mike</Editor>
-
     <Definition>Given an external reference database of speakers, say who (if any) of the known speakers is speaking at a particular point in time</Definition>
-
     <Parameters>
       <Inputs>
         <Input>
           <Name>SpeakerDatabase</Name>
-
           <Type>xml</Type>
-
           <Representation/>
         </Input>
       </Inputs>
@@ -37,7 +29,7 @@
         </Output>
       </Outputs>
     </Parameters>
-    <CapabilityGroup xsi:type="genericCapabilityGroupType" type="FaceDetection">
+    <CapabilityGroup xsi:type="genericCapabilityGroupType" type="SpeakerRecognition">
 			<Capability xsi:type="genericCapabilityType">
 				<Values>...</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/speakerrecognition/classes</Type>
@@ -50,8 +42,8 @@
         <Type>http://ebu.io/fims/ame/capabilities/format/audio</Type>
       </Capability>
   	</CapabilityGroup>
-    <CapabilityGroup xsi:type="textCapabilityGroupType">
-  		<Capability xsi:type="textLanguageCapabilityType">
+    <CapabilityGroup xsi:type="audioCapabilityGroupType">
+  		<Capability xsi:type="audioLanguageCapabilityType">
   			<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
   			<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
   		</Capability>
