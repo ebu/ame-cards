@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2017 rel. 3 (x64) (http://www.altova.com) by Lauri Saarikoski (Yle - The Finnish Broadcasting Company) -->
-
 <FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
 	<AMECard>
 		<CardID>T008</CardID>
@@ -11,17 +9,17 @@
 		<Definition>Training module for a text tagging system</Definition>
 		<Parameters>
 			<Inputs>
-<!-- Input text fragment not needed as input? 
-				<Input>
-					<Name>InputTextFragment</Name>
-					<Type>text</Type>
-				</Input> -->
 				<Input>
 					<Name>ClassificationData</Name>
 					<Type>xml</Type>
+					<Definition>Training data identifying tags to be trained, and with locators to texts to be used for training each tag.</Definition>
 				</Input>
 			</Inputs>
 			<Outputs>
+				<Output>
+					<Name>TrainedTaggingModelReference</Name>
+					<Type>URL</Type>
+				</Output>			
 				<Output>
 					<Name>WasTrainingSuccess</Name>
 					<Type>text</Type>

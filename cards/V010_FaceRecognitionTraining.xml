@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2017 rel. 3 (x64) (http://www.altova.com) by Lauri Saarikoski (Yle - The Finnish Broadcasting Company) -->
 <FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
 	<AMECard>
 		<CardID>V010</CardID>
@@ -11,16 +10,16 @@
 		<Parameters>
 			<Inputs>
 				<Input mandatory="true">
-					<Name>ClassificationData</Name>
+					<Name>FaceClassificationData</Name>
 					<Type>xml</Type>
-				</Input>
-				<Input>
-					<Name>BoundingBox</Name>
-					<Type>text</Type>
-					<Definition>A bounding box, specified as space separated list of x,y,w,h in pixels.</Definition>
+					<Definition>A training data set with metadata identifying faces, bounding boxes specified as space separated list of x,y,w,h in pixels, and with locators to essences to be used in training for each face.</Definition>
 				</Input>
 			</Inputs>
 			<Outputs>
+				<Output>
+					<Name>TrainedFaceModelReference</Name>
+					<Type>URL</Type>
+				</Output>
 				<Output mandatory="true">
 					<Name>WasTrainingSuccess</Name>
 					<Type>text</Type>
@@ -35,7 +34,6 @@
 				<Type>http://ebu.io/fims/ame/capabilities/miniumObjectSizeInPixels</Type>
 			</Capability>
 		</CapabilityGroup>
-		
 		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
 			<Capability xsi:type="videoFormatCapabilityType">
 				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>

@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2017 rel. 3 (x64) (http://www.altova.com) by Lauri Saarikoski (Yle - The Finnish Broadcasting Company) -->
-<!-- Input audio fragment not needed as input? -->
 <FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
 	<AMECard>
 		<CardID>A009</CardID>
@@ -11,27 +9,29 @@
 		<Definition>Training service for an audio classification system</Definition>
 		<Parameters>
 			<Inputs>
-				<Input>
-					<Name>InputAudioFragment</Name>
-					<Type>URL</Type>
-				</Input>
-				<Input>
-					<Name>ClassificationDataXML</Name>
+				<Input mandatory="true">
+					<Name>TrainingDataBatch</Name>
 					<Type>xml</Type>
-				</Input>
-				<Input>
-					<Name>ClassificationDataJSON</Name>
-					<Type>json</Type>
+					<Definition>A training data set with metadata identifying classes and locators to essences to be used in training for each class.</Definition>
 				</Input>
 			</Inputs>
 			<Outputs>
 				<Output>
+					<Name>TrainedClassifierModelReference</Name>
+					<Type>URL</Type>
+				</Output>			
+				<Output mandatory="true">
 					<Name>WasTrainingSuccess</Name>
 					<Type>text</Type>
-					<Representation/>
 				</Output>
 			</Outputs>
 		</Parameters>
+		<CapabilityGroup xsi:type="audioCapabilityGroupType">
+			<Capability xsi:type="audioLanguageCapabilityType">
+				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/audio/language</Type>
+			</Capability>
+		</CapabilityGroup>		
 		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
 			<Capability xsi:type="audioFormatCapabilityType">
 				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>

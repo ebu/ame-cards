@@ -77,10 +77,10 @@
 				<Type>http://ebu.io/fims/ame/capabilities/modalities</Type>
 			</Capability>
 		</CapabilityGroup>
-		<CapabilityGroup xsi:type="genericCapabilityGroupType" type="ContentMoodDimensions">
+		<CapabilityGroup xsi:type="genericCapabilityGroupType" type="ContentMoodModels">
 			<Capability xsi:type="genericCapabilityType">
-				<Values>urn:ebu:metadata-cs:ContentMoodDimensionCS</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/moods</Type>
+				<Values>urn:ebu:metadata-cs:ContentMoodModelCS</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/moodAffectiveModels</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

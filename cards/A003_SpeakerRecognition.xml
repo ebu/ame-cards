@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--language dependant?-->
-<!-- edited with XMLSpy v2017 rel. 3 (x64) (http://www.altova.com) by Lauri Saarikoski (Yle - The Finnish Broadcasting Company) -->
 <FIMSAMECards xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd"
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -42,12 +40,6 @@
         <Type>http://ebu.io/fims/ame/capabilities/format/audio</Type>
       </Capability>
   	</CapabilityGroup>
-    <CapabilityGroup xsi:type="audioCapabilityGroupType">
-  		<Capability xsi:type="audioLanguageCapabilityType">
-  			<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
-  			<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
-  		</Capability>
-    </CapabilityGroup>
 	<CapabilityGroup xsi:type="audioCapabilityGroupType">
 			<Capability xsi:type="audioLanguageCapabilityType">
 				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>

@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2017 rel. 3 (x64) (http://www.altova.com) by Lauri Saarikoski (Yle - The Finnish Broadcasting Company) -->
-<!-- Language dependant? Now added audiolanguage to capabilities, remove if judged irrelevant -->
-<!-- Input audio fragment not needed as input? -->
 <FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
 	<AMECard>
 		<CardID>A004</CardID>
@@ -13,12 +10,14 @@
 		<Parameters>
 			<Inputs>
 				<Input mandatory="true">
-					<Name>InputAudioFragment</Name>
-					<Type>URL</Type>
+					<Name>TrainingDataBatch</Name>
+					<Type>xml</Type>
+					<Definition>A training data set with metadata identifying speakers and locators to essences to be used in training for each speakers.</Definition>
 				</Input>
 				<Input>
 					<Name>SpeakerModelReference</Name>
 					<Type>URL</Type>
+					<Definition>A pointer to pre-existing model to be updated.</Definition>
 				</Input>
 			</Inputs>
 			<Outputs>
