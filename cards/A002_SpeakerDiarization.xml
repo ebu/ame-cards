@@ -24,15 +24,10 @@
       </Inputs>
 
       <Outputs>
-        <Output mandatory="false">
-					<Name>ListOfSpeakerXml</Name>
+        <Output mandatory="true">
+					<Name>ListOfSpeaker</Name>
 					<Type>xml</Type>
-          <Representation>urn:mpeg:mpeg7:2004:AudioSegmentType/urn:mpeg:mpeg7:part5:TextAnnotationType</Representation>
-          <Definition>List of segments with start time, end time, speaker id (assigned labels within file) and confidence score</Definition>
-				</Output>
-				<Output mandatory="false">
-          <Name>ListOfSpeakerJson</Name>
-					<Type>json</Type>
+          <Type>json</Type>
           <Representation>urn:mpeg:mpeg7:2004:AudioSegmentType/urn:mpeg:mpeg7:part5:TextAnnotationType</Representation>
           <Definition>List of segments with start time, end time, speaker id (assigned labels within file) and confidence score</Definition>
 				</Output>
@@ -57,12 +52,6 @@
 				<Type>http://ebu.io/fims/ame/capabilities/codec/audio</Type>
 			</Capability>
 		</CapabilityGroup>
-    <CapabilityGroup xsi:type="textCapabilityGroupType">
-      <Capability xsi:type="textLanguageCapabilityType">
-        <Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
-        <Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
-      </Capability>
-    </CapabilityGroup>
     <CapabilityGroup xsi:type="audioCapabilityGroupType">
       <Capability xsi:type="audioLanguageCapabilityType">
         <Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
