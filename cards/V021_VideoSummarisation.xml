@@ -10,10 +10,6 @@
 		<Parameters>
 			<Inputs>
 				<Input>
-					<Name>InputVideo</Name>
-					<Type>URL</Type>
-				</Input>
-				<Input>
 					<Name>TargetMinimumLength</Name>
 					<Type>integer</Type>
 					<Unit>second</Unit>
@@ -28,11 +24,13 @@
 				<Output>
 					<Name>KeyFrames</Name>
 					<Type>xml</Type>
+					<Representation>urn:mpeg:mpeg7:part5:VideoSegmentType</Representation>
 					<Comment>a set of key frame time points, possibly organised in a hierarchy from coarse to fine</Comment>
 				</Output>
 				<Output>
 					<Name>SummaryVideo</Name>
 					<Type>xml</Type>
+					<Representation>urn:mpeg:mpeg7:part5:SummarySegmentGroupType</Representation>
 					<Comment>an EDL of segments to be incoulded in a summary</Comment>
 				</Output>
 			</Outputs>
@@ -48,17 +46,15 @@
 				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/format/video</Type>
 			</Capability>
+			<Capability xsi:type="imageFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/image</Type>
+			</Capability>
 		</CapabilityGroup>
 		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
 			<Capability xsi:type="videoCodecCapabilityType">
 				<Values>urn:ebu:metadata-cs:VideoCompressionCodeCS</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/codec/video</Type>
-			</Capability>
-		</CapabilityGroup>
-		<CapabilityGroup xsi:type="resultCapabilityGroupType">
-			<Capability>
-				<Values>urn:ebu:metadata-cs:TBD</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/result/formats</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

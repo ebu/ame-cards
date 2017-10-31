@@ -21,7 +21,11 @@
 			<Outputs>
 				<Output>
 					<Name>WasTraninigSuccess</Name>
-					<Type>text</Type>
+					<Type>boolean</Type>
+				</Output>
+				<Output>
+					<Name>TrainedModel</Name>
+					<Type>URL</Type>
 				</Output>
 			</Outputs>
 		</Parameters>

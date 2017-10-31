@@ -8,26 +8,12 @@
 		<Editor>Masa</Editor>
 		<Definition>Segment a radio stream into individual conent items (e.g. speech, mucic, jingles)</Definition>
 		<Parameters>
-			<Inputs>
-				<Input>
-					<Name>AudioContent</Name>
-					<Type>URL</Type>
-				</Input>
-				<Input>
-					<Name>AudioFormat</Name>
-					<Type>controlled vocabulary</Type>
-					<Representation>http://www.hogehoge.org/AudioFormatType.xml</Representation>
-				</Input>
-			</Inputs>
+			<Inputs/>
 			<Outputs>
 				<Output>
 					<Name>Segments</Name>
 					<Type>xml</Type>
-				</Output>
-				<Output>
-					<Name>AudioContentType</Name>
-					<Type>controlled vocabulary</Type>
-					<Representation>http://www.hogehoge.org/AudioContentType.xml</Representation>
+					<Representation>urn:mpeg:mpeg7:part5:AudioSegmentType</Representation>
 				</Output>
 			</Outputs>
 		</Parameters>
@@ -47,12 +33,6 @@
 			<Capability xsi:type="audioCodecCapabilityType">
 				<Values>urn:ebu:metadata-cs:AudioCompressionCodeCS</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/codec/audio</Type>
-			</Capability>
-		</CapabilityGroup>
-				<CapabilityGroup xsi:type="resultCapabilityGroupType">
-			<Capability>
-				<Values>urn:ebu:metadata-cs:TBD</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/result/formats</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

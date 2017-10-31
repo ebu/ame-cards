@@ -10,26 +10,12 @@
 		<Parameters>
 			<Inputs>
 				<Input>
-					<Name>VideoContent</Name>
-					<Type>URL</Type>
-				</Input>
-				<Input>
-					<Name>VideoFormat</Name>
-					<Type>controlled vocabulary</Type>
-					<Representation>http://www.hogehoge.org/VideoFormatType.xml</Representation>
-				</Input>
-				<Input>
-					<Name>ImageFormat</Name>
-					<Type>controlled vocabulary</Type>
-					<Representation>http://www.hogehoge.org/ImageFormatType.xml</Representation>
-				</Input>
-				<Input>
 					<Name>DetectDescriptor</Name>
 					<Type>controlled vocabulary</Type>
 				</Input>
 				<Input>
 					<Name>TemporalFrequency</Name>
-					<Type>controlled vocabulary</Type>
+					<Type>integer</Type>
 				</Input>
 				<Input>
 					<Name>Resolution</Name>
@@ -71,12 +57,6 @@
 			<Capability xsi:type="videoCodecCapabilityType">
 				<Values>urn:ebu:metadata-cs:VideoCompressionCodeCS</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/codec/video</Type>
-			</Capability>
-		</CapabilityGroup>
-		<CapabilityGroup xsi:type="resultCapabilityGroupType">
-			<Capability>
-				<Values>urn:ebu:metadata-cs:TBD</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/result/formats</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

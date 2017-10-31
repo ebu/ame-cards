@@ -28,7 +28,11 @@
 			<Outputs>
 				<Output>
 					<Name>WasTrainingSuccess</Name>
-					<Type>controlled vocabulary</Type>
+					<Type>boolean</Type>
+				</Output>
+				<Output>
+					<Name>TrainedModel</Name>
+					<Type>URL</Type>
 				</Output>
 			</Outputs>
 		</Parameters>

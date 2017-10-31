@@ -9,7 +9,7 @@
 		<Definition>Training module for a genre/subject classification service</Definition>
 		<Parameters>
 			<Inputs>
-				<Input>
+				<Input mandatory="true">
 					<Name>GenreClassificationTrainingData</Name>
 					<Type>xml</Type>
 					<Comment>Training data contains locators to training essence files and ground truth annotations to train</Comment>
@@ -35,6 +35,10 @@
 					<Type>controlled vocabulary</Type>
 					<Definition>The genres/subjects that have been trained.</Definition>
 				</Output>
+				<Output>
+					<Name>TrainedModel</Name>
+					<Type>URL</Type>
+				</Output>
 			</Outputs>
 		</Parameters>
 		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
@@ -57,6 +61,5 @@
 				<Type>http://ebu.io/fims/ame/capabilities/codec/video</Type>
 			</Capability>
 		</CapabilityGroup>
-		
 	</AMECard>
 </FIMSAMECards>

@@ -10,12 +10,9 @@
 		<Parameters>
 			<Inputs>
 				<Input>
-					<Name>InputImage</Name>
-					<Type>URL</Type>
-				</Input>
-				<Input>
 					<Name>StructuredRegionOfFace</Name>
 					<Type>xml</Type>
+					<Representation>urn:mpeg:mpeg7:part5:RegionType</Representation>
 				</Input>
 				<Input>
 					<Name>ClassesToDetect</Name>
@@ -25,7 +22,8 @@
 			<Outputs>
 				<Output>
 					<Name>DetectedEmotion</Name>
-					<Type>controlled vocabulary</Type>
+					<Type>xml</Type>
+					<Representation>urn:mpeg:mpeg7:part5:VideoSegmentType</Representation>
 				</Output>
 				<Output>
 					<Name>Confidence</Name>
@@ -38,11 +36,9 @@
 				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/format/image</Type>
 			</Capability>
-		</CapabilityGroup>
-		<CapabilityGroup xsi:type="resultCapabilityGroupType">
-			<Capability>
-				<Values>urn:ebu:metadata-cs:TBD</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/result/formats</Type>
+			<Capability xsi:type="videoFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/video</Type>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>
