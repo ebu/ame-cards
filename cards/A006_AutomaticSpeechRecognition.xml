@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 sp2 (x64) (http://www.altova.com) by Alberto Messina (RAI - Radiotelevisione Italiana) -->
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>A006</CardID>
+		<Name>Automatic Speech Recognition</Name>
+		<Type>Audio</Type>
+		<Status>draft</Status>
+		<Editor>Mike</Editor>
+		<Definition>The translation of spoken words (from an audio fragment) into written text</Definition>
+		<Parameters>
+			<Inputs>
+				<Input>
+					<Name>RecordingCondition</Name>
+					<Type>controlled vocabulary</Type>
+				</Input>
+				<Input>
+					<Name>InlineDIctionaryExtension</Name>
+					<Type>text</Type>
+				</Input>
+				<Input>
+					<Name>RemoteDIctionaryExtension</Name>
+					<Type>URL</Type>
+				</Input>
+				<Input>
+					<Name>Language</Name>
+					<Type>controlled vocabulary</Type>
+					<Representation>http://iso.ch/languages.xml - TO BE FIXED</Representation>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Name>Transcript</Name>
+					<Type>xml</Type>
+					<Representation>urn:mpeg:mpeg7:part5:TextAnnotationType</Representation>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup xsi:type="audioCapabilityGroupType">
+			<Capability xsi:type="audioLanguageCapabilityType">
+				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/audio/language</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
+			<Capability xsi:type="audioCodecCapabilityType">
+				<Values>urn:ebu:metadata-cs:AudioCompressionCodeCS</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/audio</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
+			<Capability xsi:type="audioFormatCapabilityType">
+				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/format/audio</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="genericCapabilityGroupType" type="ASR">
+			<Capability xsi:type="genericCapabilityType">
+				<Values>urn:ebu:metadata-cs:SpeechTypeCS</Values>
+				<Type>supported speech types</Type>
+			</Capability>
+			<Capability xsi:type="genericCapabilityType">
+				<Values>urn:jhfkjsdhs</Values>
+				<Type>supported recording conditions</Type>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
