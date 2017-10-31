@@ -9,20 +9,21 @@
 		<Definition>Training an ASR engine on a particular speaker</Definition>
 		<Parameters>
 			<Inputs>
-				<Input>
-					<Name>InputAudioFragments</Name>
-					<Type>URL</Type>
+				<Input mandatory="true">
+					<Name>TrainingDataBatch</Name>
+					<Type>xml</Type>
+					<Definition>A training data set with metadata identifying speaker, transcription and locators to essences to be used in training for each class.</Definition>
 				</Input>
 				<Input>
-					<Name>FragmentsTranscription</Name>
-					<Type>xml</Type>
+					<Name>ModelReference</Name>
+					<Type>URL</Type>
+					<Definition>The model to be adapted.</Definition>
 				</Input>
 			</Inputs>
 			<Outputs>
 				<Output>
 					<Name>WasTrainingSuccess</Name>
 					<Type>text</Type>
-					<Representation/>
 				</Output>
 				<Output>
 					<Name>AdaptedModelReference</Name>
@@ -40,6 +41,13 @@
 			<Capability xsi:type="audioFormatCapabilityType">
 				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/format/audio</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputCapabilityGroupType">
+			<Capability xsi:type="inputCapabilityType" parameter="TrainingDataBatch">
+				<Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
+				<Formats>http://abc.com/formats</Formats>
+				<Representations>http://abc.com/representations</Representations>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>
