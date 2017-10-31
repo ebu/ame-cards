@@ -9,36 +9,28 @@
 		<Definition>The allocation of categories and relationships of words in a sentence. E.g., verbs or nouns (plural/...).</Definition>
 		<Parameters>
 			<Inputs>
-				<!-- no input params, assuming the text is provided as a resource to the FIMS service		
-				-->
 				<Input>
 					<Name>Language</Name>
 					<Type>controlled vocabulary</Type>
 					<Representation>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Representation>
 					<Definition>The language of the text source</Definition>
 				</Input>
+				<Input mandatory="false">
+					<Name>OutputFormat</Name>
+					<Type>controlled vocabulary</Type>
+				</Input>
 			</Inputs>
 			<Outputs>
 				<Output mandatory="true">
-					<Name>TimedTaggedWordsXml</Name>
+					<Name>TimedTaggedWords</Name>
 					<Type>xml</Type>
-					<Representation>urn:tbd</Representation>
-					<Definition>A list of tagged words, for each the disambiguated category, relationship with other words, confidence score</Definition>
-				</Output>
-				<Output mandatory="true">
-					<Name>TimedTaggedWordsJson</Name>
 					<Type>json</Type>
 					<Representation>urn:tbd</Representation>
 					<Definition>A list of tagged words, for each the disambiguated category, relationship with other words, confidence score</Definition>
 				</Output>
 				<Output mandatory="true">
-					<Name>UntimedTaggedWordsXml</Name>
+					<Name>UntimedTaggedWords</Name>
 					<Type>xml</Type>
-					<Representation>https://www.w3.org/TR/annotation-model/#selectors</Representation>
-					<Definition>A list of tagged words, for each the disambiguated category, relationship with other words, confidence score</Definition>
-				</Output>
-				<Output mandatory="true">
-					<Name>UntimedTaggedWordsJson</Name>
 					<Type>json</Type>
 					<Representation>https://www.w3.org/TR/annotation-model/#selectors</Representation>
 					<Definition>A list of tagged words, for each the disambiguated category, relationship with other words, confidence score</Definition>
@@ -73,6 +65,20 @@
 			<Capability xsi:type="genericCapabilityType" >
 				<Values>urn:oiweuowieruf</Values>
 				<Type>supported categories for words</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="resultCapabilityGroupType">
+			<Capability xsi:type="resultCapabilityType" parameter="TimedTaggedWords">
+				<Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
+				<Formats>http://abc.com/formats</Formats>
+				<Representations>http://abc.com/representations</Representations>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="resultCapabilityGroupType">
+			<Capability xsi:type="resultCapabilityType" parameter="UntimedTaggedWords">
+				<Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
+				<Formats>http://abc.com/formats</Formats>
+				<Representations>http://abc.com/representations</Representations>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

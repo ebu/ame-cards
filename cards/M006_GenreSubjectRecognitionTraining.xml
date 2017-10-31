@@ -26,7 +26,7 @@
 				</Input>
 			</Inputs>
 			<Outputs>
-				<Output>
+				<Output mandatory="true">
 					<Name>WasTrainingSuccess</Name>
 					<Type>text</Type>
 				</Output>
@@ -59,6 +59,13 @@
 			<Capability xsi:type="videoCodecCapabilityType">
 				<Values>urn:ebu:metadata-cs:VideoCompressionCodeCS</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/codec/video</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputCapabilityGroupType">
+			<Capability xsi:type="inputCapabilityType" parameter="GenreClassificationTrainingData">
+				<Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
+				<Formats>http://abc.com/formats</Formats>
+				<Representations>http://abc.com/representations</Representations>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

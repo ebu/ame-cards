@@ -21,7 +21,7 @@
           <Type>controlled vocabulary</Type>
           <Representation>List of identifiers of classes to be detected</Representation>
         </Input>
-        <Input>
+        <Input mandatory="false">
           <Name>ModelToUse</Name>
           <Type>URL</Type>
           <Definition>If applicable, audio models to use for detection.</Definition>
@@ -30,13 +30,8 @@
 
       <Outputs>
         <Output>
-          <Name>ClassificationXml</Name>
+          <Name>Classification</Name>
           <Type>xml</Type>
-          <Representation>urn:mpeg:mpeg7:part5:SegmentType/urn:mpeg:mpeg7:part5:StructuredAnnotationType</Representation>
-          <Definition>A list of segments of detected audio classes (preferably referring to a controlled vocabulary) and confidence score.</Definition>
-        </Output>
-        <Output >
-          <Name>ClassificationJson</Name>
           <Type>json</Type>
           <Representation>urn:mpeg:mpeg7:part5:SegmentType/urn:mpeg:mpeg7:part5:StructuredAnnotationType</Representation>
           <Definition>A list of segments of detected audio classes (preferably referring to a controlled vocabulary) and confidence score.</Definition>
@@ -55,6 +50,13 @@
       <Capability xsi:type="audioCodecCapabilityType">
         <Values>urn:ebu:metadata-cs:AudioCompressionCodeCS</Values>
         <Type>http://ebu.io/fims/ame/capabilities/codec/audio</Type>
+      </Capability>
+    </CapabilityGroup>
+    <CapabilityGroup xsi:type="resultCapabilityGroupType">
+      <Capability xsi:type="resultCapabilityType" parameter="Classification">
+        <Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
+        <Formats>http://abc.com/formats</Formats>
+        <Representations>http://abc.com/representations</Representations>
       </Capability>
     </CapabilityGroup>
   </AMECard>

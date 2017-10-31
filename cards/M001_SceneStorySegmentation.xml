@@ -30,17 +30,13 @@
 			</Inputs>
 			<Outputs>
 				<Output>
-					<Name>SegmentationXml</Name>
+					<Name>Segmentation</Name>
 					<Type>xml</Type>
-					<Representation>urn:mpeg:mpeg7:schema:2004:TemporalDecompositionType/urn:mpeg:mpeg7:schema:2004:AudiovisualSegmentType</Representation>
-					<Definition>The timeline of segments with their start and end times.</Definition>
-				</Output>
-				<Output>
-					<Name>SegmentationJson</Name>
 					<Type>json</Type>
 					<Representation>urn:mpeg:mpeg7:schema:2004:TemporalDecompositionType/urn:mpeg:mpeg7:schema:2004:AudiovisualSegmentType</Representation>
 					<Definition>The timeline of segments with their start and end times.</Definition>
-				</Output>			
+				</Output>
+			
 			</Outputs>
 		</Parameters>
 		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
@@ -73,6 +69,13 @@
 			<Capability xsi:type="genericCapabilityType">
 				<Values>urn:ebu:metadata-cs:ContentGenreCS</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/genres</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="resultCapabilityGroupType">
+			<Capability xsi:type="resultCapabilityType" parameter="Segmentation">
+				<Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
+				<Formats>http://abc.com/formats</Formats>
+				<Representations>http://abc.com/representations</Representations>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

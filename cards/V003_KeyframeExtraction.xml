@@ -59,14 +59,8 @@
 			</Inputs>
 			<Outputs>
 				<Output >
-					<Name>DetectedKeyframesXml</Name>
+					<Name>DetectedKeyframes</Name>
 					<Type>xml</Type>
-					<Representation>urn:mpeg:mpeg7:schema:2004:SegmentType</Representation>
-					<Representation>urn:mpeg:mpeg7:schema:2004:MediaLocatorType</Representation>
-					<Comment>The output must contain the time points of detected key frames, and may contain the locators of the extracted images.</Comment>
-				</Output>
-				<Output >
-					<Name>DetectedKeyframesJson</Name>
 					<Type>json</Type>
 					<Representation>urn:mpeg:mpeg7:schema:2004:SegmentType</Representation>
 					<Representation>urn:mpeg:mpeg7:schema:2004:MediaLocatorType</Representation>
@@ -94,6 +88,13 @@
 			<Capability xsi:type="videoCodecCapabilityType">
 				<Values>urn:ebu:metadata-cs:VideoCompressionCodeCS</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/codec/video</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="resultCapabilityGroupType">
+			<Capability xsi:type="resultCapabilityType" parameter="UntimedTaggedWords">
+				<Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
+				<Formats>http://abc.com/formats</Formats>
+				<Representations>http://abc.com/representations</Representations>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

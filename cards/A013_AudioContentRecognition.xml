@@ -33,17 +33,12 @@
 
       <Outputs>
         <Output>
-          <Name>MatchingResultsXml</Name>
+          <Name>MatchingResults</Name>
           <Type>xml</Type>
-          <Representation>urn:mpeg:mpeg7:part5:SegmentType/urn:mpeg:mpeg7:part5:RelationType</Representation>
-          <Definition>Recognised segments, with an identifier of the database entry that matched, and optionally a score (strength) for the match.</Definition>
-        </Output>
-        <Output>
-          <Name>MatchingResultsJson</Name>
           <Type>json</Type>
           <Representation>urn:mpeg:mpeg7:part5:SegmentType/urn:mpeg:mpeg7:part5:RelationType</Representation>
           <Definition>Recognised segments, with an identifier of the database entry that matched, and optionally a score (strength) for the match.</Definition>
-        </Output>      
+        </Output>    
       </Outputs>
     </Parameters>
 
@@ -57,6 +52,13 @@
       <Capability xsi:type="audioCodecCapabilityType">
         <Values>urn:ebu:metadata-cs:AudioCompressionCodeCS</Values>
         <Type>http://ebu.io/fims/ame/capabilities/codec/audio</Type>
+      </Capability>
+    </CapabilityGroup>
+    <CapabilityGroup xsi:type="resultCapabilityGroupType">
+      <Capability xsi:type="resultCapabilityType" parameter="MatchingResults">
+        <Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
+        <Formats>http://abc.com/formats</Formats>
+        <Representations>http://abc.com/representations</Representations>
       </Capability>
     </CapabilityGroup>
   </AMECard>
