@@ -24,21 +24,21 @@
 				</Input>
 				<Input>
 					<Name>MinimumShotLength</Name>
-					<Type>integer</Type>
-					<Unit>frames</Unit>
+					<Type>float</Type>
+					<Unit>second</Unit>
 					<Definition>The minimum shot length to be considered between two detected transitions</Definition>
 					<DefaultValue/>
 				</Input>
 				<Input>
 					<Name>MaximumShotLength</Name>
-					<Type>integer</Type>
-					<Unit>frames</Unit>
+					<Type>float</Type>
+					<Unit>second</Unit>
 					<Definition>The maximum shot length to be considered between two detected transitions. If a shot transition is forced by maximum shot length the corresponding transition type should be set do a distinct value (e.g., maxShotLen)</Definition>
 				</Input>
 				<Input>
 					<Name>MaximumGradualTranistionLength</Name>
-					<Type>integer</Type>
-					<Unit>frames</Unit>
+					<Type>float</Type>
+					<Unit>second</Unit>
 					<Definition>The maximum shot length to be considered valid for a gradual transition</Definition>
 				</Input>
 			</Inputs>
