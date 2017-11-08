@@ -2,7 +2,7 @@
 <FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
 	<AMECard>
 		<CardID>A011</CardID>
-		<Name>Audio classification training</Name>
+		<Name>Audio fingerprint indexing</Name>
 		<Type>Audio</Type>
 		<Status>draft</Status>
 		<Editor>Alberto</Editor>
@@ -10,16 +10,18 @@
 		<Parameters>
 			<Inputs>
 				<Input>
-					<Name>InputAudioFragment</Name>
+					<Name>TargetDescriptorSize</Name>
+					<Type>integer</Type>
+					<Unit>bytes/second</Unit>
+					<Definition>The target bitrate of the fingerprints to be extracted.</Definition>
+				</Input>
+				<Input >
+					<Name>ReferenceToIndex</Name>
 					<Type>URL</Type>
+					<Definition>The identifier of the index in which the fingerprints shall be indexed.</Definition>
 				</Input>
 			</Inputs>
 			<Outputs>
-				<Output>
-					<Name>WasIndexingSuccess</Name>
-					<Type>text</Type>
-					<Representation/>
-				</Output>
 				<Output>
 					<Name>ReferenceToIndex</Name>
 					<Type>URL</Type>
@@ -37,6 +39,13 @@
 			<Capability xsi:type="audioFormatCapabilityType">
 				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/format/audio</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="genericCapabilityGroupType" type="AudioFingerprint">
+			<Capability xsi:type="genericCapabilityType">
+				<Values>integer</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/audiofingerprint/supportedBitrates</Type>
+				<Unit>bytes/second</Unit>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

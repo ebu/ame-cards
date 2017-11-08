@@ -26,10 +26,6 @@
 				</Input>
 			</Inputs>
 			<Outputs>
-				<Output mandatory="true">
-					<Name>WasTrainingSuccess</Name>
-					<Type>text</Type>
-				</Output>
 				<Output mandatory="false">
 					<Name>TrainedClasses</Name>
 					<Type>controlled vocabulary</Type>
