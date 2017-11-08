@@ -46,6 +46,7 @@
 				<Output mandatory="true">
 					<Name>ShotBoundaryTimesAndClassification</Name>
 					<Type>xml</Type>
+					<Type>json</Type>
 					<Representation>urn:mpeg:mpeg7:schema:2004:TemporalDecomposition</Representation>
 					<Comment>For each shot included in the temporal decomposition of the analysed content a classification label shall be attached specifying the transition type corresponding to the shot start</Comment>
 				</Output>

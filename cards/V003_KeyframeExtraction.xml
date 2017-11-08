@@ -39,6 +39,14 @@
 					<DefaultValue>false</DefaultValue>
 				</Input>
 				<Input>
+					<Name>ShotBoundaries</Name>
+					<Type>xml</Type>
+					<Type>json</Type>
+					<Representation>urn:mpeg:mpeg7:schema:2004:TemporalDecomposition</Representation>
+					<Definition>A list of shot boundary times. Required if ShotAdaptive is true.</Definition>
+					<DefaultValue>false</DefaultValue>
+				</Input>				
+				<Input>
 					<Name>StoreImages</Name>
 					<Type>boolean</Type>
 					<Definition>If true, images of the extracted key frames will be stored.</Definition>
