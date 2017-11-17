@@ -70,6 +70,10 @@
 				<Values>urn:ebu:metadata-cs:VideoCompressionCodeCS</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/codec/video</Type>
 			</Capability>
+			<Capability xsi:type="imageCodecCapabilityType">
+				<Values>tbd</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/image</Type>
+			</Capability>
 			<Capability xsi:type="textEncodingCapabilityType">
 				<Values>https://www.iana.org/assignments/character-sets/character-sets.xhtml</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/codec/textencoding</Type>

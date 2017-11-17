@@ -21,14 +21,14 @@
 				</Input>
 			</Inputs>
 			<Outputs>
-				<Output mandatory="true">
+				<Output>
 					<Name>TimedTaggedWords</Name>
 					<Type>xml</Type>
 					<Type>json</Type>
 					<Representation>urn:tbd</Representation>
 					<Definition>A list of tagged words, for each the disambiguated category, relationship with other words, confidence score</Definition>
 				</Output>
-				<Output mandatory="true">
+				<Output>
 					<Name>UntimedTaggedWords</Name>
 					<Type>xml</Type>
 					<Type>json</Type>

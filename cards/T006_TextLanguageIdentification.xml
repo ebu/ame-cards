@@ -20,7 +20,7 @@
 					<Type>xml</Type>
 					<Type>json</Type>
 					<Representation>urn:tbd</Representation>
-					<Definition>A list segments with start and end time, together with a language identifier according to ISO 639-1, -2 or -3, and an optional confidence score.</Definition>
+					<Definition>A list segments with start and end position (time stamp or word count), together with a language identifier according to ISO 639-1, -2 or -3, and an optional confidence score.</Definition>
 				</Output>
 			</Outputs>
 		</Parameters>
