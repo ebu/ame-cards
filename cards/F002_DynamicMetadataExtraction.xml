@@ -2,7 +2,7 @@
 <FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
 	<AMECard>
 		<CardID>F002</CardID>
-		<Name>Concept detection</Name>
+		<Name>DynamicMetadataExtraction</Name>
 		<Type>File</Type>
 		<Status>draft</Status>
 		<Editor>Lauri</Editor>
