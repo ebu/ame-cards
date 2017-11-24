@@ -46,7 +46,22 @@
 				<Values>urn:ebu:metadata-cs:VideoCompressionCodeCS</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/codec/video</Type>
 			</Capability>
+			<Capability xsi:type="textEncodingCapabilityType">
+				<Values>https://www.iana.org/assignments/character-sets/character-sets.xhtml</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/codec/textencoding</Type>
+			</Capability>
 		</CapabilityGroup>
+		<CapabilityGroup xsi:type="textCapabilityGroupType">
+			<Capability xsi:type="textLanguageCapabilityType">
+				<Values>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
+			</Capability>
+			<Capability xsi:type="textScriptCapabilityType">
+				<Values>urn:iso:std:iso:15924</Values>
+				<Type>http://ebu.io/fims/ame/capabilities/text/script</Type>
+			</Capability>
+		</CapabilityGroup>
+		
 		<CapabilityGroup xsi:type="inputCapabilityGroupType">
 			<Capability xsi:type="inputCapabilityType" parameter="GenreClassificationTrainingData">
 				<Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
