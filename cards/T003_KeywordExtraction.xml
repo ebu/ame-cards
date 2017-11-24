@@ -47,7 +47,6 @@
 				<Type>http://ebu.io/fims/ame/capabilities/text/language</Type>
 			</Capability>
 		</CapabilityGroup>
-
 		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">
 			<Capability xsi:type="textEncodingCapabilityType">
 				<Values>https://www.iana.org/assignments/character-sets/character-sets.xhtml</Values>

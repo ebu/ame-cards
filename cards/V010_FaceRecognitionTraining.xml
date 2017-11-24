@@ -44,6 +44,10 @@
 				<Values>urn:ebu:metadata-cs:VideoCompressionCodeCS</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/codec/video</Type>
 			</Capability>
+			<Capability xsi:type="imageCodecCapabilityType">
+				<Values></Values>
+				<Type></Type>
+			</Capability>
 		</CapabilityGroup>
 	</AMECard>
 </FIMSAMECards>
