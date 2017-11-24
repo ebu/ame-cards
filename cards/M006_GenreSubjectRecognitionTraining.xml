@@ -14,15 +14,10 @@
 					<Type>xml</Type>
 					<Comment>Training data contains locators to training essence files and ground truth annotations to train</Comment>
 				</Input>
-				<Input mandatory="true">
+				<Input mandatory="false">
 					<Name>ModelIdentifier</Name>
 					<Type>URL</Type>
 					<Definition>The identifier of the model that shall be trained.</Definition>
-				</Input>
-				<Input>
-					<Name>ReTraining</Name>
-					<Type>boolean</Type>
-					<DefaultValue>false</DefaultValue>
 				</Input>
 			</Inputs>
 			<Outputs>
