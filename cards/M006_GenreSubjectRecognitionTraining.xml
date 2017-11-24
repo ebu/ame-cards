@@ -21,11 +21,6 @@
 				</Input>
 			</Inputs>
 			<Outputs>
-				<Output mandatory="false">
-					<Name>TrainedClasses</Name>
-					<Type>controlled vocabulary</Type>
-					<Definition>The genres/subjects that have been trained.</Definition>
-				</Output>
 				<Output>
 					<Name>TrainedModel</Name>
 					<Type>URL</Type>
