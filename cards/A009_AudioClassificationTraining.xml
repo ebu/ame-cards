@@ -12,6 +12,8 @@
 				<Input mandatory="true">
 					<Name>TrainingDataBatch</Name>
 					<Type>xml</Type>
+					<Type>json</Type>
+					<Type>text</Type>
 					<Definition>A training data set with metadata identifying classes and locators to essences to be used in training for each class.</Definition>
 				</Input>
 			</Inputs>

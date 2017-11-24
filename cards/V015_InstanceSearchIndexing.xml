@@ -7,11 +7,10 @@
 		<Type>Video</Type>
 		<Status>draft</Status>
 		<Editor>Lauri</Editor>
-		
 		<Definition>Extract features from a video and index them in a database for later matching.</Definition>
 		<Parameters>
 			<Inputs>
-				<Input>
+				<Input mandatory="false">
 					<Name>TargetDescriptorSize</Name>
 					<Type>integer</Type>
 					<Unit>bytes/second</Unit>

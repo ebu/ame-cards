@@ -9,7 +9,7 @@
 		<Definition>The identification of the most relevant words in a text.</Definition>
 		<Parameters>
 			<Inputs>
-				<Input>
+				<Input mandatory="false">
 					<Name>Language</Name>
 					<Type>controlled vocabulary</Type>
 					<Representation>urn:iso:std:iso:639:-1 urn:iso:std:iso:639:-2</Representation>
@@ -25,6 +25,7 @@
 					<Name>UntimedKeywords</Name>
 					<Type>xml</Type>
 					<Type>json</Type>
+					<Type>text</Type>
 					<Representation>https://www.w3.org/TR/annotation-model/#selectors</Representation>
 					<Definition>A list of keywords, optionally for each the amount of occurrences and a confidence score</Definition>
 				</Output>
@@ -33,7 +34,7 @@
 					<Type>xml</Type>
 					<Type>json</Type>
 					<Representation>urn:mpeg:mpeg7:part5:AudiovisualSegmentType/urn:mpeg:mpeg7:schema:2004:TextAnnotationType</Representation>
-					<Definition>A list of keywords, for each the amount of occurrences and a confidence score</Definition>
+					<Definition>A timed list of keywords, optionally for each the amount of occurrences and a confidence score</Definition>
 				</Output>
 			</Outputs>
 		</Parameters>

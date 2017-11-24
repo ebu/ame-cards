@@ -12,6 +12,8 @@
 				<Input mandatory="true">
 					<Name>TrainingDataBatch</Name>
 					<Type>xml</Type>
+					<Type>json</Type>
+					<Type>text</Type>
 					<Definition>A training data set with metadata identifying speakers and locators to essences to be used in training for each speakers.</Definition>
 				</Input>
 				<Input mandatory="false">

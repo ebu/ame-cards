@@ -12,11 +12,13 @@
 				<Input mandatory="true">
 					<Name>FaceClassificationData</Name>
 					<Type>xml</Type>
+					<Type>json</Type>
+					<Type>text</Type>
 					<Definition>A training data set with metadata identifying faces, bounding boxes specified as space separated list of x,y,w,h in pixels, and with locators to essences to be used in training for each face.</Definition>
 				</Input>
 			</Inputs>
 			<Outputs>
-				<Output>
+				<Output mandatory="true">
 					<Name>TrainedFaceModelReference</Name>
 					<Type>URL</Type>
 				</Output>
@@ -49,5 +51,12 @@
 				<Type></Type>
 			</Capability>
 		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputCapabilityGroupType">
+			<Capability xsi:type="inputCapabilityType" parameter="FaceRecognitionTrainingData">
+				<Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
+				<Formats>http://abc.com/formats</Formats>
+				<Representations>http://abc.com/representations</Representations>
+			</Capability>
+		</CapabilityGroup>			
 	</AMECard>
 </FIMSAMECards>

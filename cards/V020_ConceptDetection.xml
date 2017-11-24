@@ -16,21 +16,17 @@
 				<Input mandatory="true">
 					<Name>ClassesToDetect</Name>
 					<Type>xml</Type>
-					<Representation/>
+					<Type>json</Type>
+					<Type>text</Type>
 				</Input>
-				<Input>
+				<Input mandatory="false">
 					<Name>ConceptModelToUse</Name>
 					<Type>URL</Type>
 					<Definition>If applicable, visual model to use for detection.</Definition>
 				</Input>
-				<Input>
-					<Name>InputSegmentationXml</Name>
+				<Input mandatory="false">
+					<Name>InputSegmentation</Name>
 					<Type>xml</Type>
-					<Representation>urn:mpeg:mpeg7:schema:2004:TemporalDecompositionType/urn:mpeg:mpeg7:schema:2004:AudiovisualSegmentType</Representation>
-					<Definition>The timeline of segments with their start and end times.</Definition>
-				</Input>
-				<Input>
-					<Name>InputSegmentationJson</Name>
 					<Type>json</Type>
 					<Representation>urn:mpeg:mpeg7:schema:2004:TemporalDecompositionType/urn:mpeg:mpeg7:schema:2004:AudiovisualSegmentType</Representation>
 					<Definition>The timeline of segments with their start and end times.</Definition>
@@ -66,12 +62,24 @@
 				<Type></Type>
 			</Capability>
 		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputCapabilityGroupType">
+			<Capability xsi:type="inputCapabilityType" parameter="ConceptClassesToDetect">
+				<Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
+				<Formats>http://abc.com/formats</Formats>
+				<Representations>http://abc.com/representations</Representations>
+			</Capability>
+			<Capability xsi:type="inputCapabilityType" parameter="ConceptDetectionInputSegmentation">
+				<Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
+				<Formats>http://abc.com/formats</Formats>
+				<Representations>http://abc.com/representations</Representations>
+			</Capability>
+		</CapabilityGroup>			
 		<CapabilityGroup xsi:type="resultCapabilityGroupType">
 			<Capability xsi:type="resultCapabilityType" parameter="DetectedConcepts">
 				<Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
 				<Formats>http://abc.com/formats</Formats>
 				<Representations>http://abc.com/representations</Representations>
 			</Capability>
-		</CapabilityGroup>
+		</CapabilityGroup>		
 	</AMECard>
 </FIMSAMECards>

@@ -12,11 +12,13 @@
 				<Input mandatory="true">
 					<Name>TrainingDataBatch</Name>
 					<Type>xml</Type>
+					<Type>json</Type>
+					<Type>text</Type>
 					<Definition>A training data set with metadata identifying genres and locators to essences to be used in training for each genre.</Definition>
 				</Input>			
 			</Inputs>
 			<Outputs>
-				<Output>
+				<Output mandatory="true">
 					<Name>TrainedGenreModelReference</Name>
 					<Type>URL</Type>
 				</Output>			

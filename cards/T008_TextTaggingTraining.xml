@@ -9,14 +9,16 @@
 		<Definition>Training module for a text tagging system</Definition>
 		<Parameters>
 			<Inputs>
-				<Input>
+				<Input mandatory="true">
 					<Name>ClassificationData</Name>
 					<Type>xml</Type>
-					<Definition>Training data identifying tags to be trained, and with locators to texts to be used for training each tag.</Definition>
+					<Type>json</Type>
+					<Type>text</Type>
+					<Definition>Training data identifying tags to be trained, and with text snippets or locators to texts to be used for training each tag.</Definition>
 				</Input>
 			</Inputs>
 			<Outputs>
-				<Output>
+				<Output mandatory="true">
 					<Name>TrainedTaggingModelReference</Name>
 					<Type>URL</Type>
 				</Output>			
@@ -40,5 +42,12 @@
 				<Type>http://ebu.io/fims/ame/capabilities/text/script</Type>
 			</Capability>
 		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputCapabilityGroupType">
+			<Capability xsi:type="inputCapabilityType" parameter="TextTaggingTrainingData">
+				<Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
+				<Formats>http://abc.com/formats</Formats>
+				<Representations>http://abc.com/representations</Representations>
+			</Capability>
+		</CapabilityGroup>		
 	</AMECard>
 </FIMSAMECards>

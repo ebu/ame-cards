@@ -24,13 +24,13 @@
 					<Representation/>
 					<Unit>pixels</Unit>
 				</Input>
-				<Input>
+				<Input mandatory="false">
 					<Name>ObjectModelToUse</Name>
 					<Type>URL</Type>
 					<Definition>If applicable, visual model to use for detection.</Definition>
 				</Input>
-				<Input>
-					<Name>BoundingBox</Name>
+				<Input mandatory="false">
+					<Name>BoundingBoxWhereToDetect</Name>
 					<Type>text</Type>
 					<Definition>A bounding box, specified as space separated list of x,y,w,h in pixels.</Definition>
 				</Input>
