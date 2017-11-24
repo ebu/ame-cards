@@ -40,6 +40,7 @@
 					<Name>DetectedRegions</Name>
 					<Type>xml</Type>
 					<Type>json</Type>
+					<Type>text</Type>
 					<Representation>urn:mpeg:mpeg7:part5:MovingRegionType</Representation>
 					<Definition>Per object class, a list of time indexed regions, optionally complemented with detection confidence scores per detection</Definition>
 				</Output>
@@ -50,9 +51,12 @@
 				<Values>urn:oiweuowieru</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/supportedObjectClasses</Type>
 			</Capability>
-			<Capability xsi:type="genericCapabilityType" type="minimumSize">
-				<Values>int</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/miniumObjectSizeInPixels</Type>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="detectionCapabilityGroupType">
+			<Capability xsi:type="minDetectionSizeCapabilityType">
+				<Values></Values>
+				<Type></Type>
+				<Unit>pixels</Unit>
 			</Capability>
 		</CapabilityGroup>
 		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">

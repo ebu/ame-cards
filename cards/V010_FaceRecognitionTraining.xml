@@ -24,13 +24,6 @@
 				</Output>
 			</Outputs>
 		</Parameters>
-		<!--Can this be re-used along with other visual recognition objects that state minium sizes?-->
-		<CapabilityGroup xsi:type="genericCapabilityGroupType" type="ObjectClassification">
-			<Capability xsi:type="genericCapabilityType">
-				<Values>int</Values>
-				<Type>http://ebu.io/fims/ame/capabilities/miniumObjectSizeInPixels</Type>
-			</Capability>
-		</CapabilityGroup>
 		<CapabilityGroup xsi:type="inputFormatCapabilityGroupType">
 			<Capability xsi:type="videoFormatCapabilityType">
 				<Values>urn:ebu:metadata-cs:FileFormatCS_2010</Values>

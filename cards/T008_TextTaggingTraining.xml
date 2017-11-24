@@ -16,6 +16,10 @@
 					<Type>text</Type>
 					<Definition>Training data identifying tags to be trained, and with text snippets or locators to texts to be used for training each tag.</Definition>
 				</Input>
+				<Input>
+					<Name>TaggingModelToBeTrainedReference</Name>
+					<Type>URL</Type>
+				</Input>
 			</Inputs>
 			<Outputs>
 				<Output mandatory="true">

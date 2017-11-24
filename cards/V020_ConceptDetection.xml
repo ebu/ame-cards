@@ -15,9 +15,7 @@
 				</Input>			
 				<Input mandatory="true">
 					<Name>ClassesToDetect</Name>
-					<Type>xml</Type>
-					<Type>json</Type>
-					<Type>text</Type>
+					<Type>controlled vocabulary</Type>
 				</Input>
 				<Input mandatory="false">
 					<Name>ConceptModelToUse</Name>
@@ -63,11 +61,6 @@
 			</Capability>
 		</CapabilityGroup>
 		<CapabilityGroup xsi:type="inputCapabilityGroupType">
-			<Capability xsi:type="inputCapabilityType" parameter="ConceptClassesToDetect">
-				<Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
-				<Formats>http://abc.com/formats</Formats>
-				<Representations>http://abc.com/representations</Representations>
-			</Capability>
 			<Capability xsi:type="inputCapabilityType" parameter="ConceptDetectionInputSegmentation">
 				<Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
 				<Formats>http://abc.com/formats</Formats>
