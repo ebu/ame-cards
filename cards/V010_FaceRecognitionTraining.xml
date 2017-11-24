@@ -20,11 +20,6 @@
 					<Name>TrainedFaceModelReference</Name>
 					<Type>URL</Type>
 				</Output>
-				<Output mandatory="true">
-					<Name>WasTrainingSuccess</Name>
-					<Type>text</Type>
-					<Representation/>
-				</Output>
 			</Outputs>
 		</Parameters>
 		<!--Can this be re-used along with other visual recognition objects that state minium sizes?-->

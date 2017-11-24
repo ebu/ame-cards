@@ -23,6 +23,7 @@
 						<xs:enumeration value="Video"/>
 						<xs:enumeration value="Text"/>
 						<xs:enumeration value="Multimodal"/>
+						<xs:enumeration value="File"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -112,8 +113,8 @@
 					<xs:union memberTypes="xs:anyURI xs:string"/>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="Type" type="xs:anyURI"/> 
-			<xs:element name="Unit" minOccurs="0" type="xs:string"/>
+			<xs:element name="Type" type="xs:anyURI"/>
+			<xs:element name="Unit" type="xs:string" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<!-- generic capabilities and groups -->
@@ -165,7 +166,7 @@
 			<xs:restriction base="textCapabilityType">
 				<xs:sequence>
 					<xs:element name="Type" type="xs:anyURI" fixed="http://ebu.io/fims/ame/capabilities/text/minSize"/>
-					<xs:element name="Unit" minOccurs="1" type="xs:string"/>
+					<xs:element name="Unit" type="xs:string" minOccurs="1"/>
 				</xs:sequence>
 			</xs:restriction>
 		</xs:complexContent>
@@ -290,12 +291,12 @@
 	</xs:complexType>
 	<xs:complexType name="resultCapabilityType">
 		<xs:complexContent>
-			<xs:extension base="parameterCapabilityType" />
+			<xs:extension base="parameterCapabilityType"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="inputCapabilityType">
 		<xs:complexContent>
-			<xs:extension base="parameterCapabilityType" />
+			<xs:extension base="parameterCapabilityType"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="isUpdatableCapabilityType">
@@ -353,7 +354,7 @@
 				</xs:sequence>
 			</xs:restriction>
 		</xs:complexContent>
-	</xs:complexType>	
+	</xs:complexType>
 	<!-- -->
 	<xs:complexType name="textCapabilityGroupType">
 		<xs:complexContent>
@@ -445,5 +446,4 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-
 </xs:schema>

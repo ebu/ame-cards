@@ -9,6 +9,10 @@
 		<Definition>Determine if a video segment represents a specified/one from a list of specified concept class(es). A concept is visually represented by the content, but not a particular object. Examples are day/night, indoor/outdoor, rural, ... Also includes basic actions such as person walking, person greeting other person.</Definition>
 		<Parameters>
 			<Inputs>
+				<Input mandatory="false">
+					<Name>OutputFormat</Name>
+					<Type>controlled vocabulary</Type>
+				</Input>			
 				<Input mandatory="true">
 					<Name>ClassesToDetect</Name>
 					<Type>xml</Type>
@@ -36,6 +40,7 @@
 				<Output mandatory="true">
 					<Name>DetectedConcepts</Name>
 					<Type>xml</Type>
+					<Type>json</Type>
 					<Representation/>
 					<Comment>Per concept class, a list of time segments, optionally with confidence scores for each detection.</Comment>
 				</Output>
@@ -55,6 +60,13 @@
 			<Capability xsi:type="videoCodecCapabilityType">
 				<Values>urn:ebu:metadata-cs:VideoCompressionCodeCS</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/codec/video</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="resultCapabilityGroupType">
+			<Capability xsi:type="resultCapabilityType" parameter="DetectedConcepts">
+				<Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
+				<Formats>http://abc.com/formats</Formats>
+				<Representations>http://abc.com/representations</Representations>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

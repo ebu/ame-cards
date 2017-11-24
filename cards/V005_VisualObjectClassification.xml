@@ -10,12 +10,15 @@
 		<Definition>Determine if there are one or more regions showing (part of) a specified/one from a list of specified object class(es), and report their approximate boundaries.</Definition>
 		<Parameters>
 			<Inputs>
+				<Input mandatory="false">
+					<Name>OutputFormat</Name>
+					<Type>controlled vocabulary</Type>
+				</Input>			
 				<Input mandatory="true">
 					<Name>ClassesToDetect</Name>
-					<Type>xml</Type>
-					<Representation/>
+					<Type>controlled vocabulary</Type>
 				</Input>
-				<Input mandatory="true">
+				<Input mandatory="false">
 					<Name>MinimumObjectSizeToDetect</Name>
 					<Type>integer</Type>
 					<Representation/>
@@ -36,6 +39,7 @@
 				<Output mandatory="true">
 					<Name>DetectedRegions</Name>
 					<Type>xml</Type>
+					<Type>json</Type>
 					<Representation>urn:mpeg:mpeg7:part5:MovingRegionType</Representation>
 					<Definition>Per object class, a list of time indexed regions, optionally complemented with detection confidence scores per detection</Definition>
 				</Output>
@@ -67,5 +71,12 @@
 				<Type>http://ebu.io/fims/ame/capabilities/codec/video</Type>
 			</Capability>
 		</CapabilityGroup>
+		<CapabilityGroup xsi:type="resultCapabilityGroupType">
+			<Capability xsi:type="resultCapabilityType" parameter="DetectedRegions">
+				<Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
+				<Formats>http://abc.com/formats</Formats>
+				<Representations>http://abc.com/representations</Representations>
+			</Capability>
+		</CapabilityGroup>		
 	</AMECard>
 </FIMSAMECards>

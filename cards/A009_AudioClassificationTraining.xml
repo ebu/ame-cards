@@ -16,14 +16,10 @@
 				</Input>
 			</Inputs>
 			<Outputs>
-				<Output>
-					<Name>TrainedClassifierModelReference</Name>
+				<Output mandatory="true">
+					<Name>TrainedModelReference</Name>
 					<Type>URL</Type>
 				</Output>			
-				<Output mandatory="true">
-					<Name>WasTrainingSuccess</Name>
-					<Type>text</Type>
-				</Output>
 			</Outputs>
 		</Parameters>
 		<CapabilityGroup xsi:type="audioCapabilityGroupType">
@@ -42,6 +38,13 @@
 			<Capability xsi:type="audioCodecCapabilityType">
 				<Values>urn:ebu:metadata-cs:AudioCompressionCodeCS</Values>
 				<Type>http://ebu.io/fims/ame/capabilities/codec/audio</Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="inputCapabilityGroupType">
+			<Capability xsi:type="inputCapabilityType" parameter="AudioClassificationTrainingData">
+				<Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
+				<Formats>http://abc.com/formats</Formats>
+				<Representations>http://abc.com/representations</Representations>
 			</Capability>
 		</CapabilityGroup>
 	</AMECard>

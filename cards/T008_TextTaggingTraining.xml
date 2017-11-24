@@ -20,11 +20,6 @@
 					<Name>TrainedTaggingModelReference</Name>
 					<Type>URL</Type>
 				</Output>			
-				<Output>
-					<Name>WasTrainingSuccess</Name>
-					<Type>text</Type>
-					<Representation/>
-				</Output>
 			</Outputs>
 		</Parameters>
 		<CapabilityGroup xsi:type="inputCodecCapabilityGroupType">

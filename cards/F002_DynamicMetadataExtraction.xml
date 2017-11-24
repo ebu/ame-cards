@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIMSAMECards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/FIMS-AME.xsd">
+	<AMECard>
+		<CardID>F002</CardID>
+		<Name>Concept detection</Name>
+		<Type>File</Type>
+		<Status>draft</Status>
+		<Editor>Lauri</Editor>
+		<Definition>Dynamic metadata extraction for general file or media properties such as detection of duration, bitrate, bit depth or media format.</Definition>
+		<Parameters>
+			<Inputs>
+				<Input mandatory="true">
+					<Name>PropertiesToDetect</Name>
+					<Type>controlled vocabulary</Type>
+					<Representation/>
+					<Definition>Comma separated list of FIMS QC card names for the properties to be extracted.</Definition>
+				</Input>
+				<Input mandatory="false">
+					<Name>OutputFormat</Name>
+					<Type>controlled vocabulary</Type>
+				</Input>				
+			</Inputs>
+			<Outputs>
+				<Output mandatory="true">
+					<Name>DetectedPropertiesTimeline</Name>
+					<Type>xml</Type>
+					<Type>json</Type>
+					<Definition>A timeline with extracted technical properties. For each detected property, output follows the output structure declared in FIMS QC card in question.</Definition>
+				</Output>
+			</Outputs>
+		</Parameters>
+		<CapabilityGroup xsi:type="genericCapabilityGroupType" type="SupportedEXtractionTypes">
+			<Capability xsi:type="genericCapabilityType">
+<!--insert here reference to FIMS QC card names as a vocabulary?-->
+				<Values></Values>
+				<Type></Type>
+			</Capability>
+		</CapabilityGroup>
+		<CapabilityGroup xsi:type="resultCapabilityGroupType">
+			<Capability parameter="DetectedPropertiesTimeline">
+				<Type>http://ebu.io/fims/ame/capabilities/parameter</Type>
+				<Formats>http://abc.com/formats</Formats>
+				<Representations>http://abc.com/representations</Representations>
+			</Capability>
+		</CapabilityGroup>
+	</AMECard>
+</FIMSAMECards>
