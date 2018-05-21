@@ -38,8 +38,8 @@
 				</xs:simpleType>
 			</xs:element>
 			<xs:element name="Editor" type="xs:string"/>
-			<xs:element name="Alias" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="Tag" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Alias" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Tag" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="Definition" type="xs:string"/>
 			<xs:element name="Reference" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="Example" minOccurs="0" maxOccurs="unbounded"/>
@@ -85,9 +85,9 @@
 				</xs:simpleType>
 			</xs:element>
 			<xs:element name="Representation" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="Unit" minOccurs="0"/>
+			<xs:element name="Unit" type="xs:string" minOccurs="0"/>
 			<xs:element name="Definition" type="xs:string" minOccurs="0"/>
-			<xs:element name="Comment" minOccurs="0"/>
+			<xs:element name="Comment" type="xs:string" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute name="mandatory" type="xs:boolean" default="false"/>
 	</xs:complexType>
